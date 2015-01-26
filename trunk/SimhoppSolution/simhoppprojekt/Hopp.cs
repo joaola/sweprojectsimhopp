@@ -6,45 +6,52 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
-    struct poäng
+    struct poang
     {
-        public float poäng;
-        public float uträknadpoäng;
-        poäng()
+        public float poang;
+        public float utraknadpoang;
+        public poang()
         {
-            this.poäng = 0;
-            this.uträknadpoäng = 0;
+            this.poang = 0;
+            this.utraknadpoang = 0;
         }
-        poäng(float poäng,float uträknadpoäng)
+
+        public poang(float poang,float utraknadpoang)
         {
-            this.poäng = poäng;
-            this.uträknadpoäng = uträknadpoäng;
+            this.poang = poang;
+            this.utraknadpoang = utraknadpoang;
         }
     }
+
     class Hopp
     {
+        #region data
         private int Nr;
         private int hoppNr;
         private string stil;
-        private float svårighetsgrad;
-        private int höjd;
+        private float svarighetsgrad;
+        private int hojd;
         private List<float> betyg;
         private float total;
-        private poäng poäng;
+        private poang poang;
+        #endregion
 
-        public Hopp(int Nr, int hoppNr, string stil, float svårighetsgrad, int höjd, List<float> betyg, float total, float poäng)
+        #region constructor
+        public Hopp(int Nr, int hoppNr, string stil, float svarighetsgrad, int hojd, List<float> betyg)
         {
-            this.Nr= Nr;
+            this.Nr = Nr;
             this.hoppNr = hoppNr;
             this.stil = stil;
-            this.svårighetsgrad = svårighetsgrad;
-            this.höjd = höjd;
+            this.svarighetsgrad = svarighetsgrad;
+            this.hojd = hojd;
             this.betyg = betyg;
-            this.total = this.räknaTotal();
-            this.poäng = poäng;
-        }
+            this.betyg.Sort();
+            this.total = this.raknaTotal();
+            this.poang = this.raknaPoang();
+        } 
+        #endregion
 
-        public float räknaTotal()
+        public float raknaTotal()
         {
             float sum= 0;
             for(int i = 0; i>this.betyg.Count(); i++)
@@ -53,22 +60,40 @@ namespace simhoppprojekt
             }
             return sum;
         }
-
-
-        public poäng räknaPoäng()
+        
+        public poang raknaPoang()
         {
-            poäng temp;
-            float störst = 0, minst = 11;
-            for (int i = 0; i > this.betyg.Count(); i++)
+            List<float> temp = new List<float>();
+            temp = this.betyg;
+            temp.RemoveAt(0);
+            temp.RemoveAt(temp.Count-1);
+            poang temppoang = new poang();
+            for (int i = 0; i > temp.Count(); i++)
             {
-                if (this.betyg[i] > störst)
-                    störst = this.betyg[i];
-                else if(this.betyg[i] <minst)
-                    minst = ;
+                temppoang.poang = temppoang.poang + temp[i];
             }
-            temp.poäng = 
-            return (this.total * this.svårighetsgrad);
+            temppoang.utraknadpoang = temppoang.poang * this.svarighetsgrad;
+            return (temppoang);
         }
 
+        #region getter
+        public int getNr() { return Nr; }
+        public int getHoppNr() { return hoppNr; }
+        public string getStil() { return stil; }
+        public float getSvarighet() { return svarighetsgrad; }
+        public int getHojd() { return hojd; }
+        public float getTotal() { return total; }
+        public poang getPoang() { return poang; }
+        #endregion
+
+        #region setter
+        public void setNr(int Nr) { this.Nr = Nr; }
+        public void setHoppNr(int hN) { this.hoppNr = hN; }
+        public void setStil(string stil) { this.stil = stil; }
+        public void setSvarighet(float svar) { this.svarighetsgrad = svar; }
+        public void setHojd(int hojd) { this.hojd = hojd; }
+        public void setTotal() { this.total = this.raknaTotal(); }
+        public void setPoang() { this.poang = this.raknaPoang(); }
+        #endregion
     }
 }
