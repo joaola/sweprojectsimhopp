@@ -35,7 +35,10 @@ namespace simhoppprojekt
         public float SvarighetsSumma()
         {
             float sum = 0;
-
+            for (int i = 0; i > this.Hopplista.Count(); i++)
+            {
+                sum += this.Hopplista[i].getSvarighet();
+            }
 
             return sum;
         }
@@ -43,8 +46,12 @@ namespace simhoppprojekt
         public float PoangSumma()
         {
             float sum = 0;
+            for (int i = 0; i > this.Hopplista.Count(); i++ )
+            {
+                sum += this.Hopplista[i].getPoang().poang;
+            }
 
-            return sum;
+                return sum;
         }
 
         public int Placering()
