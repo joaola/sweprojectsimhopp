@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
-    struct poang
+    struct Poang
     {
         public float poang;
         public float utraknadpoang;
-        public poang()
+        public Poang()
         {
             this.poang = 0;
             this.utraknadpoang = 0;
         }
 
-        public poang(float poang,float utraknadpoang)
+        public Poang(float poang,float utraknadpoang)
         {
             this.poang = poang;
             this.utraknadpoang = utraknadpoang;
@@ -33,7 +33,7 @@ namespace simhoppprojekt
         private int hojd;
         private List<float> betyg;
         private float total;
-        private poang poang;
+        private Poang poang;
         #endregion
 
         #region constructor
@@ -61,13 +61,13 @@ namespace simhoppprojekt
             return sum;
         }
         
-        public poang raknaPoang()
+        public Poang raknaPoang()
         {
             List<float> temp = new List<float>();
             temp = this.betyg;
             temp.RemoveAt(0);
             temp.RemoveAt(temp.Count-1);
-            poang temppoang = new poang();
+            Poang temppoang = new Poang();
             for (int i = 0; i > temp.Count(); i++)
             {
                 temppoang.poang = temppoang.poang + temp[i];
@@ -83,7 +83,7 @@ namespace simhoppprojekt
         public float getSvarighet() { return svarighetsgrad; }
         public int getHojd() { return hojd; }
         public float getTotal() { return total; }
-        public poang getPoang() { return poang; }
+        public Poang getPoang() { return poang; }
         #endregion
 
         #region setter
