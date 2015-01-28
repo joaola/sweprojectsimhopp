@@ -105,6 +105,7 @@ namespace simhoppprojekt
         public void setStil(string stil) { this.stil = stil; }
         public void setSvarighet(float svar) { this.svarighetsgrad = svar; }
         public void setHojd(int hojd) { this.hojd = hojd; }
+        public void setBetyg(List<float> betyg) { this.betyg = betyg; }
         public void setTotal() { this.total = this.raknaTotal(); }
         public void setPoang() { this.poang = this.raknaPoang(2); }
         #endregion
