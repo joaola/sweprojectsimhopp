@@ -63,7 +63,7 @@ namespace simhoppprojekt
         public float raknaTotal()
         {
             float sum= 0;
-            for(int i = 0; i>this.betyg.Count(); i++)
+            for(int i = 0; i<this.betyg.Count(); i++)
             {
                 sum += this.betyg[i];
             }
