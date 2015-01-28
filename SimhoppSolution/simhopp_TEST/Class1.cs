@@ -13,5 +13,9 @@ namespace simhopp_TEST
     public class Class1
     {
         [Test]
+        public float PoangSumma()
+        {
+            Hopp h;
+        } 
     }
 }
