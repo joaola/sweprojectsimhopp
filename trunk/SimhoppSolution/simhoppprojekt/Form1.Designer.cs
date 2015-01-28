@@ -33,7 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.button4 = new System.Windows.Forms.Button();
             this.arkivToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,15 +42,16 @@
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.innehållToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.omToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,15 +96,6 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(354, 323);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hopplista...";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // arkivToolStripMenuItem
             // 
             this.arkivToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,30 +111,30 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.nyToolStripMenuItem.Text = "Ny";
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.sparaToolStripMenuItem.Text = "Spara";
             // 
             // öppnaToolStripMenuItem
             // 
             this.öppnaToolStripMenuItem.Name = "öppnaToolStripMenuItem";
-            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.öppnaToolStripMenuItem.Text = "Öppna";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
             // 
             // hjälpToolStripMenuItem
@@ -158,14 +149,23 @@
             // innehållToolStripMenuItem
             // 
             this.innehållToolStripMenuItem.Name = "innehållToolStripMenuItem";
-            this.innehållToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.innehållToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.innehållToolStripMenuItem.Text = "Innehåll";
             // 
             // omToolStripMenuItem
             // 
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
-            this.omToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.omToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.omToolStripMenuItem.Text = "Om";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(354, 323);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(69, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Hopplista...";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
             // 
@@ -178,16 +178,6 @@
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Öppna";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -198,6 +188,16 @@
             this.toolStripButton2.Text = "Spara";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Öppna";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(75, 323);
@@ -206,19 +206,24 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "Nytt hopp...";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Placering,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(53, 71);
+            this.name,
+            this.antalhopp,
+            this.points});
+            this.dataGridView1.Location = new System.Drawing.Point(41, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 236);
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(468, 236);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -226,21 +231,23 @@
             // 
             this.Placering.HeaderText = "Placering";
             this.Placering.Name = "Placering";
+            this.Placering.ReadOnly = true;
             // 
-            // Column2
+            // name
             // 
-            this.Column2.HeaderText = "Namn";
-            this.Column2.Name = "Column2";
+            this.name.HeaderText = "Namn";
+            this.name.Name = "name";
             // 
-            // Column3
+            // antalhopp
             // 
-            this.Column3.HeaderText = "Antal hopp";
-            this.Column3.Name = "Column3";
+            this.antalhopp.HeaderText = "Antal hopp";
+            this.antalhopp.Name = "antalhopp";
             // 
-            // Column4
+            // points
             // 
-            this.Column4.HeaderText = "Poäng";
-            this.Column4.Name = "Column4";
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // Form1
             // 
@@ -293,9 +300,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Placering;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn points;
 
     }
 }
