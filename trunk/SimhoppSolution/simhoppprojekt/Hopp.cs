@@ -77,8 +77,8 @@ namespace simhoppprojekt
                 toRemove = 2;
             else if (this.betyg.Count() == 5)
                 toRemove = 1;
-            List<float> temp = new List<float>();
-            temp = this.betyg;
+            List<float> temp = this.betyg.ToList();
+            
 
             for (int i = 0; i < toRemove; i++)
             {
