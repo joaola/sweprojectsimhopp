@@ -19,7 +19,7 @@ namespace simhoppprojekt
         }
     }
 
-    class Hopp
+   public class Hopp
     {
         #region data
         private int Nr;
