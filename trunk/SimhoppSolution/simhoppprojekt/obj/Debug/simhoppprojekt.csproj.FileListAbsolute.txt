@@ -1,2 +1,4 @@
 M:\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
+C:\Users\Joakim\Downloads\sweprojectsimhopp\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
+C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simhoppprojekt", "simhoppprojekt\simhoppprojekt.csproj", "{3815231F-7EF8-4E25-B38F-BF1E28C5E41B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simhopp_TEST", "simhopp_TEST\simhopp_TEST.csproj", "{225C1232-8E77-4545-970E-5384BE05BE3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3815231F-7EF8-4E25-B38F-BF1E28C5E41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3815231F-7EF8-4E25-B38F-BF1E28C5E41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3815231F-7EF8-4E25-B38F-BF1E28C5E41B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225C1232-8E77-4545-970E-5384BE05BE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225C1232-8E77-4545-970E-5384BE05BE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225C1232-8E77-4545-970E-5384BE05BE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225C1232-8E77-4545-970E-5384BE05BE3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
