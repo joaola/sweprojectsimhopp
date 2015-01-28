@@ -86,7 +86,7 @@ namespace simhoppprojekt
                 temp.RemoveAt(temp.Count - 1); 
             }
             Poang temppoang = new Poang();
-            for (int i = 0; i > temp.Count(); i++)
+            for (int i = 0; i < temp.Count(); i++)
             {
                 temppoang.poang = temppoang.poang + temp[i];
             }
