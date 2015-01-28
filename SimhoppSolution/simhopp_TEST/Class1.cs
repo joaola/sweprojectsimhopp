@@ -13,9 +13,22 @@ namespace simhopp_TEST
     public class Class1
     {
         [Test]
-        public float PoangSumma()
+        public void PoangSumma()
         {
-            Hopp h;
+            List<float> tempbetyg = new List<float>();
+            tempbetyg.Add(1);
+            tempbetyg.Add(1.5f);
+            tempbetyg.Add(5f);
+            tempbetyg.Add(5);
+            tempbetyg.Add(5);
+            tempbetyg.Add(7);
+            tempbetyg.Add(7);
+            Hopp h = new Hopp();
+            h.setBetyg(tempbetyg);
+            Assert.AreEqual(15,h.raknaPoang().poang);
+            Assert.AreEqual(31.5,h.raknaTotal());
+            //Assert.AreEqual(0,h.getNr());
+            
         } 
     }
 }
