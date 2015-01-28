@@ -8,7 +8,8 @@ namespace simhoppprojekt
 {
     public class Hopplist
     {
-        private List<Hopp> Hopplista; 
+        private List<Hopp> Hopplista;
+        private int id;
         private string namn;
         private string forening;
         private int fodelsear;
@@ -19,8 +20,22 @@ namespace simhoppprojekt
         private string datum;
         private int placering;
 
-        public Hopplist(int placering, string namn, string forening, int fodelsear, string kon, string tavling, string ort, string gren, string datum)
+        public Hopplist()
         {
+            id = -1;
+            placering = 0;
+            namn = "";
+            forening = "";
+            fodelsear = 0;
+            kon = "";
+            tavling = "";
+            ort = "";
+            gren = "";
+            datum = "";
+        }
+        public Hopplist(int id, int placering, string namn, string forening, int fodelsear, string kon, string tavling, string ort, string gren, string datum)
+        {
+            this.id = id;
             this.placering = placering;
             this.namn = namn;
             this.forening = forening;
@@ -54,10 +69,9 @@ namespace simhoppprojekt
                 return sum;
         }
 
-        public int Placering()
+        public void Placering(List<Hopplist> hopp)
         {
-
-            return ;
+            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.placering.CompareTo(h2.placering); });
         }
 
 
