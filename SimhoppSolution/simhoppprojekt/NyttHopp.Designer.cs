@@ -1,0 +1,467 @@
+﻿namespace simhoppprojekt
+{
+    partial class NyttHopp
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NyttHopp));
+            this.antalDomare = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.UpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.calc = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.simnamn = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.UpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.UpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.UpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.UpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.UpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.UpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.de = new System.Windows.Forms.TextBox();
+            this.hoppnummer = new System.Windows.Forms.TextBox();
+            this.domare1 = new System.Windows.Forms.TextBox();
+            this.domare2 = new System.Windows.Forms.TextBox();
+            this.domare3 = new System.Windows.Forms.TextBox();
+            this.domare4 = new System.Windows.Forms.TextBox();
+            this.domare5 = new System.Windows.Forms.TextBox();
+            this.domare6 = new System.Windows.Forms.TextBox();
+            this.domare7 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown7)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // antalDomare
+            // 
+            this.antalDomare.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.antalDomare.Location = new System.Drawing.Point(24, 99);
+            this.antalDomare.Name = "antalDomare";
+            this.antalDomare.ReadOnly = true;
+            this.antalDomare.Size = new System.Drawing.Size(78, 13);
+            this.antalDomare.TabIndex = 0;
+            this.antalDomare.TabStop = false;
+            this.antalDomare.Text = "Antal domare:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(84, 364);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Ok";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(202, 364);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Ångra";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // UpDown1
+            // 
+            this.UpDown1.DecimalPlaces = 1;
+            this.UpDown1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown1.Location = new System.Drawing.Point(84, 128);
+            this.UpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown1.Name = "UpDown1";
+            this.UpDown1.Size = new System.Drawing.Size(56, 20);
+            this.UpDown1.TabIndex = 3;
+            // 
+            // calc
+            // 
+            this.calc.Location = new System.Drawing.Point(202, 232);
+            this.calc.Name = "calc";
+            this.calc.Size = new System.Drawing.Size(75, 23);
+            this.calc.TabIndex = 4;
+            this.calc.Text = "Räkna";
+            this.calc.UseVisualStyleBackColor = true;
+            this.calc.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "7"});
+            this.comboBox1.Location = new System.Drawing.Point(102, 96);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(38, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.Tag = "";
+            // 
+            // simnamn
+            // 
+            this.simnamn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.simnamn.Location = new System.Drawing.Point(126, 19);
+            this.simnamn.Name = "simnamn";
+            this.simnamn.ReadOnly = true;
+            this.simnamn.Size = new System.Drawing.Size(100, 13);
+            this.simnamn.TabIndex = 6;
+            this.simnamn.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(24, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(106, 13);
+            this.textBox3.TabIndex = 7;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Simhopparens namn:";
+            // 
+            // UpDown2
+            // 
+            this.UpDown2.DecimalPlaces = 1;
+            this.UpDown2.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown2.Location = new System.Drawing.Point(84, 154);
+            this.UpDown2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown2.Name = "UpDown2";
+            this.UpDown2.Size = new System.Drawing.Size(56, 20);
+            this.UpDown2.TabIndex = 8;
+            // 
+            // UpDown3
+            // 
+            this.UpDown3.DecimalPlaces = 1;
+            this.UpDown3.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown3.Location = new System.Drawing.Point(84, 180);
+            this.UpDown3.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown3.Name = "UpDown3";
+            this.UpDown3.Size = new System.Drawing.Size(56, 20);
+            this.UpDown3.TabIndex = 9;
+            // 
+            // UpDown4
+            // 
+            this.UpDown4.DecimalPlaces = 1;
+            this.UpDown4.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown4.Location = new System.Drawing.Point(84, 206);
+            this.UpDown4.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown4.Name = "UpDown4";
+            this.UpDown4.Size = new System.Drawing.Size(56, 20);
+            this.UpDown4.TabIndex = 10;
+            // 
+            // UpDown5
+            // 
+            this.UpDown5.DecimalPlaces = 1;
+            this.UpDown5.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown5.Location = new System.Drawing.Point(84, 232);
+            this.UpDown5.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown5.Name = "UpDown5";
+            this.UpDown5.Size = new System.Drawing.Size(56, 20);
+            this.UpDown5.TabIndex = 11;
+            // 
+            // UpDown6
+            // 
+            this.UpDown6.DecimalPlaces = 1;
+            this.UpDown6.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown6.Location = new System.Drawing.Point(84, 258);
+            this.UpDown6.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown6.Name = "UpDown6";
+            this.UpDown6.Size = new System.Drawing.Size(56, 20);
+            this.UpDown6.TabIndex = 12;
+            // 
+            // UpDown7
+            // 
+            this.UpDown7.DecimalPlaces = 1;
+            this.UpDown7.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.UpDown7.Location = new System.Drawing.Point(84, 284);
+            this.UpDown7.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.UpDown7.Name = "UpDown7";
+            this.UpDown7.Size = new System.Drawing.Size(56, 20);
+            this.UpDown7.TabIndex = 13;
+            // 
+            // de
+            // 
+            this.de.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.de.Location = new System.Drawing.Point(24, 38);
+            this.de.Name = "de";
+            this.de.ReadOnly = true;
+            this.de.Size = new System.Drawing.Size(75, 13);
+            this.de.TabIndex = 15;
+            this.de.TabStop = false;
+            this.de.Text = "Hoppnummer:";
+            // 
+            // hoppnummer
+            // 
+            this.hoppnummer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.hoppnummer.Location = new System.Drawing.Point(96, 38);
+            this.hoppnummer.Name = "hoppnummer";
+            this.hoppnummer.ReadOnly = true;
+            this.hoppnummer.Size = new System.Drawing.Size(20, 13);
+            this.hoppnummer.TabIndex = 14;
+            this.hoppnummer.TabStop = false;
+            // 
+            // domare1
+            // 
+            this.domare1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare1.Location = new System.Drawing.Point(23, 133);
+            this.domare1.Name = "domare1";
+            this.domare1.ReadOnly = true;
+            this.domare1.Size = new System.Drawing.Size(55, 13);
+            this.domare1.TabIndex = 16;
+            this.domare1.TabStop = false;
+            this.domare1.Text = "Domare 1:";
+            // 
+            // domare2
+            // 
+            this.domare2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare2.Location = new System.Drawing.Point(23, 159);
+            this.domare2.Name = "domare2";
+            this.domare2.ReadOnly = true;
+            this.domare2.Size = new System.Drawing.Size(55, 13);
+            this.domare2.TabIndex = 17;
+            this.domare2.TabStop = false;
+            this.domare2.Text = "Domare 2:";
+            // 
+            // domare3
+            // 
+            this.domare3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare3.Location = new System.Drawing.Point(24, 185);
+            this.domare3.Name = "domare3";
+            this.domare3.ReadOnly = true;
+            this.domare3.Size = new System.Drawing.Size(55, 13);
+            this.domare3.TabIndex = 18;
+            this.domare3.TabStop = false;
+            this.domare3.Text = "Domare 3:";
+            // 
+            // domare4
+            // 
+            this.domare4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare4.Location = new System.Drawing.Point(23, 211);
+            this.domare4.Name = "domare4";
+            this.domare4.ReadOnly = true;
+            this.domare4.Size = new System.Drawing.Size(55, 13);
+            this.domare4.TabIndex = 19;
+            this.domare4.TabStop = false;
+            this.domare4.Text = "Domare 4:";
+            // 
+            // domare5
+            // 
+            this.domare5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare5.Location = new System.Drawing.Point(24, 237);
+            this.domare5.Name = "domare5";
+            this.domare5.ReadOnly = true;
+            this.domare5.Size = new System.Drawing.Size(55, 13);
+            this.domare5.TabIndex = 20;
+            this.domare5.TabStop = false;
+            this.domare5.Text = "Domare 5:";
+            // 
+            // domare6
+            // 
+            this.domare6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare6.Location = new System.Drawing.Point(24, 263);
+            this.domare6.Name = "domare6";
+            this.domare6.ReadOnly = true;
+            this.domare6.Size = new System.Drawing.Size(55, 13);
+            this.domare6.TabIndex = 21;
+            this.domare6.TabStop = false;
+            this.domare6.Text = "Domare 6:";
+            // 
+            // domare7
+            // 
+            this.domare7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domare7.Location = new System.Drawing.Point(24, 289);
+            this.domare7.Name = "domare7";
+            this.domare7.ReadOnly = true;
+            this.domare7.Size = new System.Drawing.Size(55, 13);
+            this.domare7.TabIndex = 22;
+            this.domare7.TabStop = false;
+            this.domare7.Text = "Domare 7:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(23, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(78, 13);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "Svårighetgrad:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(96, 67);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(44, 20);
+            this.textBox2.TabIndex = 24;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Location = new System.Drawing.Point(202, 206);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(109, 20);
+            this.textBox4.TabIndex = 25;
+            // 
+            // NyttHopp
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(366, 399);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.domare7);
+            this.Controls.Add(this.domare6);
+            this.Controls.Add(this.domare5);
+            this.Controls.Add(this.domare4);
+            this.Controls.Add(this.domare3);
+            this.Controls.Add(this.domare2);
+            this.Controls.Add(this.domare1);
+            this.Controls.Add(this.de);
+            this.Controls.Add(this.hoppnummer);
+            this.Controls.Add(this.UpDown7);
+            this.Controls.Add(this.UpDown6);
+            this.Controls.Add(this.UpDown5);
+            this.Controls.Add(this.UpDown4);
+            this.Controls.Add(this.UpDown3);
+            this.Controls.Add(this.UpDown2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.simnamn);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.calc);
+            this.Controls.Add(this.UpDown1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.antalDomare);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "NyttHopp";
+            this.Text = "Nytt hopp";
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDown7)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox antalDomare;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown UpDown1;
+        private System.Windows.Forms.Button calc;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox simnamn;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.NumericUpDown UpDown2;
+        private System.Windows.Forms.NumericUpDown UpDown3;
+        private System.Windows.Forms.NumericUpDown UpDown4;
+        private System.Windows.Forms.NumericUpDown UpDown5;
+        private System.Windows.Forms.NumericUpDown UpDown6;
+        private System.Windows.Forms.NumericUpDown UpDown7;
+        private System.Windows.Forms.TextBox de;
+        private System.Windows.Forms.TextBox hoppnummer;
+        private System.Windows.Forms.TextBox domare1;
+        private System.Windows.Forms.TextBox domare2;
+        private System.Windows.Forms.TextBox domare3;
+        private System.Windows.Forms.TextBox domare4;
+        private System.Windows.Forms.TextBox domare5;
+        private System.Windows.Forms.TextBox domare6;
+        private System.Windows.Forms.TextBox domare7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
+    }
+}
