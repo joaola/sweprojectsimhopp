@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
-    struct Poang
+    public struct Poang
     {
         public float poang;
         public float utraknadpoang;
@@ -56,7 +56,7 @@ namespace simhoppprojekt
             this.betyg = betyg;
             this.betyg.Sort();
             this.total = this.raknaTotal();
-            this.poang = this.raknaPoang(2);
+            this.poang = this.raknaPoang();
         } 
         #endregion
 
@@ -70,12 +70,17 @@ namespace simhoppprojekt
             return sum;
         }
         
-        public Poang raknaPoang(int ToRemove)
+        public Poang raknaPoang()
         {
+            int toRemove = 0;
+            if (this.betyg.Count() == 7)
+                toRemove = 2;
+            else if (this.betyg.Count() == 5)
+                toRemove = 1;
             List<float> temp = new List<float>();
             temp = this.betyg;
 
-            for (int i = 0; i < ToRemove; i++)
+            for (int i = 0; i < toRemove; i++)
             {
                 temp.RemoveAt(0);
                 temp.RemoveAt(temp.Count - 1); 
@@ -107,7 +112,7 @@ namespace simhoppprojekt
         public void setHojd(int hojd) { this.hojd = hojd; }
         public void setBetyg(List<float> betyg) { this.betyg = betyg; }
         public void setTotal() { this.total = this.raknaTotal(); }
-        public void setPoang() { this.poang = this.raknaPoang(2); }
+        public void setPoang() { this.poang = this.raknaPoang(); }
         #endregion
     }
 }
