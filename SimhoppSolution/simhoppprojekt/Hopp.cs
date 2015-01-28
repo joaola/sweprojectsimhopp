@@ -33,6 +33,19 @@ namespace simhoppprojekt
         #endregion
 
         #region constructor
+
+        public Hopp()
+        {
+            this.Nr = 0;
+            this.hoppNr = 0;
+            this.stil = "";
+            this.svarighetsgrad = 0;
+            this.hojd = 0;
+            this.betyg = new List<float>();
+            this.total = 0;
+            this.poang = new Poang();
+        }
+
         public Hopp(int Nr, int hoppNr, string stil, float svarighetsgrad, int hojd, List<float> betyg)
         {
             this.Nr = Nr;
