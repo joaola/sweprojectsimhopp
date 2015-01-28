@@ -10,11 +10,7 @@ namespace simhoppprojekt
     {
         public float poang;
         public float utraknadpoang;
-        public Poang()
-        {
-            this.poang = 0;
-            this.utraknadpoang = 0;
-        }
+        
 
         public Poang(float poang,float utraknadpoang)
         {
