@@ -56,7 +56,7 @@ namespace simhoppprojekt
             this.betyg = betyg;
             this.betyg.Sort();
             this.total = this.raknaTotal();
-            this.poang = this.raknaPoang();
+            this.poang = this.raknaPoang(2);
         } 
         #endregion
 
@@ -70,12 +70,16 @@ namespace simhoppprojekt
             return sum;
         }
         
-        public Poang raknaPoang()
+        public Poang raknaPoang(int ToRemove)
         {
             List<float> temp = new List<float>();
             temp = this.betyg;
-            temp.RemoveAt(0);
-            temp.RemoveAt(temp.Count-1);
+
+            for (int i = 0; i < ToRemove; i++)
+            {
+                temp.RemoveAt(0);
+                temp.RemoveAt(temp.Count - 1); 
+            }
             Poang temppoang = new Poang();
             for (int i = 0; i > temp.Count(); i++)
             {
@@ -102,7 +106,7 @@ namespace simhoppprojekt
         public void setSvarighet(float svar) { this.svarighetsgrad = svar; }
         public void setHojd(int hojd) { this.hojd = hojd; }
         public void setTotal() { this.total = this.raknaTotal(); }
-        public void setPoang() { this.poang = this.raknaPoang(); }
+        public void setPoang() { this.poang = this.raknaPoang(2); }
         #endregion
     }
 }
