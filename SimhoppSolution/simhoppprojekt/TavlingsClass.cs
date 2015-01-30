@@ -28,5 +28,14 @@ namespace simhoppprojekt
 
         #endregion
 
+        #region getters
+        public string getNamn() { return this.namn; }
+        public List<Hopplist> getHopplistor() { return this.Hopplistor; }
+        #endregion
+
+        #region setters
+        public void setNamn(string namn) { this.namn = namn; }
+        public void setHopplistor(List<Hopplist> Hopplistor) { this.Hopplistor = Hopplistor; }
+        #endregion
     }
 }
