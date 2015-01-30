@@ -37,5 +37,6 @@ namespace simhoppprojekt
         public void setNamn(string namn) { this.namn = namn; }
         public void setHopplistor(List<Hopplist> Hopplistor) { this.Hopplistor = Hopplistor; }
         #endregion
+
     }
 }
