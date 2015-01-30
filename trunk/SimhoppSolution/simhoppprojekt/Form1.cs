@@ -49,8 +49,8 @@ namespace simhoppprojekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            NyttHopp ny = new NyttHopp();
-            ny.Show();
+            Hopp ny = new Hopp();
+            //ny.Show();
         }
 
     }

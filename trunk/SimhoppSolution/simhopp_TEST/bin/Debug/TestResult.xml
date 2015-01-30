@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-28" time="14:18:51">
-  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="JOAKIM-AIR" user="Joakim" user-domain="JOAKIM-AIR" />
-  <culture-info current-culture="sv-SE" current-uiculture="sv-SE" />
-  <test-suite type="Assembly" name="C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" executed="True" result="Success" success="True" time="0.002" asserts="0">
+<test-results name="\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-30" time="10:48:18">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.34209" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE" machine-name="T006E007718" user="patmah121" user-domain="EDUNET" />
+  <culture-info current-culture="sv-SE" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" executed="True" result="Success" success="True" time="0.177" asserts="0">
     <results>
-      <test-suite type="Namespace" name="simhopp_TEST" executed="True" result="Success" success="True" time="0.001" asserts="0">
+      <test-suite type="Namespace" name="simhopp_TEST" executed="True" result="Success" success="True" time="0.175" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="Class1" executed="True" result="Success" success="True" time="0.001" asserts="0">
+          <test-suite type="TestFixture" name="Class1" executed="True" result="Success" success="True" time="0.170" asserts="0">
             <results>
-              <test-case name="simhopp_TEST.Class1.PoangSumma" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+              <test-case name="simhopp_TEST.Class1.PoangSumma" executed="True" result="Success" success="True" time="0.166" asserts="2" />
             </results>
           </test-suite>
         </results>

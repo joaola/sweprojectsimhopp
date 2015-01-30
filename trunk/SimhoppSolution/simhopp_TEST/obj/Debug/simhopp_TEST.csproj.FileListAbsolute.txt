@@ -7,3 +7,11 @@ C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\bin\Debug
 C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\bin\Debug\nunit.framework.xml
 C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\obj\Debug\simhopp_TEST.dll
 C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\obj\Debug\simhopp_TEST.pdb
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\obj\Debug\simhopp_TEST.csprojResolveAssemblyReference.cache
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\obj\Debug\simhopp_TEST.dll
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\obj\Debug\simhopp_TEST.pdb
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.pdb
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhoppprojekt.exe
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhoppprojekt.pdb
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\nunit.framework.xml
