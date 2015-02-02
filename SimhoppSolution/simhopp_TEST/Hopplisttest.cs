@@ -43,10 +43,24 @@ namespace simhopp_TEST
         }
 
         [Test]
-        public void TotalSumma()
+        public void AntalHoppSumma()
         {
             Assert.AreEqual(2, hl1.AntalHopp());
         }
-
+        [Test]
+        public void svarighetsgradSumma()
+        {
+            Assert.AreEqual(3.5f, hl1.SvarighetsSumma());
+        }
+        [Test]
+        public void poangSumma()
+        {
+            Assert.AreEqual(32.5f, hl1.PoangSumma());
+        }
+        [Test]
+        public void utraknadPoangSumma()
+        {
+            Assert.AreEqual(57.5f, hl1.UtraknadPoangSumma());
+        }
     }
 }
