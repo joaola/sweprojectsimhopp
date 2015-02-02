@@ -33,6 +33,12 @@ namespace simhoppprojekt
 
         #endregion
 
+        public void Placering(List<Hopplist> hopp)
+        {
+            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.placering.CompareTo(h2.placering); });
+        }
+
+
         #region getters
         public string getNamn() { return this.namn; }
         public List<Hopplist> getHopplistor() { return this.Hopplistor; }
