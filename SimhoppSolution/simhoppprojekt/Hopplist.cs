@@ -18,7 +18,6 @@ namespace simhoppprojekt
         private string ort;
         private string gren;
         private string datum;
-        private int placering;
         #endregion
 
         #region constructs
@@ -27,7 +26,6 @@ namespace simhoppprojekt
         {
             Hopplista = new List<Hopp>();
             id = -1;
-            placering = 0;
             namn = "";
             forening = "";
             fodelsear = 0;
@@ -37,11 +35,10 @@ namespace simhoppprojekt
             datum = "";
         }
 
-        public Hopplist(int id, int placering, string namn, string forening, int fodelsear, string kon, string ort, string gren, string datum)
+        public Hopplist(int id, string namn, string forening, int fodelsear, string kon, string ort, string gren, string datum)
         {
             this.Hopplista = new List<Hopp>();
             this.id = id;
-            this.placering = placering;
             this.namn = namn;
             this.forening = forening;
             this.fodelsear = fodelsear;
