@@ -27,7 +27,8 @@ namespace simhoppprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            NyPers np = new NyPers();
+            np.Show();
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)

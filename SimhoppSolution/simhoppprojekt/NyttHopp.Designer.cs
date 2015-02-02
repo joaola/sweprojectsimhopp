@@ -80,18 +80,20 @@
             this.button1.Location = new System.Drawing.Point(84, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(202, 364);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Ångra";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UpDown1
             // 
@@ -116,7 +118,7 @@
             this.calc.Location = new System.Drawing.Point(202, 232);
             this.calc.Name = "calc";
             this.calc.Size = new System.Drawing.Size(75, 23);
-            this.calc.TabIndex = 4;
+            this.calc.TabIndex = 10;
             this.calc.Text = "Räkna";
             this.calc.UseVisualStyleBackColor = true;
             this.calc.Click += new System.EventHandler(this.button3_Click);
@@ -132,7 +134,7 @@
             this.comboBox1.Location = new System.Drawing.Point(102, 96);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(38, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.Tag = "";
             // 
             // simnamn
@@ -172,7 +174,7 @@
             0});
             this.UpDown2.Name = "UpDown2";
             this.UpDown2.Size = new System.Drawing.Size(56, 20);
-            this.UpDown2.TabIndex = 8;
+            this.UpDown2.TabIndex = 4;
             // 
             // UpDown3
             // 
@@ -190,7 +192,7 @@
             0});
             this.UpDown3.Name = "UpDown3";
             this.UpDown3.Size = new System.Drawing.Size(56, 20);
-            this.UpDown3.TabIndex = 9;
+            this.UpDown3.TabIndex = 5;
             // 
             // UpDown4
             // 
@@ -208,7 +210,7 @@
             0});
             this.UpDown4.Name = "UpDown4";
             this.UpDown4.Size = new System.Drawing.Size(56, 20);
-            this.UpDown4.TabIndex = 10;
+            this.UpDown4.TabIndex = 6;
             // 
             // UpDown5
             // 
@@ -226,7 +228,7 @@
             0});
             this.UpDown5.Name = "UpDown5";
             this.UpDown5.Size = new System.Drawing.Size(56, 20);
-            this.UpDown5.TabIndex = 11;
+            this.UpDown5.TabIndex = 7;
             // 
             // UpDown6
             // 
@@ -244,7 +246,7 @@
             0});
             this.UpDown6.Name = "UpDown6";
             this.UpDown6.Size = new System.Drawing.Size(56, 20);
-            this.UpDown6.TabIndex = 12;
+            this.UpDown6.TabIndex = 8;
             // 
             // UpDown7
             // 
@@ -262,7 +264,7 @@
             0});
             this.UpDown7.Name = "UpDown7";
             this.UpDown7.Size = new System.Drawing.Size(56, 20);
-            this.UpDown7.TabIndex = 13;
+            this.UpDown7.TabIndex = 9;
             // 
             // de
             // 
@@ -292,7 +294,7 @@
             this.domare1.Name = "domare1";
             this.domare1.ReadOnly = true;
             this.domare1.Size = new System.Drawing.Size(55, 13);
-            this.domare1.TabIndex = 16;
+            this.domare1.TabIndex = 0;
             this.domare1.TabStop = false;
             this.domare1.Text = "Domare 1:";
             // 
@@ -303,7 +305,7 @@
             this.domare2.Name = "domare2";
             this.domare2.ReadOnly = true;
             this.domare2.Size = new System.Drawing.Size(55, 13);
-            this.domare2.TabIndex = 17;
+            this.domare2.TabIndex = 0;
             this.domare2.TabStop = false;
             this.domare2.Text = "Domare 2:";
             // 
@@ -314,7 +316,7 @@
             this.domare3.Name = "domare3";
             this.domare3.ReadOnly = true;
             this.domare3.Size = new System.Drawing.Size(55, 13);
-            this.domare3.TabIndex = 18;
+            this.domare3.TabIndex = 0;
             this.domare3.TabStop = false;
             this.domare3.Text = "Domare 3:";
             // 
@@ -325,7 +327,7 @@
             this.domare4.Name = "domare4";
             this.domare4.ReadOnly = true;
             this.domare4.Size = new System.Drawing.Size(55, 13);
-            this.domare4.TabIndex = 19;
+            this.domare4.TabIndex = 0;
             this.domare4.TabStop = false;
             this.domare4.Text = "Domare 4:";
             // 
@@ -336,7 +338,7 @@
             this.domare5.Name = "domare5";
             this.domare5.ReadOnly = true;
             this.domare5.Size = new System.Drawing.Size(55, 13);
-            this.domare5.TabIndex = 20;
+            this.domare5.TabIndex = 0;
             this.domare5.TabStop = false;
             this.domare5.Text = "Domare 5:";
             // 
@@ -347,7 +349,7 @@
             this.domare6.Name = "domare6";
             this.domare6.ReadOnly = true;
             this.domare6.Size = new System.Drawing.Size(55, 13);
-            this.domare6.TabIndex = 21;
+            this.domare6.TabIndex = 0;
             this.domare6.TabStop = false;
             this.domare6.Text = "Domare 6:";
             // 
@@ -358,7 +360,7 @@
             this.domare7.Name = "domare7";
             this.domare7.ReadOnly = true;
             this.domare7.Size = new System.Drawing.Size(55, 13);
-            this.domare7.TabIndex = 22;
+            this.domare7.TabIndex = 0;
             this.domare7.TabStop = false;
             this.domare7.Text = "Domare 7:";
             // 
@@ -371,14 +373,14 @@
             this.textBox1.Size = new System.Drawing.Size(78, 13);
             this.textBox1.TabIndex = 23;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Svårighetgrad:";
+            this.textBox1.Text = "Svårighetsgrad:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 67);
+            this.textBox2.Location = new System.Drawing.Point(98, 67);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(44, 20);
-            this.textBox2.TabIndex = 24;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox4
             // 
@@ -387,7 +389,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(109, 20);
-            this.textBox4.TabIndex = 25;
+            this.textBox4.TabIndex = 0;
             // 
             // NyttHopp
             // 
