@@ -73,12 +73,6 @@ namespace simhoppprojekt
             this.Hopplista.Add(h);
         }
 
-        public void Placering(List<Hopplist> hopp)
-        {
-            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.placering.CompareTo(h2.placering); });
-        }
-
-
         ~Hopplist() { }
 
         #region getters
