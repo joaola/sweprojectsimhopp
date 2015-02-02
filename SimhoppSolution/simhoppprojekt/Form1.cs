@@ -12,6 +12,8 @@ namespace simhoppprojekt
 {
     public partial class Form1 : Form
     {
+        private TavlingsClass t1 = new TavlingsClass("tävling1");
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace simhoppprojekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            string namn = this.t1.getNamn();
+            textBox1.Text = namn;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,9 +52,11 @@ namespace simhoppprojekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Hopp ny = new Hopp();
-            //ny.Show();
+            NyttHopp ny = new NyttHopp();
+            ny.Show();
         }
+
+
 
     }
 }
