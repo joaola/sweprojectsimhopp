@@ -14,7 +14,6 @@ namespace simhoppprojekt
         #endregion
 
         #region constr
-
         public TavlingsClass()
         {
             this.namn = "";
@@ -30,14 +29,18 @@ namespace simhoppprojekt
             this.namn = "";
             this.Hopplistor = hopplistor;
         }
-
         #endregion
 
-        public void Placering(List<Hopplist> hopp)
+        #region funcs
+        public void PlaceringSort(List<Hopplist> hopp)
         {
             hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.UtraknadPoangSumma().CompareTo(h2.UtraknadPoangSumma()); });
         }
-
+        public void AddPerson(Hopplist hl1)
+        {
+            this.Hopplistor.Add(hl1);
+        }
+        #endregion
 
         #region getters
         public string getNamn() { return this.namn; }
