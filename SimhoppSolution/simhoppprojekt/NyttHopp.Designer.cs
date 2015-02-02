@@ -112,6 +112,7 @@
             this.UpDown1.Name = "UpDown1";
             this.UpDown1.Size = new System.Drawing.Size(56, 20);
             this.UpDown1.TabIndex = 3;
+            this.UpDown1.Visible = false;
             // 
             // calc
             // 
@@ -136,6 +137,7 @@
             this.comboBox1.Size = new System.Drawing.Size(38, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Tag = "";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // simnamn
             // 
@@ -175,6 +177,7 @@
             this.UpDown2.Name = "UpDown2";
             this.UpDown2.Size = new System.Drawing.Size(56, 20);
             this.UpDown2.TabIndex = 4;
+            this.UpDown2.Visible = false;
             // 
             // UpDown3
             // 
@@ -193,6 +196,7 @@
             this.UpDown3.Name = "UpDown3";
             this.UpDown3.Size = new System.Drawing.Size(56, 20);
             this.UpDown3.TabIndex = 5;
+            this.UpDown3.Visible = false;
             // 
             // UpDown4
             // 
@@ -211,6 +215,7 @@
             this.UpDown4.Name = "UpDown4";
             this.UpDown4.Size = new System.Drawing.Size(56, 20);
             this.UpDown4.TabIndex = 6;
+            this.UpDown4.Visible = false;
             // 
             // UpDown5
             // 
@@ -229,6 +234,7 @@
             this.UpDown5.Name = "UpDown5";
             this.UpDown5.Size = new System.Drawing.Size(56, 20);
             this.UpDown5.TabIndex = 7;
+            this.UpDown5.Visible = false;
             // 
             // UpDown6
             // 
@@ -247,6 +253,7 @@
             this.UpDown6.Name = "UpDown6";
             this.UpDown6.Size = new System.Drawing.Size(56, 20);
             this.UpDown6.TabIndex = 8;
+            this.UpDown6.Visible = false;
             // 
             // UpDown7
             // 
@@ -265,6 +272,7 @@
             this.UpDown7.Name = "UpDown7";
             this.UpDown7.Size = new System.Drawing.Size(56, 20);
             this.UpDown7.TabIndex = 9;
+            this.UpDown7.Visible = false;
             // 
             // de
             // 
@@ -297,6 +305,7 @@
             this.domare1.TabIndex = 0;
             this.domare1.TabStop = false;
             this.domare1.Text = "Domare 1:";
+            this.domare1.Visible = false;
             // 
             // domare2
             // 
@@ -308,6 +317,7 @@
             this.domare2.TabIndex = 0;
             this.domare2.TabStop = false;
             this.domare2.Text = "Domare 2:";
+            this.domare2.Visible = false;
             // 
             // domare3
             // 
@@ -319,6 +329,7 @@
             this.domare3.TabIndex = 0;
             this.domare3.TabStop = false;
             this.domare3.Text = "Domare 3:";
+            this.domare3.Visible = false;
             // 
             // domare4
             // 
@@ -330,6 +341,7 @@
             this.domare4.TabIndex = 0;
             this.domare4.TabStop = false;
             this.domare4.Text = "Domare 4:";
+            this.domare4.Visible = false;
             // 
             // domare5
             // 
@@ -341,6 +353,7 @@
             this.domare5.TabIndex = 0;
             this.domare5.TabStop = false;
             this.domare5.Text = "Domare 5:";
+            this.domare5.Visible = false;
             // 
             // domare6
             // 
@@ -352,6 +365,7 @@
             this.domare6.TabIndex = 0;
             this.domare6.TabStop = false;
             this.domare6.Text = "Domare 6:";
+            this.domare6.Visible = false;
             // 
             // domare7
             // 
@@ -363,6 +377,7 @@
             this.domare7.TabIndex = 0;
             this.domare7.TabStop = false;
             this.domare7.Text = "Domare 7:";
+            this.domare7.Visible = false;
             // 
             // textBox1
             // 
@@ -425,6 +440,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NyttHopp";
             this.Text = "Nytt hopp";
+            this.Load += new System.EventHandler(this.NyttHopp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown3)).EndInit();

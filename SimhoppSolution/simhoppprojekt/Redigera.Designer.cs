@@ -41,9 +41,9 @@
             this.GenderReg = new System.Windows.Forms.TextBox();
             this.ForeningReg = new System.Windows.Forms.TextBox();
             this.NamnReg = new System.Windows.Forms.TextBox();
-            this.DatumReg = new System.Windows.Forms.TextBox();
             this.GrenReg = new System.Windows.Forms.TextBox();
             this.OrtReg = new System.Windows.Forms.TextBox();
+            this.regdatum = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // OkReg
@@ -161,13 +161,6 @@
             this.NamnReg.Size = new System.Drawing.Size(86, 20);
             this.NamnReg.TabIndex = 1;
             // 
-            // DatumReg
-            // 
-            this.DatumReg.Location = new System.Drawing.Point(105, 235);
-            this.DatumReg.Name = "DatumReg";
-            this.DatumReg.Size = new System.Drawing.Size(86, 20);
-            this.DatumReg.TabIndex = 7;
-            // 
             // GrenReg
             // 
             this.GrenReg.Location = new System.Drawing.Point(105, 200);
@@ -182,11 +175,19 @@
             this.OrtReg.Size = new System.Drawing.Size(86, 20);
             this.OrtReg.TabIndex = 5;
             // 
+            // regdatum
+            // 
+            this.regdatum.Location = new System.Drawing.Point(105, 232);
+            this.regdatum.Name = "regdatum";
+            this.regdatum.Size = new System.Drawing.Size(86, 20);
+            this.regdatum.TabIndex = 7;
+            // 
             // Redigera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 344);
+            this.Controls.Add(this.regdatum);
             this.Controls.Add(this.OkReg);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -199,7 +200,6 @@
             this.Controls.Add(this.GenderReg);
             this.Controls.Add(this.ForeningReg);
             this.Controls.Add(this.NamnReg);
-            this.Controls.Add(this.DatumReg);
             this.Controls.Add(this.GrenReg);
             this.Controls.Add(this.OrtReg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -224,8 +224,8 @@
         private System.Windows.Forms.TextBox GenderReg;
         private System.Windows.Forms.TextBox ForeningReg;
         private System.Windows.Forms.TextBox NamnReg;
-        private System.Windows.Forms.TextBox DatumReg;
         private System.Windows.Forms.TextBox GrenReg;
         private System.Windows.Forms.TextBox OrtReg;
+        private System.Windows.Forms.DateTimePicker regdatum;
     }
 }

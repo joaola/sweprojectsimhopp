@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NyPers));
             this.OrtBox = new System.Windows.Forms.TextBox();
             this.GrenBox = new System.Windows.Forms.TextBox();
-            this.DatumBox = new System.Windows.Forms.TextBox();
             this.BirthBox = new System.Windows.Forms.TextBox();
             this.GenderBox = new System.Windows.Forms.TextBox();
             this.ForeningBox = new System.Windows.Forms.TextBox();
@@ -40,10 +39,11 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
+            this.datum = new System.Windows.Forms.DateTimePicker();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OrtBox
@@ -59,13 +59,6 @@
             this.GrenBox.Name = "GrenBox";
             this.GrenBox.Size = new System.Drawing.Size(86, 20);
             this.GrenBox.TabIndex = 6;
-            // 
-            // DatumBox
-            // 
-            this.DatumBox.Location = new System.Drawing.Point(105, 235);
-            this.DatumBox.Name = "DatumBox";
-            this.DatumBox.Size = new System.Drawing.Size(86, 20);
-            this.DatumBox.TabIndex = 7;
             // 
             // BirthBox
             // 
@@ -139,17 +132,6 @@
             this.textBox12.TabStop = false;
             this.textBox12.Text = "Namn:";
             // 
-            // textBox13
-            // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(49, 238);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(37, 13);
-            this.textBox13.TabIndex = 0;
-            this.textBox13.TabStop = false;
-            this.textBox13.Text = "Datum:";
-            // 
             // textBox15
             // 
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -182,11 +164,30 @@
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
+            // datum
+            // 
+            this.datum.Location = new System.Drawing.Point(105, 232);
+            this.datum.Name = "datum";
+            this.datum.Size = new System.Drawing.Size(86, 20);
+            this.datum.TabIndex = 9;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Location = new System.Drawing.Point(49, 238);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(37, 13);
+            this.textBox13.TabIndex = 0;
+            this.textBox13.TabStop = false;
+            this.textBox13.Text = "Datum:";
+            // 
             // NyPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 344);
+            this.Controls.Add(this.datum);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -199,7 +200,6 @@
             this.Controls.Add(this.GenderBox);
             this.Controls.Add(this.ForeningBox);
             this.Controls.Add(this.NamnBox);
-            this.Controls.Add(this.DatumBox);
             this.Controls.Add(this.GrenBox);
             this.Controls.Add(this.OrtBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -214,7 +214,6 @@
 
         private System.Windows.Forms.TextBox OrtBox;
         private System.Windows.Forms.TextBox GrenBox;
-        private System.Windows.Forms.TextBox DatumBox;
         private System.Windows.Forms.TextBox BirthBox;
         private System.Windows.Forms.TextBox GenderBox;
         private System.Windows.Forms.TextBox ForeningBox;
@@ -223,9 +222,10 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.DateTimePicker datum;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }
