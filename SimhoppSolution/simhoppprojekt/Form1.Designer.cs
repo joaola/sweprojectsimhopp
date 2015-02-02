@@ -48,11 +48,11 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,6 +76,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Redigera...";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -223,32 +224,11 @@
             this.points});
             this.dataGridView1.Location = new System.Drawing.Point(41, 71);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 236);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Placering
-            // 
-            this.Placering.HeaderText = "Placering";
-            this.Placering.Name = "Placering";
-            this.Placering.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Namn";
-            this.name.Name = "name";
-            // 
-            // antalhopp
-            // 
-            this.antalhopp.HeaderText = "Antal hopp";
-            this.antalhopp.Name = "antalhopp";
-            // 
-            // points
-            // 
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // textBox1
             // 
@@ -260,6 +240,34 @@
             this.textBox1.Size = new System.Drawing.Size(100, 13);
             this.textBox1.TabIndex = 9;
             this.textBox1.TabStop = false;
+            // 
+            // Placering
+            // 
+            this.Placering.FillWeight = 65F;
+            this.Placering.HeaderText = "Placering";
+            this.Placering.Name = "Placering";
+            this.Placering.ReadOnly = true;
+            this.Placering.Width = 65;
+            // 
+            // name
+            // 
+            this.name.FillWeight = 170F;
+            this.name.HeaderText = "Namn";
+            this.name.Name = "name";
+            this.name.Width = 170;
+            // 
+            // antalhopp
+            // 
+            this.antalhopp.HeaderText = "Antal hopp";
+            this.antalhopp.Name = "antalhopp";
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.points.Width = 120;
             // 
             // Form1
             // 
@@ -312,11 +320,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Placering;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
-        private System.Windows.Forms.TextBox textBox1;
 
     }
 }

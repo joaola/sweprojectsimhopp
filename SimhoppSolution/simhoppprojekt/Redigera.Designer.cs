@@ -1,6 +1,6 @@
 ﻿namespace simhoppprojekt
 {
-    partial class NyPers
+    partial class Redigera
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NyPers));
-            this.OrtBox = new System.Windows.Forms.TextBox();
-            this.GrenBox = new System.Windows.Forms.TextBox();
-            this.DatumBox = new System.Windows.Forms.TextBox();
-            this.BirthBox = new System.Windows.Forms.TextBox();
-            this.GenderBox = new System.Windows.Forms.TextBox();
-            this.ForeningBox = new System.Windows.Forms.TextBox();
-            this.NamnBox = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Redigera));
+            this.OkReg = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -43,57 +37,24 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.OkButton = new System.Windows.Forms.Button();
+            this.BirthReg = new System.Windows.Forms.TextBox();
+            this.GenderReg = new System.Windows.Forms.TextBox();
+            this.ForeningReg = new System.Windows.Forms.TextBox();
+            this.NamnReg = new System.Windows.Forms.TextBox();
+            this.DatumReg = new System.Windows.Forms.TextBox();
+            this.GrenReg = new System.Windows.Forms.TextBox();
+            this.OrtReg = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // OrtBox
+            // OkReg
             // 
-            this.OrtBox.Location = new System.Drawing.Point(105, 165);
-            this.OrtBox.Name = "OrtBox";
-            this.OrtBox.Size = new System.Drawing.Size(86, 20);
-            this.OrtBox.TabIndex = 5;
-            // 
-            // GrenBox
-            // 
-            this.GrenBox.Location = new System.Drawing.Point(105, 200);
-            this.GrenBox.Name = "GrenBox";
-            this.GrenBox.Size = new System.Drawing.Size(86, 20);
-            this.GrenBox.TabIndex = 6;
-            // 
-            // DatumBox
-            // 
-            this.DatumBox.Location = new System.Drawing.Point(105, 235);
-            this.DatumBox.Name = "DatumBox";
-            this.DatumBox.Size = new System.Drawing.Size(86, 20);
-            this.DatumBox.TabIndex = 7;
-            // 
-            // BirthBox
-            // 
-            this.BirthBox.Location = new System.Drawing.Point(105, 95);
-            this.BirthBox.Name = "BirthBox";
-            this.BirthBox.Size = new System.Drawing.Size(86, 20);
-            this.BirthBox.TabIndex = 3;
-            // 
-            // GenderBox
-            // 
-            this.GenderBox.Location = new System.Drawing.Point(105, 130);
-            this.GenderBox.Name = "GenderBox";
-            this.GenderBox.Size = new System.Drawing.Size(86, 20);
-            this.GenderBox.TabIndex = 4;
-            // 
-            // ForeningBox
-            // 
-            this.ForeningBox.Location = new System.Drawing.Point(105, 60);
-            this.ForeningBox.Name = "ForeningBox";
-            this.ForeningBox.Size = new System.Drawing.Size(86, 20);
-            this.ForeningBox.TabIndex = 2;
-            // 
-            // NamnBox
-            // 
-            this.NamnBox.Location = new System.Drawing.Point(105, 25);
-            this.NamnBox.Name = "NamnBox";
-            this.NamnBox.Size = new System.Drawing.Size(86, 20);
-            this.NamnBox.TabIndex = 1;
+            this.OkReg.Location = new System.Drawing.Point(92, 295);
+            this.OkReg.Name = "OkReg";
+            this.OkReg.Size = new System.Drawing.Size(75, 23);
+            this.OkReg.TabIndex = 8;
+            this.OkReg.Text = "Ok";
+            this.OkReg.UseVisualStyleBackColor = true;
+            this.OkReg.Click += new System.EventHandler(this.OkReg_Click);
             // 
             // textBox9
             // 
@@ -102,7 +63,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(51, 13);
-            this.textBox9.TabIndex = 0;
+            this.textBox9.TabIndex = 9;
             this.textBox9.TabStop = false;
             this.textBox9.Text = "Födelseår:";
             // 
@@ -113,7 +74,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(26, 13);
-            this.textBox10.TabIndex = 0;
+            this.textBox10.TabIndex = 10;
             this.textBox10.TabStop = false;
             this.textBox10.Text = "Kön: ";
             // 
@@ -124,7 +85,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(47, 13);
-            this.textBox11.TabIndex = 0;
+            this.textBox11.TabIndex = 11;
             this.textBox11.TabStop = false;
             this.textBox11.Text = "Förening:";
             // 
@@ -135,7 +96,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(34, 13);
-            this.textBox12.TabIndex = 0;
+            this.textBox12.TabIndex = 12;
             this.textBox12.TabStop = false;
             this.textBox12.Text = "Namn:";
             // 
@@ -146,7 +107,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(37, 13);
-            this.textBox13.TabIndex = 0;
+            this.textBox13.TabIndex = 13;
             this.textBox13.TabStop = false;
             this.textBox13.Text = "Datum:";
             // 
@@ -157,7 +118,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(28, 13);
-            this.textBox15.TabIndex = 0;
+            this.textBox15.TabIndex = 14;
             this.textBox15.TabStop = false;
             this.textBox15.Text = "Gren:";
             // 
@@ -168,26 +129,65 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(23, 13);
-            this.textBox16.TabIndex = 0;
+            this.textBox16.TabIndex = 15;
             this.textBox16.TabStop = false;
             this.textBox16.Text = "Ort:";
             // 
-            // OkButton
+            // BirthReg
             // 
-            this.OkButton.Location = new System.Drawing.Point(92, 295);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 8;
-            this.OkButton.Text = "Ok";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.BirthReg.Location = new System.Drawing.Point(105, 95);
+            this.BirthReg.Name = "BirthReg";
+            this.BirthReg.Size = new System.Drawing.Size(86, 20);
+            this.BirthReg.TabIndex = 3;
             // 
-            // NyPers
+            // GenderReg
+            // 
+            this.GenderReg.Location = new System.Drawing.Point(105, 130);
+            this.GenderReg.Name = "GenderReg";
+            this.GenderReg.Size = new System.Drawing.Size(86, 20);
+            this.GenderReg.TabIndex = 4;
+            // 
+            // ForeningReg
+            // 
+            this.ForeningReg.Location = new System.Drawing.Point(105, 60);
+            this.ForeningReg.Name = "ForeningReg";
+            this.ForeningReg.Size = new System.Drawing.Size(86, 20);
+            this.ForeningReg.TabIndex = 2;
+            // 
+            // NamnReg
+            // 
+            this.NamnReg.Location = new System.Drawing.Point(105, 25);
+            this.NamnReg.Name = "NamnReg";
+            this.NamnReg.Size = new System.Drawing.Size(86, 20);
+            this.NamnReg.TabIndex = 1;
+            // 
+            // DatumReg
+            // 
+            this.DatumReg.Location = new System.Drawing.Point(105, 235);
+            this.DatumReg.Name = "DatumReg";
+            this.DatumReg.Size = new System.Drawing.Size(86, 20);
+            this.DatumReg.TabIndex = 7;
+            // 
+            // GrenReg
+            // 
+            this.GrenReg.Location = new System.Drawing.Point(105, 200);
+            this.GrenReg.Name = "GrenReg";
+            this.GrenReg.Size = new System.Drawing.Size(86, 20);
+            this.GrenReg.TabIndex = 6;
+            // 
+            // OrtReg
+            // 
+            this.OrtReg.Location = new System.Drawing.Point(105, 165);
+            this.OrtReg.Name = "OrtReg";
+            this.OrtReg.Size = new System.Drawing.Size(86, 20);
+            this.OrtReg.TabIndex = 5;
+            // 
+            // Redigera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 344);
-            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.OkReg);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
@@ -195,16 +195,16 @@
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.BirthBox);
-            this.Controls.Add(this.GenderBox);
-            this.Controls.Add(this.ForeningBox);
-            this.Controls.Add(this.NamnBox);
-            this.Controls.Add(this.DatumBox);
-            this.Controls.Add(this.GrenBox);
-            this.Controls.Add(this.OrtBox);
+            this.Controls.Add(this.BirthReg);
+            this.Controls.Add(this.GenderReg);
+            this.Controls.Add(this.ForeningReg);
+            this.Controls.Add(this.NamnReg);
+            this.Controls.Add(this.DatumReg);
+            this.Controls.Add(this.GrenReg);
+            this.Controls.Add(this.OrtReg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "NyPers";
-            this.Text = "Ny Person";
+            this.Name = "Redigera";
+            this.Text = "Redigera";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,13 +212,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox OrtBox;
-        private System.Windows.Forms.TextBox GrenBox;
-        private System.Windows.Forms.TextBox DatumBox;
-        private System.Windows.Forms.TextBox BirthBox;
-        private System.Windows.Forms.TextBox GenderBox;
-        private System.Windows.Forms.TextBox ForeningBox;
-        private System.Windows.Forms.TextBox NamnBox;
+        private System.Windows.Forms.Button OkReg;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
@@ -226,6 +220,12 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.TextBox BirthReg;
+        private System.Windows.Forms.TextBox GenderReg;
+        private System.Windows.Forms.TextBox ForeningReg;
+        private System.Windows.Forms.TextBox NamnReg;
+        private System.Windows.Forms.TextBox DatumReg;
+        private System.Windows.Forms.TextBox GrenReg;
+        private System.Windows.Forms.TextBox OrtReg;
     }
 }
