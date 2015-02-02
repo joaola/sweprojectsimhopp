@@ -20,6 +20,11 @@ namespace simhoppprojekt
             this.namn = "";
             this.Hopplistor = new List<Hopplist>();
         }
+        public TavlingsClass(string namn)
+        {
+            this.namn = namn;
+            this.Hopplistor = new List<Hopplist>();
+        }
         public TavlingsClass(string namn, List<Hopplist> hopplistor)
         {
             this.namn = "";
