@@ -8,6 +8,7 @@ namespace simhoppprojekt
 {
     public class Hopplist
     {
+        #region data
         private List<Hopp> Hopplista;
         private int id;
         private string namn;
@@ -18,6 +19,9 @@ namespace simhoppprojekt
         private string gren;
         private string datum;
         private int placering;
+        #endregion
+
+        #region constructs
 
         public Hopplist()
         {
@@ -32,6 +36,7 @@ namespace simhoppprojekt
             gren = "";
             datum = "";
         }
+
         public Hopplist(int id, int placering, string namn, string forening, int fodelsear, string kon, string ort, string gren, string datum)
         {
             this.Hopplista = new List<Hopp>();
@@ -45,11 +50,13 @@ namespace simhoppprojekt
             this.gren = gren;
             this.datum = datum;
         }
+        #endregion
 
+        #region funks
         public float SvarighetsSumma()
         {
             float sum = 0;
-            for (int i = 0; i > this.Hopplista.Count(); i++)
+            for (int i = 0; i < this.Hopplista.Count(); i++)
             {
                 sum += this.Hopplista[i].getSvarighet();
             }
@@ -60,7 +67,7 @@ namespace simhoppprojekt
         public float PoangSumma()
         {
             float sum = 0;
-            for (int i = 0; i > this.Hopplista.Count(); i++ )
+            for (int i = 0; i < this.Hopplista.Count(); i++ )
             {
                 sum += this.Hopplista[i].getPoang().poang;
             }
@@ -71,7 +78,7 @@ namespace simhoppprojekt
         public float UtraknadPoangSumma()
         {
             float sum = 0;
-            for (int i = 0; i > this.Hopplista.Count(); i++)
+            for (int i = 0; i < this.Hopplista.Count(); i++)
             {
                 sum += this.Hopplista[i].getPoang().utraknadpoang;
             }
@@ -88,6 +95,7 @@ namespace simhoppprojekt
         {
             return this.Hopplista.Count();
         }
+        #endregion
 
         ~Hopplist() { }
 
