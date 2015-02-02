@@ -73,6 +73,11 @@ namespace simhoppprojekt
             this.Hopplista.Add(h);
         }
 
+        public int AntalHopp()
+        {
+            return this.Hopplista.Count();
+        }
+
         ~Hopplist() { }
 
         #region getters
