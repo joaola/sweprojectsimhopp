@@ -35,7 +35,7 @@ namespace simhoppprojekt
 
         public void Placering(List<Hopplist> hopp)
         {
-            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.placering.CompareTo(h2.placering); });
+            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.UtraknadPoangSumma().CompareTo(h2.UtraknadPoangSumma()); });
         }
 
 
