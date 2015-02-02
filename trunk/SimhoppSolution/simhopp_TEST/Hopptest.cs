@@ -30,16 +30,15 @@ namespace simhopp_TEST
         }
 
         [Test]
-        public void PoangSummor()
+        public void TotalSumma()
         {
-            Assert.AreEqual(15,h.raknaPoang().poang);
-            Assert.AreEqual(52.5,h.raknaPoang().utraknadpoang);
             Assert.AreEqual(31.5,h.raknaTotal());
         }
         [Test]
-        public void Hopplistor()
+        public void PoangSummor()
         {
-            Assert.AreEqual(1,1);
+            Assert.AreEqual(15, h.raknaPoang().poang);
+            Assert.AreEqual(52.5, h.raknaPoang().utraknadpoang);
         }
     }
 }
