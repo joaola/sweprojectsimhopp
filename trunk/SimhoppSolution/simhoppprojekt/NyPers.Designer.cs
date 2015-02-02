@@ -101,7 +101,8 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(51, 13);
-            this.textBox9.TabIndex = 15;
+            this.textBox9.TabIndex = 0;
+            this.textBox9.TabStop = false;
             this.textBox9.Text = "Födelseår:";
             // 
             // textBox10
@@ -111,7 +112,8 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(26, 13);
-            this.textBox10.TabIndex = 14;
+            this.textBox10.TabIndex = 0;
+            this.textBox10.TabStop = false;
             this.textBox10.Text = "Kön: ";
             // 
             // textBox11
@@ -121,7 +123,8 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(47, 13);
-            this.textBox11.TabIndex = 13;
+            this.textBox11.TabIndex = 0;
+            this.textBox11.TabStop = false;
             this.textBox11.Text = "Förening:";
             // 
             // textBox12
@@ -131,7 +134,8 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(34, 13);
-            this.textBox12.TabIndex = 12;
+            this.textBox12.TabIndex = 0;
+            this.textBox12.TabStop = false;
             this.textBox12.Text = "Namn:";
             // 
             // textBox13
@@ -141,7 +145,8 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(37, 13);
-            this.textBox13.TabIndex = 11;
+            this.textBox13.TabIndex = 0;
+            this.textBox13.TabStop = false;
             this.textBox13.Text = "Datum:";
             // 
             // textBox15
@@ -151,7 +156,8 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(28, 13);
-            this.textBox15.TabIndex = 9;
+            this.textBox15.TabIndex = 0;
+            this.textBox15.TabStop = false;
             this.textBox15.Text = "Gren:";
             // 
             // textBox16
@@ -161,7 +167,8 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(23, 13);
-            this.textBox16.TabIndex = 8;
+            this.textBox16.TabIndex = 0;
+            this.textBox16.TabStop = false;
             this.textBox16.Text = "Ort:";
             // 
             // OkButton
@@ -169,7 +176,7 @@
             this.OkButton.Location = new System.Drawing.Point(92, 295);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 16;
+            this.OkButton.TabIndex = 8;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
