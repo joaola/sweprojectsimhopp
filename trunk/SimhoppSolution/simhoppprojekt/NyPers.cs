@@ -10,27 +10,16 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
-    public partial class NyttHopp : Form
+    public partial class NyPers : Form
     {
-        public NyttHopp()
+        public NyPers()
         {
-            
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e) // räkna
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e) // ok
+        private void OkButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e) // ångra
-        {
-           
         }
     }
 }
