@@ -46,6 +46,7 @@
     <Compile Include="Hopplisttest.cs" />
     <Compile Include="Hopptest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tavlingsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\simhoppprojekt\simhoppprojekt.csproj">
