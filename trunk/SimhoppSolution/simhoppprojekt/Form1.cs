@@ -57,6 +57,12 @@ namespace simhoppprojekt
             ny.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Redigera reggie = new Redigera();
+            reggie.Show();
+        }
+
 
 
     }
