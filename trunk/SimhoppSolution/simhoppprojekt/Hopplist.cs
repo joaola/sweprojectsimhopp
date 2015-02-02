@@ -21,6 +21,7 @@ namespace simhoppprojekt
 
         public Hopplist()
         {
+            Hopplista = null;
             id = -1;
             placering = 0;
             namn = "";
@@ -33,6 +34,7 @@ namespace simhoppprojekt
         }
         public Hopplist(int id, int placering, string namn, string forening, int fodelsear, string kon, string ort, string gren, string datum)
         {
+            this.Hopplista = null;
             this.id = id;
             this.placering = placering;
             this.namn = namn;
@@ -64,6 +66,11 @@ namespace simhoppprojekt
             }
 
                 return sum;
+        }
+
+        public void AddHopp(Hopp h)
+        {
+            this.Hopplista.Add(h);
         }
 
         public void Placering(List<Hopplist> hopp)
