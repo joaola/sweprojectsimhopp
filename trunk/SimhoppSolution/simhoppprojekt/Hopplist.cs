@@ -21,7 +21,7 @@ namespace simhoppprojekt
 
         public Hopplist()
         {
-            Hopplista = null;
+            Hopplista = new List<Hopp>();
             id = -1;
             placering = 0;
             namn = "";
@@ -34,7 +34,7 @@ namespace simhoppprojekt
         }
         public Hopplist(int id, int placering, string namn, string forening, int fodelsear, string kon, string ort, string gren, string datum)
         {
-            this.Hopplista = null;
+            this.Hopplista = new List<Hopp>();
             this.id = id;
             this.placering = placering;
             this.namn = namn;
@@ -66,6 +66,17 @@ namespace simhoppprojekt
             }
 
                 return sum;
+        }
+
+        public float UtraknadPoangSumma()
+        {
+            float sum = 0;
+            for (int i = 0; i > this.Hopplista.Count(); i++)
+            {
+                sum += this.Hopplista[i].getPoang().utraknadpoang;
+            }
+
+            return sum;
         }
 
         public void AddHopp(Hopp h)
