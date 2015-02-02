@@ -32,14 +32,26 @@ namespace simhoppprojekt
         #endregion
 
         #region funcs
-        public void PlaceringSort(List<Hopplist> hopp)
+        public void PlaceringSort()
         {
-            hopp.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.UtraknadPoangSumma().CompareTo(h2.UtraknadPoangSumma()); });
+            this.Hopplistor.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.UtraknadPoangSumma().CompareTo(h2.UtraknadPoangSumma()); });
         }
+
         public void AddPerson(Hopplist hl1)
         {
             this.Hopplistor.Add(hl1);
         }
+
+        public int AntalTavlande()
+        {
+            return this.Hopplistor.Count();
+        }
+
+        public string GetFirstContestant()
+        {
+            return this.Hopplistor[0].getNamn();
+        }
+
         #endregion
 
         #region getters
