@@ -27,8 +27,9 @@ namespace simhoppprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NyPers np = new NyPers();
-            np.Show();
+            //NyPers np = new NyPers();
+            //np.Show();
+            NyPers.GetForm.Show();
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -53,14 +54,16 @@ namespace simhoppprojekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            NyttHopp ny = new NyttHopp();
-            ny.Show();
+            //NyttHopp ny = new NyttHopp();
+            //ny.Show();
+            NyttHopp.GetForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Redigera reggie = new Redigera();
-            reggie.Show();
+            //Redigera reggie = new Redigera();
+            //reggie.Show();
+            Redigera.GetForm.Show();
         }
 
 
