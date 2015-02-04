@@ -2,7 +2,6 @@ M:\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\bin\D
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
 C:\Users\Joakim\Downloads\sweprojectsimhopp\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
 C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
-\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.csprojResolveAssemblyReference.cache
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.Form1.resources
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.Properties.Resources.resources
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.csproj.GenerateResource.Cache
@@ -10,3 +9,9 @@ C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhoppprojekt\bin\Deb
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.pdb
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.exe
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.pdb
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.csprojResolveAssemblyReference.cache
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.NyttHopp.resources
+\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.NyPers.resources
+C:\Users\Joakim\Desktop\SimhoppSolution\SimhoppSolution\simhoppprojekt\bin\Debug\simhoppprojekt.exe.config
+C:\Users\Joakim\Desktop\SimhoppSolution\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.exe
+C:\Users\Joakim\Desktop\SimhoppSolution\SimhoppSolution\simhoppprojekt\obj\Debug\simhoppprojekt.pdb
