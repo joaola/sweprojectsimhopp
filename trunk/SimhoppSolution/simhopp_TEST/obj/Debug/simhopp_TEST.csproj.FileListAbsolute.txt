@@ -14,4 +14,3 @@ C:\Users\Joakim\Desktop\sweprojectsimhopp\SimhoppSolution\simhopp_TEST\obj\Debug
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.pdb
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhoppprojekt.exe
 \\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhoppprojekt.pdb
-\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\nunit.framework.xml

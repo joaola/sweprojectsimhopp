@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1002]\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll</TopNode>
-  <SelectedNode>[0-1001]simhopp_TEST.Class1.PoangSumma</SelectedNode>
+  <TopNode>[0-1011]C:\Users\Joakim\Desktop\SimhoppSolution\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll</TopNode>
+  <SelectedNode>[0-1012]simhopp_TEST</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1002]\\edunet\dfs\home09\ht12\patmah121\My Documents\Visual Studio 2013\Projects\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" Expanded="true" />
-    <Node UniqueName="[0-1003]simhopp_TEST" Expanded="true" />
-    <Node UniqueName="[0-1000]simhopp_TEST.Class1" Expanded="true" />
+    <Node UniqueName="[0-1011]C:\Users\Joakim\Desktop\SimhoppSolution\SimhoppSolution\simhopp_TEST\bin\Debug\simhopp_TEST.dll" Expanded="true" />
+    <Node UniqueName="[0-1012]simhopp_TEST" Expanded="true" />
+    <Node UniqueName="[0-1000]simhopp_TEST.Hopplisttest" Expanded="true" />
+    <Node UniqueName="[0-1005]simhopp_TEST.Hopptest" Expanded="true" />
+    <Node UniqueName="[0-1008]simhopp_TEST.tavlingsTest" Expanded="true" />
   </Nodes>
 </VisualState>
