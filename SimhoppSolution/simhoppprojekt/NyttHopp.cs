@@ -12,10 +12,20 @@ namespace simhoppprojekt
 {
     public partial class NyttHopp : Form
     {
+        private static NyttHopp inst;
         public NyttHopp()
         {
             
             InitializeComponent();
+        }
+        public static NyttHopp GetForm
+        {
+            get
+            {
+                if (inst == null || inst.IsDisposed)
+                    inst = new NyttHopp();
+                return inst;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e) // räkna
