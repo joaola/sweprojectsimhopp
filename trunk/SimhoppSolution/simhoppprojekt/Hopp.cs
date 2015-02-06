@@ -113,4 +113,5 @@ namespace simhoppprojekt
         public void setPoang() { this.poang = this.raknaPoang(); }
         #endregion
     }
+
 }
