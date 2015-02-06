@@ -10,6 +10,7 @@ namespace simhoppprojekt
     {
         #region data
         private string namn;
+        private string datum;
         private List<Hopplist> Hopplistor;
         #endregion
 
@@ -17,6 +18,7 @@ namespace simhoppprojekt
         public TavlingsClass()
         {
             this.namn = "";
+            this.datum = "";
             this.Hopplistor = new List<Hopplist>();
         }
         public TavlingsClass(string namn)
@@ -24,9 +26,10 @@ namespace simhoppprojekt
             this.namn = namn;
             this.Hopplistor = new List<Hopplist>();
         }
-        public TavlingsClass(string namn, List<Hopplist> hopplistor)
+        public TavlingsClass(string namn, string datum, List<Hopplist> hopplistor)
         {
-            this.namn = "";
+            this.namn = namn;
+            this.datum = datum;
             this.Hopplistor = hopplistor;
         }
         #endregion
@@ -56,11 +59,13 @@ namespace simhoppprojekt
 
         #region getters
         public string getNamn() { return this.namn; }
+        public string getDatum() { return this.datum; }
         public List<Hopplist> getHopplistor() { return this.Hopplistor; }
         #endregion
 
         #region setters
         public void setNamn(string namn) { this.namn = namn; }
+        public void setDatum(string datum) { this.datum = datum; }
         public void setHopplistor(List<Hopplist> Hopplistor) { this.Hopplistor = Hopplistor; }
         #endregion
 
