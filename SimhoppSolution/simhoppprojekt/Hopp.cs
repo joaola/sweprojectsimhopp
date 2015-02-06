@@ -57,6 +57,7 @@ namespace simhoppprojekt
         } 
         #endregion
 
+        #region uträkningar
         public float raknaTotal()
         {
             float sum= 0;
@@ -90,6 +91,8 @@ namespace simhoppprojekt
             temppoang.utraknadpoang = temppoang.poang * this.svarighetsgrad;
             return (temppoang);
         }
+
+        #endregion
 
         #region getter
         public int getHoppNr() { return hoppNr; }
