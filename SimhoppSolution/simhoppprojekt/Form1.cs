@@ -76,6 +76,11 @@ namespace simhoppprojekt
             ListHopp.GetForm.Show();
         }
 
+        private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
 
     }
