@@ -120,5 +120,10 @@ namespace simhoppprojekt
         {
             comboBox1.SelectedItem = "3";
         }
+
+        private void UpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
