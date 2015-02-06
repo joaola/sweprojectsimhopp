@@ -22,7 +22,6 @@ namespace simhoppprojekt
    public class Hopp
     {
         #region data
-        private int Nr;
         private int hoppNr;
         private string stil;
         private float svarighetsgrad;
@@ -36,7 +35,6 @@ namespace simhoppprojekt
 
         public Hopp()
         {
-            this.Nr = 0;
             this.hoppNr = 0;
             this.stil = "";
             this.svarighetsgrad = 0;
@@ -46,9 +44,8 @@ namespace simhoppprojekt
             this.poang = new Poang();
         }
 
-        public Hopp(int Nr, int hoppNr, string stil, float svarighetsgrad, int hojd, List<float> betyg)
+        public Hopp(int hoppNr, string stil, float svarighetsgrad, int hojd, List<float> betyg)
         {
-            this.Nr = Nr;
             this.hoppNr = hoppNr;
             this.stil = stil;
             this.svarighetsgrad = svarighetsgrad;
@@ -95,7 +92,6 @@ namespace simhoppprojekt
         }
 
         #region getter
-        public int getNr() { return Nr; }
         public int getHoppNr() { return hoppNr; }
         public string getStil() { return stil; }
         public float getSvarighet() { return svarighetsgrad; }
@@ -105,7 +101,6 @@ namespace simhoppprojekt
         #endregion
 
         #region setter
-        public void setNr(int Nr) { this.Nr = Nr; }
         public void setHoppNr(int hN) { this.hoppNr = hN; }
         public void setStil(string stil) { this.stil = stil; }
         public void setSvarighet(float svar) { this.svarighetsgrad = svar; }
