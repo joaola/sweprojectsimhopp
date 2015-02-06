@@ -119,6 +119,8 @@ namespace simhoppprojekt
         private void NyttHopp_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = "3";
+            comboBox3.SelectedItem = "1";
+            stilDrop.SelectedItem = "A";
         }
 
         private void UpDown1_ValueChanged(object sender, EventArgs e)
