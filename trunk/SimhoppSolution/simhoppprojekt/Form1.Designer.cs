@@ -53,6 +53,9 @@
             this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.datum = new System.Windows.Forms.DateTimePicker();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +63,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 323);
+            this.button1.Location = new System.Drawing.Point(134, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 2;
@@ -70,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(244, 323);
+            this.button2.Location = new System.Drawing.Point(221, 323);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 23);
             this.button2.TabIndex = 3;
@@ -80,7 +83,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(317, 323);
+            this.button3.Location = new System.Drawing.Point(294, 323);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 23);
             this.button3.TabIndex = 4;
@@ -151,23 +154,24 @@
             // innehållToolStripMenuItem
             // 
             this.innehållToolStripMenuItem.Name = "innehållToolStripMenuItem";
-            this.innehållToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.innehållToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.innehållToolStripMenuItem.Text = "Innehåll";
             // 
             // omToolStripMenuItem
             // 
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
-            this.omToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.omToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.omToolStripMenuItem.Text = "Om";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(373, 323);
+            this.button4.Location = new System.Drawing.Point(350, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(69, 23);
             this.button4.TabIndex = 5;
             this.button4.Text = "Hopplista...";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // toolStrip1
             // 
@@ -202,7 +206,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(75, 323);
+            this.button5.Location = new System.Drawing.Point(52, 323);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 23);
             this.button5.TabIndex = 1;
@@ -270,12 +274,44 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(424, 323);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 23);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Person info...";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // datum
+            // 
+            this.datum.Location = new System.Drawing.Point(430, 24);
+            this.datum.Name = "datum";
+            this.datum.Size = new System.Drawing.Size(86, 20);
+            this.datum.TabIndex = 12;
+            this.datum.Value = new System.DateTime(2015, 7, 23, 0, 0, 0, 0);
+            // 
+            // textBox13
+            // 
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Location = new System.Drawing.Point(384, 30);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(37, 13);
+            this.textBox13.TabIndex = 11;
+            this.textBox13.TabStop = false;
+            this.textBox13.Text = "Datum:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(553, 375);
+            this.Controls.Add(this.datum);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
@@ -326,6 +362,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker datum;
+        private System.Windows.Forms.TextBox textBox13;
 
     }
 }

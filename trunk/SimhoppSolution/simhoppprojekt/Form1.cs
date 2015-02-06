@@ -66,6 +66,16 @@ namespace simhoppprojekt
             Redigera.GetForm.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PersonInfo.GetForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ListHopp.GetForm.Show();
+        }
+
 
 
     }
