@@ -8,7 +8,7 @@ namespace simhoppprojekt
 {
     public interface ITavlingsClass
     {
-        void AddPerson(Hopp h);
+        void AddPerson(Hopplist h);
         void RemovePerson(int index);
 
 
