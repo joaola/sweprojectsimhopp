@@ -86,6 +86,11 @@ namespace simhoppprojekt
             this.Hopplistor.RemoveAt(index);
         }
 
+        List<Hopplist> ITavlingsClass.GetHopplistor()
+        {
+            return this.Hopplistor;
+        }
+
         #endregion
     }
 }
