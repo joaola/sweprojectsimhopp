@@ -11,6 +11,7 @@ namespace simhoppprojekt
         void AddPerson(Hopplist h);
         void RemovePerson(int index);
 
+        List<Hopplist> GetHopplistor();
 
     }
 }
