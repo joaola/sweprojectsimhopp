@@ -44,11 +44,12 @@
             this.OrtReg = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.NamnBox = new System.Windows.Forms.TextBox();
+            this.cancelbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OkReg
             // 
-            this.OkReg.Location = new System.Drawing.Point(86, 284);
+            this.OkReg.Location = new System.Drawing.Point(49, 284);
             this.OkReg.Name = "OkReg";
             this.OkReg.Size = new System.Drawing.Size(75, 23);
             this.OkReg.TabIndex = 8;
@@ -182,11 +183,22 @@
             this.NamnBox.Size = new System.Drawing.Size(86, 20);
             this.NamnBox.TabIndex = 2;
             // 
+            // cancelbutton
+            // 
+            this.cancelbutton.Location = new System.Drawing.Point(139, 284);
+            this.cancelbutton.Name = "cancelbutton";
+            this.cancelbutton.Size = new System.Drawing.Size(75, 23);
+            this.cancelbutton.TabIndex = 9;
+            this.cancelbutton.Text = "Avbryt";
+            this.cancelbutton.UseVisualStyleBackColor = true;
+            this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
+            // 
             // Redigera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 339);
+            this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.NamnBox);
             this.Controls.Add(this.OkReg);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.TextBox OrtReg;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox NamnBox;
+        private System.Windows.Forms.Button cancelbutton;
     }
 }

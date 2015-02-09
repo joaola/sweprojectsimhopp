@@ -59,6 +59,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.cancelbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown3)).BeginInit();
@@ -81,7 +82,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(84, 373);
+            this.button1.Location = new System.Drawing.Point(47, 373);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -91,7 +92,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(202, 373);
+            this.button2.Location = new System.Drawing.Point(143, 373);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -407,10 +408,10 @@
             this.textBox6.Location = new System.Drawing.Point(24, 92);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(30, 13);
+            this.textBox6.Size = new System.Drawing.Size(43, 13);
             this.textBox6.TabIndex = 25;
             this.textBox6.TabStop = false;
-            this.textBox6.Text = "Höjd:";
+            this.textBox6.Text = "Höjd (m):";
             // 
             // stilDrop
             // 
@@ -461,11 +462,22 @@
             this.textBox7.Size = new System.Drawing.Size(44, 20);
             this.textBox7.TabIndex = 1;
             // 
+            // cancelbutton
+            // 
+            this.cancelbutton.Location = new System.Drawing.Point(239, 373);
+            this.cancelbutton.Name = "cancelbutton";
+            this.cancelbutton.Size = new System.Drawing.Size(75, 23);
+            this.cancelbutton.TabIndex = 16;
+            this.cancelbutton.Text = "Avbryt";
+            this.cancelbutton.UseVisualStyleBackColor = true;
+            this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
+            // 
             // NyttHopp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 419);
+            this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.stilDrop);
@@ -544,5 +556,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button cancelbutton;
     }
 }
