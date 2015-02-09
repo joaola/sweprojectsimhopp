@@ -85,6 +85,11 @@ namespace simhoppprojekt
             this.Hopplista.Add(h);
         }
 
+        public void RemoveHopp(int index)
+        {
+            this.Hopplista.RemoveAt(index);
+        }
+
         public int AntalHopp()
         {
             return this.Hopplista.Count();
