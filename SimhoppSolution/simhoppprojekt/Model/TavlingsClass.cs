@@ -45,6 +45,11 @@ namespace simhoppprojekt
             this.Hopplistor.Add(hl1);
         }
 
+        public void RemovePerson(int index)
+        {
+            this.Hopplistor.RemoveAt(index);
+        }
+
         public int AntalTavlande()
         {
             return this.Hopplistor.Count();

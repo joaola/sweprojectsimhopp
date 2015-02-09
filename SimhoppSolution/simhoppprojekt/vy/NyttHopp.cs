@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
-    public partial class NyttHopp : Form
+    public partial class NyttHopp : Form, IFormNyttHopp
     {
         private static NyttHopp inst;
         public NyttHopp()
@@ -35,6 +35,10 @@ namespace simhoppprojekt
 
         private void button1_Click(object sender, EventArgs e) // ok
         {
+
+            //if (this.EventNewHopp != null)
+            //    this.EventNewHopp();
+
             this.Close();
         }
 
@@ -42,6 +46,7 @@ namespace simhoppprojekt
         {
            
         }
+        
         #region domare
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,5 +137,12 @@ namespace simhoppprojekt
         {
             this.Close();
         }
+
+        #region IFormMain Members
+
+        public event DelegateNewHopp EventNewHopp = null;
+
+        #endregion
+
     }
 }
