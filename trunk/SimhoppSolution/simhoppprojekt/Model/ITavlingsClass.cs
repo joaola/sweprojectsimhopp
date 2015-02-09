@@ -8,8 +8,8 @@ namespace simhoppprojekt.Model
 {
     interface ITavlingsClass
     {
-        void AddHopp(Hopp h);
-        void RemoveHopp(int index);
+        void AddPerson(Hopp h);
+        void RemovePerson(int index);
 
 
     }

@@ -9,6 +9,7 @@ namespace simhoppprojekt
     public class PresenterForm1
     {
         public IForm1 _view { get; set; }
+
         public TavlingsClass _model { get; set; }
 
         public PresenterForm1(IForm1 view, TavlingsClass t)
@@ -22,10 +23,15 @@ namespace simhoppprojekt
         {
             this._model.AddPerson(new Hopplist());
         }
+
         public void DeletePers(int index)
         {
             this._model.RemovePerson(index);
         }
 
+        public List<Hopplist> GetHopplist()
+        {
+            return this._model.getHopplistor();
+        }
     }
 }
