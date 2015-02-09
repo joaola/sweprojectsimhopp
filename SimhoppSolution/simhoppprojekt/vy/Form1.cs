@@ -21,8 +21,9 @@ namespace simhoppprojekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string namn = this.t1.getNamn();
-            textBox1.Text = namn;
+            dataGridView1.Rows[0].Cells[0].Value = "hue";
+            //string namn = this.t1.getNamn();
+            textBox1.Text = "Tävling";
         }
 
         private void button1_Click(object sender, EventArgs e)
