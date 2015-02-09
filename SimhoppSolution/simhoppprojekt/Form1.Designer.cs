@@ -259,16 +259,17 @@
             // 
             // datum
             // 
-            this.datum.Location = new System.Drawing.Point(430, 24);
+            this.datum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datum.Location = new System.Drawing.Point(425, 24);
             this.datum.Name = "datum";
-            this.datum.Size = new System.Drawing.Size(86, 20);
+            this.datum.Size = new System.Drawing.Size(91, 20);
             this.datum.TabIndex = 12;
             this.datum.Value = new System.DateTime(2015, 7, 23, 0, 0, 0, 0);
             // 
             // textBox13
             // 
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(384, 30);
+            this.textBox13.Location = new System.Drawing.Point(382, 30);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(37, 13);
