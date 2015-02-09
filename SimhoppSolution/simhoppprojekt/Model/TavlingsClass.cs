@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
+    [Serializable()]
     public class TavlingsClass : ITavlingsClass
     {
         #region data
@@ -76,11 +77,11 @@ namespace simhoppprojekt
 
         #region ITavlingsClassMembers
 
-        public void ITavlingsClass.AddPerson(Hopplist h)
+        void ITavlingsClass.AddPerson(Hopplist h)
         {
             this.Hopplistor.Add(h);
         }
-        public void ITavlingsClass.RemovePerson(int index)
+        void ITavlingsClass.RemovePerson(int index)
         {
             this.Hopplistor.RemoveAt(index);
         }
