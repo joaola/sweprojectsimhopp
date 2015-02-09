@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace simhoppprojekt
 {
     public delegate void DelegateNewHopp(Hopp h);
-    interface IFormNyttHopp
+    public interface IFormNyttHopp
     {
         event DelegateNewHopp EventNewHopp;
     }
