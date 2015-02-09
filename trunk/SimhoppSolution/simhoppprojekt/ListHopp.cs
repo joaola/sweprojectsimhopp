@@ -32,5 +32,15 @@ namespace simhoppprojekt
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redButton_Click(object sender, EventArgs e)
+        {
+            dataGridView1.ReadOnly = false;
+        }
     }
 }

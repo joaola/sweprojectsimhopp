@@ -33,11 +33,13 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.simnamn1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.redButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,14 +52,15 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Placering,
+            this.hoppkod,
             this.hojd,
             this.Stile,
-            this.name,
-            this.antalhopp,
+            this.svarighet,
+            this.betyg,
             this.points});
             this.dataGridView1.Location = new System.Drawing.Point(39, 69);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(475, 236);
@@ -86,21 +89,41 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(242, 340);
+            this.button1.Location = new System.Drawing.Point(320, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Stäng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Placering
+            // redButton
             // 
-            this.Placering.FillWeight = 65F;
-            this.Placering.HeaderText = "Hoppkod";
-            this.Placering.Name = "Placering";
-            this.Placering.ReadOnly = true;
-            this.Placering.Width = 65;
+            this.redButton.Location = new System.Drawing.Point(132, 340);
+            this.redButton.Name = "redButton";
+            this.redButton.Size = new System.Drawing.Size(75, 23);
+            this.redButton.TabIndex = 1;
+            this.redButton.Text = "Redigera";
+            this.redButton.UseVisualStyleBackColor = true;
+            this.redButton.Click += new System.EventHandler(this.redButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(227, 340);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Verkställ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // hoppkod
+            // 
+            this.hoppkod.FillWeight = 65F;
+            this.hoppkod.HeaderText = "Hoppkod";
+            this.hoppkod.Name = "hoppkod";
+            this.hoppkod.ReadOnly = true;
+            this.hoppkod.Width = 65;
             // 
             // hojd
             // 
@@ -118,19 +141,19 @@
             this.Stile.ReadOnly = true;
             this.Stile.Width = 55;
             // 
-            // name
+            // svarighet
             // 
-            this.name.FillWeight = 55F;
-            this.name.HeaderText = "Svårighetsgrad";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 55;
+            this.svarighet.FillWeight = 55F;
+            this.svarighet.HeaderText = "Svårighetsgrad";
+            this.svarighet.Name = "svarighet";
+            this.svarighet.ReadOnly = true;
+            this.svarighet.Width = 55;
             // 
-            // antalhopp
+            // betyg
             // 
-            this.antalhopp.HeaderText = "Betyg";
-            this.antalhopp.Name = "antalhopp";
-            this.antalhopp.ReadOnly = true;
+            this.betyg.HeaderText = "Betyg";
+            this.betyg.Name = "betyg";
+            this.betyg.ReadOnly = true;
             // 
             // points
             // 
@@ -145,6 +168,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 375);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.redButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.simnamn1);
@@ -164,11 +189,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox simnamn1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Placering;
+        private System.Windows.Forms.Button redButton;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoppkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn hojd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn svarighet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn betyg;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
     }
 }
