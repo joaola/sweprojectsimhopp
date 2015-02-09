@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace simhoppprojekt.Model
+namespace simhoppprojekt
 {
-    interface ITavlingsClass
+    public interface ITavlingsClass
     {
         void AddPerson(Hopp h);
         void RemovePerson(int index);

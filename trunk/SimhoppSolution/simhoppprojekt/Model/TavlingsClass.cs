@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
-    public class TavlingsClass
+    public class TavlingsClass : ITavlingsClass
     {
         #region data
         private string namn;
@@ -74,5 +74,17 @@ namespace simhoppprojekt
         public void setHopplistor(List<Hopplist> Hopplistor) { this.Hopplistor = Hopplistor; }
         #endregion
 
+        #region ITavlingsClassMembers
+
+        public void ITavlingsClass.AddPerson(Hopplist h)
+        {
+            this.Hopplistor.Add(h);
+        }
+        public void ITavlingsClass.RemovePerson(int index)
+        {
+            this.Hopplistor.RemoveAt(index);
+        }
+
+        #endregion
     }
 }
