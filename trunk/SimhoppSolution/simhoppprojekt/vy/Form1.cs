@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IForm1
     {
-        private TavlingsClass t1 = new TavlingsClass("tävling1");
+        //private TavlingsClass t1 = new TavlingsClass("tävling1");
 
         public Form1()
         {
@@ -29,7 +29,7 @@ namespace simhoppprojekt
         {
             //NyPers np = new NyPers();
             //np.Show();
-            NyPers.GetForm.Show();
+            //NyPers.GetForm.Show();
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -81,7 +81,8 @@ namespace simhoppprojekt
             this.Close();
         }
 
-
+        public event DelegateNewPers EventNewPers = null;
+        public event DelegateDeletePers EventDeletePers = null;
 
     }
 }

@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ITavlingsClass.cs" />
+    <Compile Include="vy\IForm1.cs" />
+    <Compile Include="presenter\PresenterForm1.cs" />
+    <Compile Include="presenter\PresenterNyPers.cs" />
+    <Compile Include="vy\IFormNyttHopp.cs" />
+    <Compile Include="presenter\PresenterNyttHopp.cs" />
     <Compile Include="vy\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
