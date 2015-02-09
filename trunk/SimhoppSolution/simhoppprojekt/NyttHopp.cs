@@ -127,5 +127,10 @@ namespace simhoppprojekt
         {
 
         }
+
+        private void cancelbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

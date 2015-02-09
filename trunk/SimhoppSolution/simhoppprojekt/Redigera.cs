@@ -32,5 +32,10 @@ namespace simhoppprojekt
         {
             this.Close();
         }
+
+        private void cancelbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
