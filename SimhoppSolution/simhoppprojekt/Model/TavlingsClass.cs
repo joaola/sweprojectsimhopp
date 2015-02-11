@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace simhoppprojekt
 {
     [Serializable()]
-    public class TavlingsClass : ITavlingsClass
+    public class TavlingsClass //: ITavlingsClass
     {
         #region data
         private string namn;
@@ -39,11 +39,13 @@ namespace simhoppprojekt
         public void PlaceringSort()
         {
             this.Hopplistor.Sort(delegate(Hopplist h1, Hopplist h2) { return h1.UtraknadPoangSumma().CompareTo(h2.UtraknadPoangSumma()); });
+            this.Hopplistor.Reverse();
         }
 
         public void AddPerson(Hopplist hl1)
         {
             this.Hopplistor.Add(hl1);
+            this.PlaceringSort();
         }
 
         public void RemovePerson(int index)
@@ -77,19 +79,18 @@ namespace simhoppprojekt
 
         #region ITavlingsClassMembers
 
-        void ITavlingsClass.AddPerson(Hopplist h)
-        {
-            this.Hopplistor.Add(h);
-        }
-        void ITavlingsClass.RemovePerson(int index)
-        {
-            this.Hopplistor.RemoveAt(index);
-        }
-
-        List<Hopplist> ITavlingsClass.GetHopplistor()
-        {
-            return this.Hopplistor;
-        }
+        //void ITavlingsClass.NewPerson(Hopplist h)
+        //{
+        //    this.Hopplistor.Add(h);
+        //}
+        //void ITavlingsClass.DeletePerson(int index)
+        //{
+        //    this.Hopplistor.RemoveAt(index);
+        //}
+        //List<Hopplist> ITavlingsClass.GetPersons()
+        //{
+        //    return this.Hopplistor;
+        //}
 
         #endregion
     }
