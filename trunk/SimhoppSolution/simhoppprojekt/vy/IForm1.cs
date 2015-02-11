@@ -8,12 +8,14 @@ namespace simhoppprojekt
 {
     public delegate void DelegateNewPers();
     public delegate void DelegateDeletePers();
-
-
+    public delegate List<Hopplist> DelegateGetHopplist();
+    
     public interface IForm1
     {
         event DelegateNewPers EventNewPers;
         event DelegateDeletePers EventDeletePers;
+        event DelegateGetHopplist EventGetHopplist;
+
     }
 
 }

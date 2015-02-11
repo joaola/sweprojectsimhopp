@@ -21,13 +21,45 @@ namespace simhoppprojekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows[0].Cells[0].Value = "hue";
+            List<Hopplist> persons = this.EventGetHopplist();
+
+            while(dataGridView1.Rows.Count !=1)
+                dataGridView1.Rows.RemoveAt(0);
+
+            for (int i = 0; i < persons.Count-1; i++)
+            {
+                dataGridView1.Rows.Add();
+            }
+
+            
+            for(int i=0; i<persons.Count;i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = i+1;
+                dataGridView1.Rows[i].Cells[1].Value = persons[i].getNamn();
+                dataGridView1.Rows[i].Cells[2].Value = persons[i].getHopplista().Count;
+                dataGridView1.Rows[i].Cells[3].Value = persons[i].UtraknadPoangSumma();
+            }
+
+
+
+            //dataGridView1.Rows[0].Cells[0].Value = "hue";
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            
+
+            
+
+            
             //string namn = this.t1.getNamn();
             textBox1.Text = "Tävling";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.EventNewPers();
+            this.Form1_Load(sender,e);
             //NyPers np = new NyPers();
             //np.Show();
             //NyPers.GetForm.Show();
@@ -84,6 +116,7 @@ namespace simhoppprojekt
 
         public event DelegateNewPers EventNewPers = null;
         public event DelegateDeletePers EventDeletePers = null;
+        public event DelegateGetHopplist EventGetHopplist = null;
 
     }
 }

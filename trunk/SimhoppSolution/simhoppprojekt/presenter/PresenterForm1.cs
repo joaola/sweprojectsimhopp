@@ -17,6 +17,7 @@ namespace simhoppprojekt
             this._model = t;
             this._view = view;
             this._view.EventNewPers += NewPers;
+            this._view.EventGetHopplist += GetHopplist;
         }
 
         public void NewPers()
@@ -31,6 +32,7 @@ namespace simhoppprojekt
 
         public List<Hopplist> GetHopplist()
         {
+            
             return this._model.getHopplistor();
         }
     }

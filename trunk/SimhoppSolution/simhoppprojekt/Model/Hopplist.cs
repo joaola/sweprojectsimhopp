@@ -99,6 +99,7 @@ namespace simhoppprojekt
         ~Hopplist() { }
 
         #region getters
+        public List<Hopp> getHopplista() { return Hopplista; }
         public string getNamn() { return namn; }
         public string getForening() { return forening; }
         public int getFodelsear() { return fodelsear; }
