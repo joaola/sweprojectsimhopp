@@ -20,40 +20,40 @@ namespace simhopp_TEST
 
             #region Kurt
             List<float> tempbetyg = new List<float>();
-            tempbetyg.Add(1);
-            tempbetyg.Add(1.5f);
-            tempbetyg.Add(5f);
-            tempbetyg.Add(5);
-            tempbetyg.Add(5);
+            tempbetyg.Add(10);
+            tempbetyg.Add(8.5f);
+            tempbetyg.Add(9f);
+            tempbetyg.Add(8);
             tempbetyg.Add(7);
-            tempbetyg.Add(7);
+            tempbetyg.Add(6);
+            tempbetyg.Add(6);
             Hopp temphopp1 = new Hopp( 101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl1 = new Hopplist(1, "Kurt", "gyttorp sf", 1990, "man", "gyttorp", "3m", "2015-02-02");
+            Hopplist hl1 = new Hopplist(1, "Kurt", "gyttorp sf", 1990, "man", "gyttorp", "3m");
             hl1.AddHopp(temphopp1);
 
             tempbetyg.Clear();
 
-            tempbetyg.Add(3);
-            tempbetyg.Add(5.5f);
+            tempbetyg.Add(10);
+            tempbetyg.Add(9.5f);
+            tempbetyg.Add(7);
+            tempbetyg.Add(5);
             tempbetyg.Add(6);
             tempbetyg.Add(8);
-            tempbetyg.Add(7);
-            tempbetyg.Add(6);
-            tempbetyg.Add(5.5f);
+            tempbetyg.Add(9.5f);
             Hopp temphopp2 = new Hopp(302, "B", 2f, 3, tempbetyg);
 
             hl1.AddHopp(temphopp2);
 
             tempbetyg.Clear();
 
-            tempbetyg.Add(2);
-            tempbetyg.Add(4.5f);
-            tempbetyg.Add(5);
+            tempbetyg.Add(10);
+            tempbetyg.Add(8.5f);
+            tempbetyg.Add(9);
             tempbetyg.Add(8);
-            tempbetyg.Add(3);
-            tempbetyg.Add(2);
-            tempbetyg.Add(2.5f);
+            tempbetyg.Add(8);
+            tempbetyg.Add(6);
+            tempbetyg.Add(6.5f);
             Hopp temphopp3 = new Hopp(201, "C", 3f, 3, tempbetyg);
 
             hl1.AddHopp(temphopp2);
@@ -72,7 +72,7 @@ namespace simhopp_TEST
             tempbetyg.Add(2);
             Hopp temphopp4 = new Hopp(101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl2 = new Hopplist(2, "Sven", "gyttorp sf", 1990, "man", "gyttorp", "3m", "2015-02-02");
+            Hopplist hl2 = new Hopplist(2, "Sven", "gyttorp sf", 1990, "man", "gyttorp", "3m");
             hl2.AddHopp(temphopp4);
 
             tempbetyg.Clear();
@@ -115,7 +115,7 @@ namespace simhopp_TEST
             tempbetyg.Add(8);
             Hopp temphopp7 = new Hopp(101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl3 = new Hopplist(3,"Bert", "gyttorp sf", 1990, "man", "gyttorp", "3m", "2015-02-02");
+            Hopplist hl3 = new Hopplist(3,"Bert", "gyttorp sf", 1990, "man", "gyttorp", "3m");
             hl3.AddHopp(temphopp7);
 
             tempbetyg.Clear();
@@ -146,8 +146,7 @@ namespace simhopp_TEST
             Hopplistor1.Add(hl3);
             #endregion
 
-            this.T1 = new TavlingsClass("gyttorp simtävling", Hopplistor1);
-
+            this.T1 = new TavlingsClass("gyttorp simtävling","2014-01-04", Hopplistor1);
         }
 
         [Test]
@@ -160,8 +159,14 @@ namespace simhopp_TEST
         public void sortTavlande()
         {
             T1.PlaceringSort();
-            Assert.AreEqual("Sven", T1.GetFirstContestant());
-            Assert.AreEqual(38.75f, T1.getHopplistor()[0].UtraknadPoangSumma());
+            Assert.AreEqual("Kurt", T1.getHopplistor()[0].getNamn());
+            Assert.AreEqual(133.25f, T1.getHopplistor()[0].UtraknadPoangSumma());
+
+            Assert.AreEqual("Bert", T1.getHopplistor()[1].getNamn());
+            Assert.AreEqual(99.5f, T1.getHopplistor()[1].UtraknadPoangSumma());
+
+            Assert.AreEqual("Sven", T1.getHopplistor()[2].getNamn());
+            Assert.AreEqual(38.75f, T1.getHopplistor()[2].UtraknadPoangSumma());
                         
         }
     }
