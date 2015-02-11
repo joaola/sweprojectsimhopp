@@ -101,6 +101,7 @@ namespace simhoppprojekt
         #region getters
         public List<Hopp> getHopplista() { return Hopplista; }
         public string getNamn() { return namn; }
+        public int getID() { return id; }
         public string getForening() { return forening; }
         public int getFodelsear() { return fodelsear; }
         public string getKon() { return kon; }

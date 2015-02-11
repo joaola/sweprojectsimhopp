@@ -226,6 +226,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonInfo";
             this.Text = "PersonInfo";
+            this.Load += new System.EventHandler(this.PersonInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

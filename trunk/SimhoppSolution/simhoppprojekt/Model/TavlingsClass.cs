@@ -50,7 +50,11 @@ namespace simhoppprojekt
 
         public void RemovePerson(int index)
         {
-            this.Hopplistor.RemoveAt(index);
+            if (this.Hopplistor.Count != 0)
+            {
+                this.Hopplistor.RemoveAt(index);
+                this.PlaceringSort();
+            }
         }
 
         public int AntalTavlande()
