@@ -17,9 +17,12 @@ namespace simhoppprojekt
             this._model = t;
             this._view = view;
             this._view.EventNewPers += NewPers;
+            this._view.EventDeletePers += DeletePers;
             this._view.EventGetHopplist += GetHopplist;
+            this._view.EventGetTavlingsnamn += GetTavlingsnamn;
         }
 
+        #region funcs
         public void NewPers()
         {
             this._model.AddPerson(new Hopplist());
@@ -32,8 +35,13 @@ namespace simhoppprojekt
 
         public List<Hopplist> GetHopplist()
         {
-            
             return this._model.getHopplistor();
         }
+
+        public string GetTavlingsnamn()
+        {
+            return this._model.getNamn();
+        }
+        #endregion
     }
 }

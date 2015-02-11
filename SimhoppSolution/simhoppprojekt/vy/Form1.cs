@@ -12,7 +12,12 @@ namespace simhoppprojekt
 {
     public partial class Form1 : Form, IForm1
     {
-        //private TavlingsClass t1 = new TavlingsClass("tävling1");
+        #region events
+        public event DelegateNewPers EventNewPers = null;
+        public event DelegateDeletePers EventDeletePers = null;
+        public event DelegateGetHopplist EventGetHopplist = null;
+        public event DelegateGetTavlingsnamn EventGetTavlingsnamn = null;
+        #endregion
 
         public Form1()
         {
@@ -21,41 +26,39 @@ namespace simhoppprojekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            drawTable();
+            textBox1.Text = this.EventGetTavlingsnamn();
+        }
+
+
+        #region draws
+        private void drawTable()
+        {
             List<Hopplist> persons = this.EventGetHopplist();
 
-            while(dataGridView1.Rows.Count !=1)
+            if (persons.Count == 0)
+                dataGridView1.Rows.Clear();
+
+            while (dataGridView1.Rows.Count != 1)
                 dataGridView1.Rows.RemoveAt(0);
 
-            for (int i = 0; i < persons.Count-1; i++)
+            for (int i = 0; i < persons.Count - 1; i++)
             {
                 dataGridView1.Rows.Add();
             }
 
-            
-            for(int i=0; i<persons.Count;i++)
+
+            for (int i = 0; i < persons.Count; i++)
             {
-                dataGridView1.Rows[i].Cells[0].Value = i+1;
+                dataGridView1.Rows[i].Cells[0].Value = i + 1;
                 dataGridView1.Rows[i].Cells[1].Value = persons[i].getNamn();
                 dataGridView1.Rows[i].Cells[2].Value = persons[i].getHopplista().Count;
                 dataGridView1.Rows[i].Cells[3].Value = persons[i].UtraknadPoangSumma();
             }
-
-
-
-            //dataGridView1.Rows[0].Cells[0].Value = "hue";
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            
-
-            
-
-            
-            //string namn = this.t1.getNamn();
-            textBox1.Text = "Tävling";
         }
+        #endregion
 
+        #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
             this.EventNewPers();
@@ -101,7 +104,16 @@ namespace simhoppprojekt
 
         private void button6_Click(object sender, EventArgs e)
         {
-            PersonInfo.GetForm.Show();
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
+            {
+                if (item.Selected)
+                {
+                    List<Hopplist>persons = this.EventGetHopplist();
+                    Hopplist person = persons[item.RowIndex];
+                    PersonInfo info = new PersonInfo(person);
+                    info.GetForm.Show();
+                }
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -114,9 +126,20 @@ namespace simhoppprojekt
             this.Close();
         }
 
-        public event DelegateNewPers EventNewPers = null;
-        public event DelegateDeletePers EventDeletePers = null;
-        public event DelegateGetHopplist EventGetHopplist = null;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells) 
+            {
+                if (item.Selected)
+                {
+                    this.EventDeletePers(item.RowIndex);
+                    this.Form1_Load(sender, e); 
+                }
+            }
+
+        }
+
+        #endregion
 
     }
 }
