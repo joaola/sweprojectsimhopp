@@ -8,15 +8,21 @@ namespace simhoppprojekt
 {
     public delegate void DelegateNewPers();
     public delegate void DelegateDeletePers(int index);
-    public delegate List<Hopplist> DelegateGetHopplist();
+    public delegate List<Hopplist> DelegateGetHopplistor();
+    public delegate TavlingsClass DelegateGetTavling();
     public delegate string DelegateGetTavlingsnamn();
+    public delegate string DelegateGetDatum();
+    public delegate void DelegateSetDatum(string datum);
     
     public interface IForm1
     {
         event DelegateNewPers EventNewPers;
         event DelegateDeletePers EventDeletePers;
-        event DelegateGetHopplist EventGetHopplist;
+        event DelegateGetHopplistor EventGetHopplistor;
+        event DelegateGetTavling EventGetTavling;
         event DelegateGetTavlingsnamn EventGetTavlingsnamn;
+        event DelegateGetDatum EventGetDatum;
+        event DelegateSetDatum EventSetDatum;
 
     }
 

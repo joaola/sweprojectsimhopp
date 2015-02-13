@@ -34,7 +34,7 @@
             this.BirthBox = new System.Windows.Forms.TextBox();
             this.GenderBox = new System.Windows.Forms.TextBox();
             this.ForeningBox = new System.Windows.Forms.TextBox();
-            this.NamnBox = new System.Windows.Forms.TextBox();
+            this.IDbox = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Namnbox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
             this.cancelbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -82,12 +82,12 @@
             this.ForeningBox.Size = new System.Drawing.Size(86, 20);
             this.ForeningBox.TabIndex = 2;
             // 
-            // NamnBox
+            // IDbox
             // 
-            this.NamnBox.Location = new System.Drawing.Point(105, 59);
-            this.NamnBox.Name = "NamnBox";
-            this.NamnBox.Size = new System.Drawing.Size(86, 20);
-            this.NamnBox.TabIndex = 1;
+            this.IDbox.Location = new System.Drawing.Point(105, 59);
+            this.IDbox.Name = "IDbox";
+            this.IDbox.Size = new System.Drawing.Size(86, 20);
+            this.IDbox.TabIndex = 1;
             // 
             // textBox9
             // 
@@ -166,12 +166,12 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Namn:";
             // 
-            // textBox2
+            // Namnbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(86, 20);
-            this.textBox2.TabIndex = 1;
+            this.Namnbox.Location = new System.Drawing.Point(105, 27);
+            this.Namnbox.Name = "Namnbox";
+            this.Namnbox.Size = new System.Drawing.Size(86, 20);
+            this.Namnbox.TabIndex = 1;
             // 
             // OkButton
             // 
@@ -200,7 +200,7 @@
             this.ClientSize = new System.Drawing.Size(261, 339);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Namnbox);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -211,7 +211,7 @@
             this.Controls.Add(this.BirthBox);
             this.Controls.Add(this.GenderBox);
             this.Controls.Add(this.ForeningBox);
-            this.Controls.Add(this.NamnBox);
+            this.Controls.Add(this.IDbox);
             this.Controls.Add(this.GrenBox);
             this.Controls.Add(this.OrtBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -229,7 +229,7 @@
         private System.Windows.Forms.TextBox BirthBox;
         private System.Windows.Forms.TextBox GenderBox;
         private System.Windows.Forms.TextBox ForeningBox;
-        private System.Windows.Forms.TextBox NamnBox;
+        private System.Windows.Forms.TextBox IDbox;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
@@ -237,7 +237,7 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Namnbox;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.Button cancelbutton;
     }

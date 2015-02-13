@@ -101,6 +101,7 @@ namespace simhoppprojekt
         public int getHojd() { return hojd; }
         public float getTotal() { return total; }
         public Poang getPoang() { return poang; }
+        public List<float> getBetyg() { return this.betyg; }
         #endregion
 
         #region setter

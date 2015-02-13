@@ -18,7 +18,7 @@ namespace simhoppprojekt
             Application.SetCompatibleTextRenderingDefault(false);
 
             Form1 form1 = new Form1();
-            TavlingsClass t1 = new TavlingsClass("vm i magplask");
+            TavlingsClass t1 = new TavlingsClass("vm i magplask","2015-02-15");
 
             Hopplist kurt = new Hopplist(1, "Kurt", "slavicboyz", 1990, "?", "hallsberg", "3mmagplask");
             List<float> tempbetyg = new List<float>();
@@ -30,6 +30,7 @@ namespace simhoppprojekt
             tempbetyg.Add(6);
             tempbetyg.Add(6);
             kurt.AddHopp(new Hopp(101,"A",1.5f,3,tempbetyg));
+            kurt.AddHopp(new Hopp(202, "A", 2f, 3, tempbetyg));
             t1.AddPerson(kurt);
 
 
