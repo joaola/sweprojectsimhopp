@@ -17,17 +17,7 @@ namespace simhoppprojekt
             InitializeComponent();
         }
 
-        private static ListHopp inst;
-        public static ListHopp GetForm
-        {
-            get
-            {
-                if (inst == null || inst.IsDisposed)
-                    inst = new ListHopp();
-                return inst;
-            }
-        }
-
+        #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,5 +32,6 @@ namespace simhoppprojekt
         {
             dataGridView1.ReadOnly = false;
         }
+        #endregion
     }
 }

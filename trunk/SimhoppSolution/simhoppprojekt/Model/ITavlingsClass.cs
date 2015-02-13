@@ -8,6 +8,8 @@ namespace simhoppprojekt
 {
     public interface ITavlingsClass
     {
+        void AddPerson(Hopplist hl1);
+        
         void NewPerson(Hopplist h);
         void DeletePerson(int index);
 

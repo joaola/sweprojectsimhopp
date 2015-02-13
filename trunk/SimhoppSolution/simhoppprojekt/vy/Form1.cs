@@ -61,11 +61,10 @@ namespace simhoppprojekt
         #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
+            NyPers np = new NyPers();
+            np.ShowDialog();
             this.EventNewPers();
-            this.Form1_Load(sender,e);
-            //NyPers np = new NyPers();
-            //np.Show();
-            //NyPers.GetForm.Show();
+            this.drawTable();                       
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -90,35 +89,35 @@ namespace simhoppprojekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //NyttHopp ny = new NyttHopp();
-            //ny.Show();
-            NyttHopp.GetForm.Show();
+            NyttHopp ny = new NyttHopp();
+            ny.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Redigera reggie = new Redigera();
-            //reggie.Show();
-            Redigera.GetForm.Show();
+            Redigera reggie = new Redigera();
+            reggie.ShowDialog();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected)
+                if (item.Selected && this.EventGetHopplist().Count!=0)
                 {
                     List<Hopplist>persons = this.EventGetHopplist();
                     Hopplist person = persons[item.RowIndex];
                     PersonInfo info = new PersonInfo(person);
-                    info.GetForm.Show();
+                    info.ShowDialog();
                 }
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ListHopp.GetForm.Show();
+            ListHopp lh = new ListHopp();
+            lh.ShowDialog();
         }
 
         private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)

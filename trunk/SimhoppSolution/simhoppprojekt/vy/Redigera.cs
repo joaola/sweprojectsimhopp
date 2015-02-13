@@ -17,17 +17,6 @@ namespace simhoppprojekt
             InitializeComponent();
         }
 
-        private static Redigera inst;
-        public static Redigera GetForm
-        {
-            get
-            {
-                if (inst == null || inst.IsDisposed)
-                    inst = new Redigera();
-                return inst;
-            }
-        }
-
         private void OkReg_Click(object sender, EventArgs e)
         {
             this.Close();

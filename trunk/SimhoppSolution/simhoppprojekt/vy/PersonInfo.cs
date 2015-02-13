@@ -25,17 +25,6 @@ namespace simhoppprojekt
             InitializeComponent();
         }
 
-        public static PersonInfo inst;
-        public PersonInfo GetForm
-        {
-            get
-            {
-                if (inst == null || inst.IsDisposed)
-                    inst = new PersonInfo(this.person);
-                return inst;
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
