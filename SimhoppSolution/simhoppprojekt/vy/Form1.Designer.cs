@@ -297,6 +297,7 @@
             this.datum.Size = new System.Drawing.Size(91, 20);
             this.datum.TabIndex = 12;
             this.datum.Value = new System.DateTime(2015, 7, 23, 0, 0, 0, 0);
+            this.datum.ValueChanged += new System.EventHandler(this.datum_ValueChanged);
             // 
             // textBox13
             // 

@@ -30,23 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListHopp));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.simnamn1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.redButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.poangsumbox = new System.Windows.Forms.TextBox();
             this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.simnamn1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.redButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -63,8 +67,80 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(475, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(503, 248);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(39, 28);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(106, 13);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Simhopparens namn:";
+            // 
+            // simnamn1
+            // 
+            this.simnamn1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.simnamn1.Location = new System.Drawing.Point(149, 28);
+            this.simnamn1.Name = "simnamn1";
+            this.simnamn1.ReadOnly = true;
+            this.simnamn1.Size = new System.Drawing.Size(100, 13);
+            this.simnamn1.TabIndex = 10;
+            this.simnamn1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(363, 377);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Stäng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // redButton
+            // 
+            this.redButton.Location = new System.Drawing.Point(148, 377);
+            this.redButton.Name = "redButton";
+            this.redButton.Size = new System.Drawing.Size(101, 23);
+            this.redButton.TabIndex = 1;
+            this.redButton.Text = "Tillåt redigering";
+            this.redButton.UseVisualStyleBackColor = true;
+            this.redButton.Click += new System.EventHandler(this.redButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(270, 377);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Verkställ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(337, 323);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(75, 13);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "Poängsumma:";
+            // 
+            // poangsumbox
+            // 
+            this.poangsumbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.poangsumbox.Location = new System.Drawing.Point(427, 323);
+            this.poangsumbox.Name = "poangsumbox";
+            this.poangsumbox.ReadOnly = true;
+            this.poangsumbox.Size = new System.Drawing.Size(100, 13);
+            this.poangsumbox.TabIndex = 12;
+            this.poangsumbox.TabStop = false;
             // 
             // hoppkod
             // 
@@ -103,6 +179,7 @@
             this.betyg.HeaderText = "Betyg";
             this.betyg.Name = "betyg";
             this.betyg.ReadOnly = true;
+            this.betyg.Width = 150;
             // 
             // points
             // 
@@ -110,64 +187,14 @@
             this.points.HeaderText = "Poäng";
             this.points.Name = "points";
             this.points.ReadOnly = true;
-            this.points.Width = 120;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(39, 28);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(106, 13);
-            this.textBox3.TabIndex = 11;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Simhopparens namn:";
-            // 
-            // simnamn1
-            // 
-            this.simnamn1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.simnamn1.Location = new System.Drawing.Point(141, 28);
-            this.simnamn1.Name = "simnamn1";
-            this.simnamn1.ReadOnly = true;
-            this.simnamn1.Size = new System.Drawing.Size(100, 13);
-            this.simnamn1.TabIndex = 10;
-            this.simnamn1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(320, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Stäng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // redButton
-            // 
-            this.redButton.Location = new System.Drawing.Point(105, 340);
-            this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(101, 23);
-            this.redButton.TabIndex = 1;
-            this.redButton.Text = "Tillåt redigering";
-            this.redButton.UseVisualStyleBackColor = true;
-            this.redButton.Click += new System.EventHandler(this.redButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(227, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Verkställ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ListHopp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 375);
+            this.ClientSize = new System.Drawing.Size(601, 425);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.poangsumbox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.button1);
@@ -177,6 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListHopp";
             this.Text = "Hopplista";
+            this.Load += new System.EventHandler(this.ListHopp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,6 +219,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button redButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox poangsumbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoppkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn hojd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stile;

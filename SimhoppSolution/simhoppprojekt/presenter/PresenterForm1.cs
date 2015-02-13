@@ -8,9 +8,10 @@ namespace simhoppprojekt
 {
     public class PresenterForm1
     {
+        #region data
         public IForm1 _view { get; set; }
-
         public TavlingsClass _model { get; set; }
+        #endregion
 
         public PresenterForm1(IForm1 view, TavlingsClass t)
         {
@@ -18,8 +19,11 @@ namespace simhoppprojekt
             this._view = view;
             this._view.EventNewPers += NewPers;
             this._view.EventDeletePers += DeletePers;
-            this._view.EventGetHopplist += GetHopplist;
+            this._view.EventGetHopplistor += GetHopplistor;
+            this._view.EventGetTavling += getTavling;
             this._view.EventGetTavlingsnamn += GetTavlingsnamn;
+            this._view.EventGetDatum += GetDatum;
+            this._view.EventSetDatum += SetDatum;
         }
 
         #region funcs
@@ -33,7 +37,7 @@ namespace simhoppprojekt
             this._model.RemovePerson(index);
         }
 
-        public List<Hopplist> GetHopplist()
+        public List<Hopplist> GetHopplistor()
         {
             return this._model.getHopplistor();
         }
@@ -41,6 +45,21 @@ namespace simhoppprojekt
         public string GetTavlingsnamn()
         {
             return this._model.getNamn();
+        }
+
+        public string GetDatum()
+        {
+            return this._model.getDatum();
+        }
+
+        public TavlingsClass getTavling()
+        {
+            return this._model;
+        }
+
+        public void SetDatum(string datum)
+        {
+            this._model.setDatum(datum);
         }
         #endregion
     }

@@ -14,9 +14,12 @@ namespace simhoppprojekt
     {
         #region events
         public event DelegateNewPers EventNewPers = null;
+        public event DelegateGetTavling EventGetTavling = null;
         public event DelegateDeletePers EventDeletePers = null;
-        public event DelegateGetHopplist EventGetHopplist = null;
+        public event DelegateGetHopplistor EventGetHopplistor = null;
         public event DelegateGetTavlingsnamn EventGetTavlingsnamn = null;
+        public event DelegateGetDatum EventGetDatum = null;
+        public event DelegateSetDatum EventSetDatum = null;
         #endregion
 
         public Form1()
@@ -27,6 +30,7 @@ namespace simhoppprojekt
         private void Form1_Load(object sender, EventArgs e)
         {
             drawTable();
+            drawDate();
             textBox1.Text = this.EventGetTavlingsnamn();
         }
 
@@ -34,7 +38,7 @@ namespace simhoppprojekt
         #region draws
         private void drawTable()
         {
-            List<Hopplist> persons = this.EventGetHopplist();
+            List<Hopplist> persons = this.EventGetHopplistor();
 
             if (persons.Count == 0)
                 dataGridView1.Rows.Clear();
@@ -56,14 +60,21 @@ namespace simhoppprojekt
                 dataGridView1.Rows[i].Cells[3].Value = persons[i].UtraknadPoangSumma();
             }
         }
+
+        private void drawDate()
+        {
+            this.datum.Text = this.EventGetDatum();
+        }
+
         #endregion
 
         #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
-            NyPers np = new NyPers();
+
+            NyPers np = new NyPers(this.EventGetTavling());
             np.ShowDialog();
-            this.EventNewPers();
+            //this.EventNewPers();
             this.drawTable();                       
         }
 
@@ -104,9 +115,9 @@ namespace simhoppprojekt
         {
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected && this.EventGetHopplist().Count!=0)
+                if (item.Selected && this.EventGetHopplistor().Count!=0)
                 {
-                    List<Hopplist>persons = this.EventGetHopplist();
+                    List<Hopplist>persons = this.EventGetHopplistor();
                     Hopplist person = persons[item.RowIndex];
                     PersonInfo info = new PersonInfo(person);
                     info.ShowDialog();
@@ -116,8 +127,17 @@ namespace simhoppprojekt
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ListHopp lh = new ListHopp();
-            lh.ShowDialog();
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
+            {
+                if (item.Selected && this.EventGetHopplistor().Count != 0)
+                {
+                    List<Hopplist> persons = this.EventGetHopplistor();
+                    Hopplist person = persons[item.RowIndex];
+                    ListHopp lh = new ListHopp(person);
+                    lh.ShowDialog();
+                }
+            }
+            
         }
 
         private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,6 +159,13 @@ namespace simhoppprojekt
         }
 
         #endregion
+
+        private void datum_ValueChanged(object sender, EventArgs e)
+        {
+            //string tempdatum = this.datum.Text;
+            this.EventSetDatum(this.datum.Text);
+            this.drawDate();
+        }
 
     }
 }

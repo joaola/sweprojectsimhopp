@@ -12,8 +12,11 @@ namespace simhoppprojekt
 {
     public partial class PersonInfo : Form
     {
-
+        #region data
         Hopplist person;
+        #endregion
+
+        #region constr
         public PersonInfo()
         {
             InitializeComponent();
@@ -24,11 +27,14 @@ namespace simhoppprojekt
             this.person = h1;
             InitializeComponent();
         }
+        #endregion
 
+        #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
         private void PersonInfo_Load(object sender, EventArgs e)
         {
@@ -40,5 +46,7 @@ namespace simhoppprojekt
             this.ortruta.Text = person.getOrt();
             this.grenruta.Text = person.getGren();
         }
+        
+
     }
 }
