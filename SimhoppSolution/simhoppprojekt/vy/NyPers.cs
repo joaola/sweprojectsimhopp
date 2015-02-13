@@ -17,17 +17,6 @@ namespace simhoppprojekt
             InitializeComponent();
         }
 
-        private static NyPers inst;
-        public static NyPers GetForm
-        {
-            get
-            {
-                if (inst == null || inst.IsDisposed)
-                    inst = new NyPers();
-                return inst;
-            }
-        }
-
         private void OkButton_Click(object sender, EventArgs e)
         {
             this.Close();
