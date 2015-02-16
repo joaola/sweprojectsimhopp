@@ -56,6 +56,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Tavlingsnamn = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -119,6 +120,7 @@
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
             this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.nyToolStripMenuItem.Text = "Ny";
+            this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
@@ -218,6 +220,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -272,12 +275,13 @@
             this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox1.Location = new System.Drawing.Point(12, 52);
+            this.textBox1.Location = new System.Drawing.Point(43, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 13);
+            this.textBox1.Size = new System.Drawing.Size(75, 13);
             this.textBox1.TabIndex = 9;
             this.textBox1.TabStop = false;
+            this.textBox1.Text = "Tävlingsnamn:";
             // 
             // button6
             // 
@@ -310,6 +314,14 @@
             this.textBox13.TabStop = false;
             this.textBox13.Text = "Datum:";
             // 
+            // Tavlingsnamn
+            // 
+            this.Tavlingsnamn.Location = new System.Drawing.Point(119, 50);
+            this.Tavlingsnamn.Name = "Tavlingsnamn";
+            this.Tavlingsnamn.Size = new System.Drawing.Size(100, 20);
+            this.Tavlingsnamn.TabIndex = 13;
+            this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +329,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(553, 375);
+            this.Controls.Add(this.Tavlingsnamn);
             this.Controls.Add(this.datum);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.button6);
@@ -329,8 +342,10 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "HoppSIM";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -373,6 +388,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
+        private System.Windows.Forms.TextBox Tavlingsnamn;
 
     }
 }

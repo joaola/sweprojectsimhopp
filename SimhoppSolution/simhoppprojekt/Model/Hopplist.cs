@@ -111,6 +111,7 @@ namespace simhoppprojekt
 
         #region setters
         public void setNamn(string n) { namn = n; }
+        public void setID(int id) { this.id = id; }
         public void setForening(string f) { forening = f; }
         public void setFodelsear(int f) { fodelsear = f; }
         public void setKon(string k) { kon = k; }

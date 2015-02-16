@@ -43,7 +43,7 @@
             this.GrenReg = new System.Windows.Forms.TextBox();
             this.OrtReg = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.NamnBox = new System.Windows.Forms.TextBox();
+            this.IDreg = new System.Windows.Forms.TextBox();
             this.cancelbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -176,12 +176,12 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "ID:";
             // 
-            // NamnBox
+            // IDreg
             // 
-            this.NamnBox.Location = new System.Drawing.Point(105, 58);
-            this.NamnBox.Name = "NamnBox";
-            this.NamnBox.Size = new System.Drawing.Size(86, 20);
-            this.NamnBox.TabIndex = 2;
+            this.IDreg.Location = new System.Drawing.Point(105, 58);
+            this.IDreg.Name = "IDreg";
+            this.IDreg.Size = new System.Drawing.Size(86, 20);
+            this.IDreg.TabIndex = 2;
             // 
             // cancelbutton
             // 
@@ -200,7 +200,7 @@
             this.ClientSize = new System.Drawing.Size(261, 339);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.NamnBox);
+            this.Controls.Add(this.IDreg);
             this.Controls.Add(this.OkReg);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
@@ -217,6 +217,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Redigera";
             this.Text = "Redigera";
+            this.Load += new System.EventHandler(this.Redigera_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +239,7 @@
         private System.Windows.Forms.TextBox GrenReg;
         private System.Windows.Forms.TextBox OrtReg;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox NamnBox;
+        private System.Windows.Forms.TextBox IDreg;
         private System.Windows.Forms.Button cancelbutton;
     }
 }
