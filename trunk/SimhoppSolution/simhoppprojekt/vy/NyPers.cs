@@ -34,13 +34,11 @@ namespace simhoppprojekt
         private void OkButton_Click(object sender, EventArgs e)
         {
             string namn = this.Namnbox.Text;
-            int id =-1;
-            if (this.IDbox.Text!="")
-                id = Convert.ToInt32(this.IDbox.Text);
+            int id;
+            int.TryParse(this.IDbox.Text, out id);
             string forening = this.ForeningBox.Text;
-            int fodelsear = -1;
-            if (this.BirthBox.Text!="")
-                fodelsear = Convert.ToInt32(this.BirthBox.Text);
+            int fodelsear;
+            int.TryParse(this.BirthBox.Text, out fodelsear);
             string kon = this.GenderBox.Text;
             string ort = this.OrtBox.Text;
             string gren = this.GrenBox.Text;

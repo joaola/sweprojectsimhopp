@@ -60,7 +60,7 @@ namespace simhoppprojekt
             if (this.Hopplistor.Count != 0)
             {
                 this.Hopplistor.RemoveAt(index);
-                this.PlaceringSort();
+                //this.PlaceringSort();
             }
         }
 

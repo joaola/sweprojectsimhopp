@@ -12,20 +12,105 @@ namespace simhoppprojekt
 {
     public partial class NyttHopp : Form
     {
+        private Hopplist person;
         public NyttHopp()
         {
             
             InitializeComponent();
         }
+        public NyttHopp(Hopplist person)
+        {
+            this.person = person;
+            InitializeComponent();
+        }
         
         private void button3_Click(object sender, EventArgs e) // räkna
         {
+            int hoppkod;
+            int.TryParse(this.HoppkodBox.Text, out hoppkod);
+            float svarighet;
+            float.TryParse(this.svarighetsbox.Text, out svarighet);
+            int hojd;
+            int.TryParse(this.hojddrop.Text, out hojd);
+            string stil = this.stilDrop.Text;
+            int antaldom;
+            int.TryParse(this.antaldomdrop.Text, out antaldom);
+            List<float> tempbetyg = new List<float>();
 
+            if (antaldom == 3)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+            }
+            else if (antaldom == 5)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+                tempbetyg.Add((float)this.UpDown4.Value);
+                tempbetyg.Add((float)this.UpDown5.Value);
+            }
+            else if (antaldom == 7)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+                tempbetyg.Add((float)this.UpDown4.Value);
+                tempbetyg.Add((float)this.UpDown5.Value);
+                tempbetyg.Add((float)this.UpDown6.Value);
+                tempbetyg.Add((float)this.UpDown7.Value);
+            }
+
+
+
+            Hopp temphopp = new Hopp(hoppkod,stil,svarighet,hojd,tempbetyg);
+            this.poangbox.Text = temphopp.raknaPoang().utraknadpoang.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e) // ok
         {
 
+            int hoppkod;
+            int.TryParse(this.HoppkodBox.Text, out hoppkod);
+            float svarighet;
+            float.TryParse(this.svarighetsbox.Text, out svarighet);
+            int hojd;
+            int.TryParse(this.hojddrop.Text, out hojd);
+            string stil = this.stilDrop.Text;
+            int antaldom;
+            int.TryParse(this.antaldomdrop.Text, out antaldom);
+            List<float> tempbetyg = new List<float>();
+
+            if (antaldom == 3)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+            }
+            else if (antaldom == 5)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+                tempbetyg.Add((float)this.UpDown4.Value);
+                tempbetyg.Add((float)this.UpDown5.Value);
+            }
+            else if (antaldom == 7)
+            {
+                tempbetyg.Add((float)this.UpDown1.Value);
+                tempbetyg.Add((float)this.UpDown2.Value);
+                tempbetyg.Add((float)this.UpDown3.Value);
+                tempbetyg.Add((float)this.UpDown4.Value);
+                tempbetyg.Add((float)this.UpDown5.Value);
+                tempbetyg.Add((float)this.UpDown6.Value);
+                tempbetyg.Add((float)this.UpDown7.Value);
+            }
+
+
+
+            Hopp temphopp = new Hopp(hoppkod,stil,svarighet,hojd,tempbetyg);
+            this.person.AddHopp(temphopp);
             //if (this.EventNewHopp != null)
             //    this.EventNewHopp();
 
@@ -40,7 +125,7 @@ namespace simhoppprojekt
         #region domare
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Object selectedItem = comboBox1.SelectedItem;
+            Object selectedItem = antaldomdrop.SelectedItem;
             if(selectedItem.ToString() == "3")
             {
 
@@ -113,8 +198,9 @@ namespace simhoppprojekt
 
         private void NyttHopp_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = "3";
-            comboBox3.SelectedItem = "1";
+            this.simnamn.Text = this.person.getNamn();
+            antaldomdrop.SelectedItem = "3";
+            hojddrop.SelectedItem = "1";
             stilDrop.SelectedItem = "A";
         }
 

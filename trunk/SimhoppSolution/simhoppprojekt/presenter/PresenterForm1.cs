@@ -24,6 +24,8 @@ namespace simhoppprojekt
             this._view.EventGetTavlingsnamn += GetTavlingsnamn;
             this._view.EventGetDatum += GetDatum;
             this._view.EventSetDatum += SetDatum;
+            this._view.EventSetTavlingsnamn += setTavlingsnamn;
+            this._view.EventSort += sort;
         }
 
         #region funcs
@@ -61,6 +63,18 @@ namespace simhoppprojekt
         {
             this._model.setDatum(datum);
         }
+
+        public void setTavlingsnamn(string namn)
+        {
+            this._model.setNamn(namn);
+        }
+
+        public void sort()
+        {
+            this._model.PlaceringSort();
+        }
+        
+
         #endregion
     }
 }
