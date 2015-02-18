@@ -48,15 +48,15 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
+            this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -239,37 +239,6 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Placering
-            // 
-            this.Placering.FillWeight = 65F;
-            this.Placering.HeaderText = "Placering";
-            this.Placering.Name = "Placering";
-            this.Placering.ReadOnly = true;
-            this.Placering.Width = 65;
-            // 
-            // name
-            // 
-            this.name.FillWeight = 170F;
-            this.name.HeaderText = "Namn";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 170;
-            // 
-            // antalhopp
-            // 
-            this.antalhopp.HeaderText = "Antal hopp";
-            this.antalhopp.Name = "antalhopp";
-            this.antalhopp.ReadOnly = true;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.points.Width = 120;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -321,6 +290,37 @@
             this.Tavlingsnamn.Size = new System.Drawing.Size(100, 20);
             this.Tavlingsnamn.TabIndex = 13;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
+            // 
+            // Placering
+            // 
+            this.Placering.FillWeight = 65F;
+            this.Placering.HeaderText = "Placering";
+            this.Placering.Name = "Placering";
+            this.Placering.ReadOnly = true;
+            this.Placering.Width = 70;
+            // 
+            // name
+            // 
+            this.name.FillWeight = 170F;
+            this.name.HeaderText = "Namn";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 170;
+            // 
+            // antalhopp
+            // 
+            this.antalhopp.HeaderText = "Antal hopp";
+            this.antalhopp.Name = "antalhopp";
+            this.antalhopp.ReadOnly = true;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.points.Width = 120;
             // 
             // Form1
             // 
@@ -384,11 +384,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker datum;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Tavlingsnamn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Placering;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
-        private System.Windows.Forms.TextBox Tavlingsnamn;
 
     }
 }

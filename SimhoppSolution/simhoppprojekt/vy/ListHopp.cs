@@ -107,6 +107,26 @@ namespace simhoppprojekt
 
         #endregion
 
+        private void remove_Click(object sender, EventArgs e)
+        {
+            List<int> indexList = new List<int>();
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
+            {
+                if (item.Selected && !indexList.Contains(item.RowIndex))
+                {
+                    //this.EventDeletePers(item.RowIndex);
+                    indexList.Add(item.RowIndex);
+                }
+
+            }
+            indexList.Sort();
+            for (int i = indexList.Count - 1; i >= 0; i--)
+            {
+                this.person.RemoveHopp(indexList[i]);
+            }
+            this.drawTable();
+        }
+
 
     }
 }

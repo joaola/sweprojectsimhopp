@@ -178,7 +178,8 @@ namespace simhoppprojekt
                 }
                 lastItemIndex = item.RowIndex;
             }
-            
+            this.EventSort();
+            this.drawTable();
         }
 
         private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
