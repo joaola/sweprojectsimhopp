@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.poangsumbox = new System.Windows.Forms.TextBox();
+            this.remove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +141,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(363, 377);
+            this.button1.Location = new System.Drawing.Point(300, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -150,7 +151,7 @@
             // 
             // redButton
             // 
-            this.redButton.Location = new System.Drawing.Point(148, 377);
+            this.redButton.Location = new System.Drawing.Point(85, 377);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(101, 23);
             this.redButton.TabIndex = 1;
@@ -160,7 +161,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(270, 377);
+            this.button2.Location = new System.Drawing.Point(207, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -189,12 +190,23 @@
             this.poangsumbox.TabIndex = 12;
             this.poangsumbox.TabStop = false;
             // 
+            // remove
+            // 
+            this.remove.Location = new System.Drawing.Point(397, 377);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(82, 23);
+            this.remove.TabIndex = 14;
+            this.remove.Text = "Ta bort hopp";
+            this.remove.UseVisualStyleBackColor = true;
+            this.remove.Click += new System.EventHandler(this.remove_Click);
+            // 
             // ListHopp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(601, 425);
+            this.Controls.Add(this.remove);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.poangsumbox);
             this.Controls.Add(this.button2);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn svarighet;
         private System.Windows.Forms.DataGridViewTextBoxColumn betyg;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
+        private System.Windows.Forms.Button remove;
     }
 }
