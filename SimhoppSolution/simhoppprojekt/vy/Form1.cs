@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,12 +101,35 @@ namespace simhoppprojekt
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-        }
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        } // read
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
+            this.Save();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -241,6 +265,37 @@ namespace simhoppprojekt
             System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(threadNewTavling));
             t.Start();
         }
+        private void sparaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Save();
+        }
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
 
         #endregion
 
@@ -256,6 +311,61 @@ namespace simhoppprojekt
             this.EventSetTavlingsnamn(this.Tavlingsnamn.Text);
             this.drawTavling();
         }
+
+        private void Save()
+        {
+            using (SaveFileDialog dialog = new SaveFileDialog())
+            {
+                dialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                dialog.FilterIndex = 2;
+                dialog.RestoreDirectory = true;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Can use dialog.FileName
+                    using (Stream stream = dialog.OpenFile())
+                    {
+                        // Save data
+                        #region save
+                        StreamWriter file = new StreamWriter(stream);
+                        file.WriteLine(EventGetDatum());
+                        file.WriteLine(EventGetTavlingsnamn());
+                        for (int i = 0; i < EventGetTavling().getHopplistor().Count; i++)
+                        {
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getNamn());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getID());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getForening());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getFodelsear());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getKon());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getOrt());
+                            file.WriteLine(EventGetTavling().getHopplistor()[i].getGren());
+
+                            for (int j = 0; j < EventGetTavling().getHopplistor()[i].getHopplista().Count; j++)
+                            {
+
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getHoppNr());
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getStil());
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getSvarighet());
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getHojd());
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg().Count); //antal domare
+
+                                for (int k = 0; k < EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count; k++)
+                                {
+                                    file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k]);
+                                }
+
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getTotal());
+                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang);
+                            }
+                        }
+                        file.Close();
+                        #endregion
+                    }
+                }
+            }
+        } // save
+
+        
 
         
 

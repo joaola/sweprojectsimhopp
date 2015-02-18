@@ -36,7 +36,7 @@
             this.arkivToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.öppnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.avslutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,15 +48,15 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
-            this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,7 +108,7 @@
             this.arkivToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nyToolStripMenuItem,
             this.sparaToolStripMenuItem,
-            this.öppnaToolStripMenuItem,
+            this.openToolStripMenuItem,
             this.toolStripMenuItem1,
             this.avslutaToolStripMenuItem});
             this.arkivToolStripMenuItem.Name = "arkivToolStripMenuItem";
@@ -118,31 +118,33 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nyToolStripMenuItem.Text = "Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sparaToolStripMenuItem.Text = "Spara";
+            this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
-            // öppnaToolStripMenuItem
+            // openToolStripMenuItem
             // 
-            this.öppnaToolStripMenuItem.Name = "öppnaToolStripMenuItem";
-            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.öppnaToolStripMenuItem.Text = "Öppna";
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Öppna";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
@@ -239,6 +241,37 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Placering
+            // 
+            this.Placering.FillWeight = 65F;
+            this.Placering.HeaderText = "Placering";
+            this.Placering.Name = "Placering";
+            this.Placering.ReadOnly = true;
+            this.Placering.Width = 70;
+            // 
+            // name
+            // 
+            this.name.FillWeight = 170F;
+            this.name.HeaderText = "Namn";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 170;
+            // 
+            // antalhopp
+            // 
+            this.antalhopp.HeaderText = "Antal hopp";
+            this.antalhopp.Name = "antalhopp";
+            this.antalhopp.ReadOnly = true;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.points.Width = 120;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -291,37 +324,6 @@
             this.Tavlingsnamn.TabIndex = 13;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
-            // Placering
-            // 
-            this.Placering.FillWeight = 65F;
-            this.Placering.HeaderText = "Placering";
-            this.Placering.Name = "Placering";
-            this.Placering.ReadOnly = true;
-            this.Placering.Width = 70;
-            // 
-            // name
-            // 
-            this.name.FillWeight = 170F;
-            this.name.HeaderText = "Namn";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 170;
-            // 
-            // antalhopp
-            // 
-            this.antalhopp.HeaderText = "Antal hopp";
-            this.antalhopp.Name = "antalhopp";
-            this.antalhopp.ReadOnly = true;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.points.Width = 120;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,7 +371,7 @@
         private System.Windows.Forms.ToolStripMenuItem arkivToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sparaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öppnaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem avslutaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjälpToolStripMenuItem;
