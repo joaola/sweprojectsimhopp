@@ -185,6 +185,7 @@
             // 
             // cancelbutton
             // 
+            this.cancelbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelbutton.Location = new System.Drawing.Point(144, 284);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
@@ -195,8 +196,10 @@
             // 
             // NyPers
             // 
+            this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelbutton;
             this.ClientSize = new System.Drawing.Size(261, 339);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
