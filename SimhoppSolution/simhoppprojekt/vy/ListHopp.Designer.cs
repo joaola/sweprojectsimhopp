@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListHopp));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.simnamn1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,12 +43,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.poangsumbox = new System.Windows.Forms.TextBox();
-            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,52 @@
             this.dataGridView1.Size = new System.Drawing.Size(503, 248);
             this.dataGridView1.TabIndex = 9;
             // 
+            // hoppkod
+            // 
+            this.hoppkod.FillWeight = 65F;
+            this.hoppkod.HeaderText = "Hoppkod";
+            this.hoppkod.Name = "hoppkod";
+            this.hoppkod.ReadOnly = true;
+            this.hoppkod.Width = 65;
+            // 
+            // hojd
+            // 
+            this.hojd.FillWeight = 55F;
+            this.hojd.HeaderText = "Höjd";
+            this.hojd.Name = "hojd";
+            this.hojd.ReadOnly = true;
+            this.hojd.Width = 55;
+            // 
+            // Stile
+            // 
+            this.Stile.FillWeight = 55F;
+            this.Stile.HeaderText = "Stil";
+            this.Stile.Name = "Stile";
+            this.Stile.ReadOnly = true;
+            this.Stile.Width = 55;
+            // 
+            // svarighet
+            // 
+            this.svarighet.FillWeight = 55F;
+            this.svarighet.HeaderText = "Svårighetsgrad";
+            this.svarighet.Name = "svarighet";
+            this.svarighet.ReadOnly = true;
+            this.svarighet.Width = 55;
+            // 
+            // betyg
+            // 
+            this.betyg.HeaderText = "Betyg";
+            this.betyg.Name = "betyg";
+            this.betyg.ReadOnly = true;
+            this.betyg.Width = 150;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            // 
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -93,6 +139,7 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(363, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -142,56 +189,11 @@
             this.poangsumbox.TabIndex = 12;
             this.poangsumbox.TabStop = false;
             // 
-            // hoppkod
-            // 
-            this.hoppkod.FillWeight = 65F;
-            this.hoppkod.HeaderText = "Hoppkod";
-            this.hoppkod.Name = "hoppkod";
-            this.hoppkod.ReadOnly = true;
-            this.hoppkod.Width = 65;
-            // 
-            // hojd
-            // 
-            this.hojd.FillWeight = 55F;
-            this.hojd.HeaderText = "Höjd";
-            this.hojd.Name = "hojd";
-            this.hojd.ReadOnly = true;
-            this.hojd.Width = 55;
-            // 
-            // Stile
-            // 
-            this.Stile.FillWeight = 55F;
-            this.Stile.HeaderText = "Stil";
-            this.Stile.Name = "Stile";
-            this.Stile.ReadOnly = true;
-            this.Stile.Width = 55;
-            // 
-            // svarighet
-            // 
-            this.svarighet.FillWeight = 55F;
-            this.svarighet.HeaderText = "Svårighetsgrad";
-            this.svarighet.Name = "svarighet";
-            this.svarighet.ReadOnly = true;
-            this.svarighet.Width = 55;
-            // 
-            // betyg
-            // 
-            this.betyg.HeaderText = "Betyg";
-            this.betyg.Name = "betyg";
-            this.betyg.ReadOnly = true;
-            this.betyg.Width = 150;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            // 
             // ListHopp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(601, 425);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.poangsumbox);
