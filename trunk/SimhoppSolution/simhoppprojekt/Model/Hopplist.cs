@@ -16,7 +16,6 @@ namespace simhoppprojekt
         private int fodelsear;
         private string kon;
         private string ort;
-        //private string gren;
         #endregion
 
         #region constructs

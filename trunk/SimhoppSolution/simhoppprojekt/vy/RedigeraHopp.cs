@@ -145,6 +145,7 @@ namespace simhoppprojekt
             this.person.setStil(stil);
             this.person.setBetyg(tempbetyg);
             this.person.setPoang();
+            this.person.setTotal();
             #endregion
 
             this.Close();

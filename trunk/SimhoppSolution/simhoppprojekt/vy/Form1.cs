@@ -24,6 +24,7 @@ namespace simhoppprojekt
         public event DelegateSort EventSort = null;
         #endregion
 
+        #region constr
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace simhoppprojekt
             drawTavling();
             
         }
-
+        #endregion
 
         #region draws
 
@@ -238,9 +239,8 @@ namespace simhoppprojekt
         }
         private void nyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Application.Run(new Form1());
-
             System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(threadNewTavling));
+            t.SetApartmentState(System.Threading.ApartmentState.STA);
             t.Start();
         }
         private void sparaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -274,7 +274,15 @@ namespace simhoppprojekt
                 }
             }
         }
+        private void innehallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("huehuehuehuehuehuehuehuehuehue");
+        }
 
+        private void omToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("huehuehuehuehuehuehuehuehuehue");
+        } 
         #endregion
 
         private void datum_ValueChanged(object sender, EventArgs e)
@@ -337,8 +345,8 @@ namespace simhoppprojekt
                                     file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k]);
                                 }
 
-                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getTotal());
-                                file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang);
+                                //file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getTotal());
+                                //file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang);
                             }
 
                         }
@@ -349,11 +357,7 @@ namespace simhoppprojekt
                     }
                 }
             }
-        } // save
-
-        
-
-        
+        }       
 
     }
 }

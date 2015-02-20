@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace simhoppprojekt
 {
     [Serializable()]
-    public class TavlingsClass //: ITavlingsClass
+    public class TavlingsClass
     {
         #region data
         private string namn;

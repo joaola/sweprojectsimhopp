@@ -40,7 +40,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.avslutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.innehållToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.innehallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.omToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -66,7 +66,7 @@
             this.button1.Location = new System.Drawing.Point(42, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Ny person...";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -76,7 +76,7 @@
             this.button2.Location = new System.Drawing.Point(129, 323);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Redigera person...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -86,7 +86,7 @@
             this.button3.Location = new System.Drawing.Point(241, 323);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 23);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Ta bort person";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -117,63 +117,65 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nyToolStripMenuItem.Text = "Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sparaToolStripMenuItem.Text = "Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Öppna";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
             // hjälpToolStripMenuItem
             // 
             this.hjälpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.innehållToolStripMenuItem,
+            this.innehallToolStripMenuItem,
             this.omToolStripMenuItem});
             this.hjälpToolStripMenuItem.Name = "hjälpToolStripMenuItem";
             this.hjälpToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.hjälpToolStripMenuItem.Text = "Hjälp";
             // 
-            // innehållToolStripMenuItem
+            // innehallToolStripMenuItem
             // 
-            this.innehållToolStripMenuItem.Name = "innehållToolStripMenuItem";
-            this.innehållToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.innehållToolStripMenuItem.Text = "Innehåll";
+            this.innehallToolStripMenuItem.Name = "innehallToolStripMenuItem";
+            this.innehallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.innehallToolStripMenuItem.Text = "Innehåll";
+            this.innehallToolStripMenuItem.Click += new System.EventHandler(this.innehallToolStripMenuItem_Click);
             // 
             // omToolStripMenuItem
             // 
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
-            this.omToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.omToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.omToolStripMenuItem.Text = "Om";
+            this.omToolStripMenuItem.Click += new System.EventHandler(this.omToolStripMenuItem_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(434, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 23);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Information...";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -214,7 +216,7 @@
             this.button5.Location = new System.Drawing.Point(352, 323);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 23);
-            this.button5.TabIndex = 1;
+            this.button5.TabIndex = 6;
             this.button5.Text = "Nytt hopp...";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -237,7 +239,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(475, 236);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Placering
@@ -291,6 +293,7 @@
             this.datum.Name = "datum";
             this.datum.Size = new System.Drawing.Size(91, 20);
             this.datum.TabIndex = 12;
+            this.datum.TabStop = false;
             this.datum.Value = new System.DateTime(2015, 7, 23, 0, 0, 0, 0);
             this.datum.ValueChanged += new System.EventHandler(this.datum_ValueChanged);
             // 
@@ -310,7 +313,7 @@
             this.Tavlingsnamn.Location = new System.Drawing.Point(119, 52);
             this.Tavlingsnamn.Name = "Tavlingsnamn";
             this.Tavlingsnamn.Size = new System.Drawing.Size(100, 20);
-            this.Tavlingsnamn.TabIndex = 13;
+            this.Tavlingsnamn.TabIndex = 0;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
             // Form1
@@ -363,7 +366,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem avslutaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjälpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem innehållToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem innehallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem omToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;

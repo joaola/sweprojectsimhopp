@@ -127,12 +127,20 @@ namespace simhoppprojekt
                         stringbetyg += " | ";
                     
                 }
-                this.dataGridView1.Rows[i].Cells[4].Value = stringbetyg;
+                this.dataGridView1.Rows[i].Cells[4].Value = stringbetyg + " = " + tempHopplista[i].getTotal().ToString();
                 this.dataGridView1.Rows[i].Cells[5].Value = tempHopplista[i].getPoang().utraknadpoang;
             }
         }
 
         #endregion
+
+        private void nytthopp_Click(object sender, EventArgs e)
+        {
+            NyttHopp nyh = new NyttHopp(this.person);
+            nyh.ShowDialog();
+
+            this.drawTable();
+        }
 
 
     }
