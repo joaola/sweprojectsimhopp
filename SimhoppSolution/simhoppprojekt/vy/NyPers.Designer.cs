@@ -155,7 +155,7 @@
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(49, 261);
+            this.OkButton.Location = new System.Drawing.Point(49, 254);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
             this.OkButton.TabIndex = 8;
@@ -166,7 +166,7 @@
             // cancelbutton
             // 
             this.cancelbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelbutton.Location = new System.Drawing.Point(144, 261);
+            this.cancelbutton.Location = new System.Drawing.Point(140, 254);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
             this.cancelbutton.TabIndex = 9;
@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelbutton;
-            this.ClientSize = new System.Drawing.Size(261, 311);
+            this.ClientSize = new System.Drawing.Size(261, 298);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Namnbox);
