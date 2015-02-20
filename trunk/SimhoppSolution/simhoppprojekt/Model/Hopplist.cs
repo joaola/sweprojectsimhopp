@@ -16,7 +16,7 @@ namespace simhoppprojekt
         private int fodelsear;
         private string kon;
         private string ort;
-        private string gren;
+        //private string gren;
         #endregion
 
         #region constructs
@@ -30,10 +30,9 @@ namespace simhoppprojekt
             fodelsear = 0;
             kon = "";
             ort = "";
-            gren = "";
         }
 
-        public Hopplist(int id, string namn, string forening, int fodelsear, string kon, string ort, string gren)
+        public Hopplist(int id, string namn, string forening, int fodelsear, string kon, string ort)
         {
             this.Hopplista = new List<Hopp>();
             this.id = id;
@@ -42,7 +41,6 @@ namespace simhoppprojekt
             this.fodelsear = fodelsear;
             this.kon = kon;
             this.ort = ort;
-            this.gren = gren;
         }
         #endregion
 
@@ -106,7 +104,6 @@ namespace simhoppprojekt
         public int getFodelsear() { return fodelsear; }
         public string getKon() { return kon; }
         public string getOrt() { return ort; }
-        public string getGren() { return gren; }
         #endregion
 
         #region setters
@@ -116,7 +113,6 @@ namespace simhoppprojekt
         public void setFodelsear(int f) { fodelsear = f; }
         public void setKon(string k) { kon = k; }
         public void setOrt(string o) { ort = o; }
-        public void setGren(string g) { gren = g; }
         #endregion
     }
 }

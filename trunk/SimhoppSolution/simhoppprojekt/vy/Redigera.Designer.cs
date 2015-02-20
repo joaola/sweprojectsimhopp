@@ -34,13 +34,11 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.BirthReg = new System.Windows.Forms.TextBox();
             this.GenderReg = new System.Windows.Forms.TextBox();
             this.ForeningReg = new System.Windows.Forms.TextBox();
             this.NamnReg = new System.Windows.Forms.TextBox();
-            this.GrenReg = new System.Windows.Forms.TextBox();
             this.OrtReg = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.IDreg = new System.Windows.Forms.TextBox();
@@ -101,17 +99,6 @@
             this.textBox12.TabStop = false;
             this.textBox12.Text = "Namn:";
             // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(49, 234);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(28, 13);
-            this.textBox15.TabIndex = 14;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Gren:";
-            // 
             // textBox16
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -150,13 +137,6 @@
             this.NamnReg.Name = "NamnReg";
             this.NamnReg.Size = new System.Drawing.Size(86, 20);
             this.NamnReg.TabIndex = 1;
-            // 
-            // GrenReg
-            // 
-            this.GrenReg.Location = new System.Drawing.Point(105, 231);
-            this.GrenReg.Name = "GrenReg";
-            this.GrenReg.Size = new System.Drawing.Size(86, 20);
-            this.GrenReg.TabIndex = 6;
             // 
             // OrtReg
             // 
@@ -209,13 +189,11 @@
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.BirthReg);
             this.Controls.Add(this.GenderReg);
             this.Controls.Add(this.ForeningReg);
             this.Controls.Add(this.NamnReg);
-            this.Controls.Add(this.GrenReg);
             this.Controls.Add(this.OrtReg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Redigera";
@@ -233,13 +211,11 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox BirthReg;
         private System.Windows.Forms.TextBox GenderReg;
         private System.Windows.Forms.TextBox ForeningReg;
         private System.Windows.Forms.TextBox NamnReg;
-        private System.Windows.Forms.TextBox GrenReg;
         private System.Windows.Forms.TextBox OrtReg;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox IDreg;

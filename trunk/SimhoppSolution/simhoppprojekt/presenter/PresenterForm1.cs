@@ -17,7 +17,6 @@ namespace simhoppprojekt
         {
             this._model = t;
             this._view = view;
-            this._view.EventNewPers += NewPers;
             this._view.EventDeletePers += DeletePers;
             this._view.EventGetHopplistor += GetHopplistor;
             this._view.EventGetTavling += getTavling;
@@ -29,10 +28,6 @@ namespace simhoppprojekt
         }
 
         #region funcs
-        public void NewPers()
-        {
-            this._model.AddPerson(new Hopplist());
-        }
 
         public void DeletePers(int index)
         {

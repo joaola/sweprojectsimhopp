@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
-    public delegate void DelegateNewPers();
     public delegate void DelegateDeletePers(int index);
     public delegate List<Hopplist> DelegateGetHopplistor();
     public delegate TavlingsClass DelegateGetTavling();
@@ -18,7 +17,6 @@ namespace simhoppprojekt
     
     public interface IForm1
     {
-        event DelegateNewPers EventNewPers;
         event DelegateDeletePers EventDeletePers;
         event DelegateGetHopplistor EventGetHopplistor;
         event DelegateGetTavling EventGetTavling;
