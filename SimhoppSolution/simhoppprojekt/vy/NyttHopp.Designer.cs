@@ -84,7 +84,7 @@
             this.button1.Location = new System.Drawing.Point(69, 373);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 15;
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -114,7 +114,7 @@
             this.button3.Location = new System.Drawing.Point(202, 243);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
+            this.button3.TabIndex = 14;
             this.button3.Text = "Räkna";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -389,7 +389,7 @@
             this.poangbox.Name = "poangbox";
             this.poangbox.ReadOnly = true;
             this.poangbox.Size = new System.Drawing.Size(109, 20);
-            this.poangbox.TabIndex = 0;
+            this.poangbox.TabIndex = 13;
             // 
             // textBox6
             // 
