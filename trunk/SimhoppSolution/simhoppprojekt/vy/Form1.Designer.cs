@@ -53,7 +53,6 @@
             this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
@@ -171,11 +170,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(447, 323);
+            this.button4.Location = new System.Drawing.Point(434, 323);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 23);
+            this.button4.Size = new System.Drawing.Size(82, 23);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Hopplista...";
+            this.button4.Text = "Information...";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -212,7 +211,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(365, 323);
+            this.button5.Location = new System.Drawing.Point(352, 323);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 23);
             this.button5.TabIndex = 1;
@@ -285,16 +284,6 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Tävlingsnamn:";
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(470, 352);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Personinfo...";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // datum
             // 
             this.datum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -334,7 +323,6 @@
             this.Controls.Add(this.Tavlingsnamn);
             this.Controls.Add(this.datum);
             this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
@@ -383,7 +371,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker datum;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox Tavlingsnamn;

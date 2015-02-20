@@ -81,14 +81,19 @@ namespace simhoppprojekt
 
         private void ListHopp_Load(object sender, EventArgs e)
         {
-            this.drawNamn();
+            this.drawPerson();
             this.drawTable();
         }
 
         #region draws
-        private void drawNamn()
+        private void drawPerson()
         {
             this.simnamn1.Text = person.getNamn();
+            this.IDruta.Text = person.getID().ToString();
+            this.foreningruta.Text = person.getForening();
+            this.fodeseruta.Text = person.getFodelsear().ToString();
+            this.konruta.Text = person.getKon();
+            this.ortruta.Text = person.getOrt();
         }
         private void drawTable()
         {

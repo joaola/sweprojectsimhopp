@@ -93,11 +93,6 @@ namespace simhoppprojekt
             this.drawTable();                       
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Stream myStream = null;
@@ -169,22 +164,6 @@ namespace simhoppprojekt
                 lastitem = item.RowIndex;
             }
             this.drawTable();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            int lastItemIndex = -1;
-            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
-            {
-                if (item.Selected && this.EventGetHopplistor().Count!=0 && item.RowIndex != lastItemIndex)
-                {
-                    List<Hopplist>persons = this.EventGetHopplistor();
-                    Hopplist person = persons[item.RowIndex];
-                    PersonInfo info = new PersonInfo(person);
-                    info.ShowDialog();
-                }
-                lastItemIndex = item.RowIndex;
-            }
         }
 
         private void button4_Click(object sender, EventArgs e)
