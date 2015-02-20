@@ -40,7 +40,6 @@
             this.simnamn1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.poangsumbox = new System.Windows.Forms.TextBox();
             this.remove = new System.Windows.Forms.Button();
@@ -141,7 +140,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(300, 377);
+            this.button1.Location = new System.Drawing.Point(354, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -151,23 +150,13 @@
             // 
             // redButton
             // 
-            this.redButton.Location = new System.Drawing.Point(85, 377);
+            this.redButton.Location = new System.Drawing.Point(145, 376);
             this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(101, 23);
+            this.redButton.Size = new System.Drawing.Size(76, 23);
             this.redButton.TabIndex = 1;
-            this.redButton.Text = "Tillåt redigering";
+            this.redButton.Text = "Redigera...";
             this.redButton.UseVisualStyleBackColor = true;
             this.redButton.Click += new System.EventHandler(this.redButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(207, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Verkställ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -192,7 +181,7 @@
             // 
             // remove
             // 
-            this.remove.Location = new System.Drawing.Point(397, 377);
+            this.remove.Location = new System.Drawing.Point(244, 376);
             this.remove.Name = "remove";
             this.remove.Size = new System.Drawing.Size(82, 23);
             this.remove.TabIndex = 14;
@@ -209,7 +198,6 @@
             this.Controls.Add(this.remove);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.poangsumbox);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
@@ -232,7 +220,6 @@
         private System.Windows.Forms.TextBox simnamn1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button redButton;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox poangsumbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoppkod;

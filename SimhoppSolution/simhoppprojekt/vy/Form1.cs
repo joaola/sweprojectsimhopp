@@ -14,7 +14,6 @@ namespace simhoppprojekt
     public partial class Form1 : Form, IForm1
     {
         #region events
-        public event DelegateNewPers EventNewPers = null;
         public event DelegateGetTavling EventGetTavling = null;
         public event DelegateDeletePers EventDeletePers = null;
         public event DelegateGetHopplistor EventGetHopplistor = null;
@@ -326,23 +325,28 @@ namespace simhoppprojekt
                     using (Stream stream = dialog.OpenFile())
                     {
                         // Save data
-                        #region save
+                        #region savetävling
                         StreamWriter file = new StreamWriter(stream);
                         file.WriteLine(EventGetDatum());
                         file.WriteLine(EventGetTavlingsnamn());
+                        #endregion
+
+                        #region saveperson
                         for (int i = 0; i < EventGetTavling().getHopplistor().Count; i++)
                         {
+                            file.WriteLine(":");
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getNamn());
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getID());
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getForening());
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getFodelsear());
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getKon());
                             file.WriteLine(EventGetTavling().getHopplistor()[i].getOrt());
-                            file.WriteLine(EventGetTavling().getHopplistor()[i].getGren());
+                            #endregion
 
+                        #region savehopp
                             for (int j = 0; j < EventGetTavling().getHopplistor()[i].getHopplista().Count; j++)
                             {
-
+                                file.WriteLine("-");
                                 file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getHoppNr());
                                 file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getStil());
                                 file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getSvarighet());
@@ -357,9 +361,12 @@ namespace simhoppprojekt
                                 file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getTotal());
                                 file.WriteLine(EventGetTavling().getHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang);
                             }
+
                         }
-                        file.Close();
                         #endregion
+
+                        file.Close();
+                        
                     }
                 }
             }

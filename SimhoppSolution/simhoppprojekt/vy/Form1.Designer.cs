@@ -64,7 +64,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(134, 323);
+            this.button1.Location = new System.Drawing.Point(42, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 2;
@@ -74,21 +74,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(221, 323);
+            this.button2.Location = new System.Drawing.Point(129, 323);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
+            this.button2.Size = new System.Drawing.Size(106, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Redigera...";
+            this.button2.Text = "Redigera person...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(294, 323);
+            this.button3.Location = new System.Drawing.Point(241, 323);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 23);
+            this.button3.Size = new System.Drawing.Size(87, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Ta bort";
+            this.button3.Text = "Ta bort person";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -118,33 +118,33 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.nyToolStripMenuItem.Text = "Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.sparaToolStripMenuItem.Text = "Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.openToolStripMenuItem.Text = "Öppna";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
@@ -171,7 +171,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(350, 323);
+            this.button4.Location = new System.Drawing.Point(447, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(69, 23);
             this.button4.TabIndex = 5;
@@ -212,7 +212,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(52, 323);
+            this.button5.Location = new System.Drawing.Point(365, 323);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 23);
             this.button5.TabIndex = 1;
@@ -233,7 +233,7 @@
             this.name,
             this.antalhopp,
             this.points});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -277,7 +277,7 @@
             this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox1.Location = new System.Drawing.Point(43, 55);
+            this.textBox1.Location = new System.Drawing.Point(43, 57);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(75, 13);
@@ -287,11 +287,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(424, 323);
+            this.button6.Location = new System.Drawing.Point(470, 352);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(83, 23);
             this.button6.TabIndex = 10;
-            this.button6.Text = "Person info...";
+            this.button6.Text = "Personinfo...";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -318,7 +318,7 @@
             // 
             // Tavlingsnamn
             // 
-            this.Tavlingsnamn.Location = new System.Drawing.Point(119, 50);
+            this.Tavlingsnamn.Location = new System.Drawing.Point(119, 52);
             this.Tavlingsnamn.Name = "Tavlingsnamn";
             this.Tavlingsnamn.Size = new System.Drawing.Size(100, 20);
             this.Tavlingsnamn.TabIndex = 13;

@@ -35,7 +35,6 @@ namespace simhoppprojekt
             int.TryParse(this.BirthReg.Text, out fodelsear);
             string kon = this.GenderReg.Text;
             string ort = this.OrtReg.Text;
-            string gren = this.GrenReg.Text;
             #endregion
 
             #region setstuff
@@ -45,7 +44,6 @@ namespace simhoppprojekt
             this.person.setFodelsear(fodelsear);
             this.person.setKon(kon);
             this.person.setOrt(ort);
-            this.person.setGren(gren);
             #endregion
 
             this.Close();
@@ -64,7 +62,6 @@ namespace simhoppprojekt
             this.BirthReg.Text = this.person.getFodelsear().ToString();
             this.GenderReg.Text = this.person.getKon();
             this.OrtReg.Text = this.person.getOrt();
-            this.GrenReg.Text = this.person.getGren();
         }
     }
 }

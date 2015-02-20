@@ -41,8 +41,7 @@ namespace simhoppprojekt
             int.TryParse(this.BirthBox.Text, out fodelsear);
             string kon = this.GenderBox.Text;
             string ort = this.OrtBox.Text;
-            string gren = this.GrenBox.Text;
-            Hopplist tempKurt = new Hopplist(id, namn, forening, fodelsear, kon, ort, gren);
+            Hopplist tempKurt = new Hopplist(id, namn, forening, fodelsear, kon, ort);
             this.t1.AddPerson(tempKurt);
             this.Close();
         }

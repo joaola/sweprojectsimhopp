@@ -34,7 +34,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.namnruta = new System.Windows.Forms.TextBox();
@@ -43,7 +42,6 @@
             this.ortruta = new System.Windows.Forms.TextBox();
             this.konruta = new System.Windows.Forms.TextBox();
             this.fodeseruta = new System.Windows.Forms.TextBox();
-            this.grenruta = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -100,17 +98,6 @@
             this.textBox12.TabIndex = 14;
             this.textBox12.TabStop = false;
             this.textBox12.Text = "ID:";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(39, 233);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(28, 13);
-            this.textBox15.TabIndex = 16;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Gren:";
             // 
             // textBox16
             // 
@@ -194,16 +181,6 @@
             this.fodeseruta.TabIndex = 22;
             this.fodeseruta.TabStop = false;
             // 
-            // grenruta
-            // 
-            this.grenruta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grenruta.Location = new System.Drawing.Point(94, 235);
-            this.grenruta.Name = "grenruta";
-            this.grenruta.ReadOnly = true;
-            this.grenruta.Size = new System.Drawing.Size(100, 13);
-            this.grenruta.TabIndex = 25;
-            this.grenruta.TabStop = false;
-            // 
             // PersonInfo
             // 
             this.AcceptButton = this.button1;
@@ -211,7 +188,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(261, 328);
-            this.Controls.Add(this.grenruta);
             this.Controls.Add(this.ortruta);
             this.Controls.Add(this.konruta);
             this.Controls.Add(this.fodeseruta);
@@ -224,11 +200,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox16);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonInfo";
-            this.Text = "PersonInfo";
+            this.Text = "Personinfo";
             this.Load += new System.EventHandler(this.PersonInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,7 +217,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox namnruta;
@@ -251,6 +225,5 @@
         private System.Windows.Forms.TextBox ortruta;
         private System.Windows.Forms.TextBox konruta;
         private System.Windows.Forms.TextBox fodeseruta;
-        private System.Windows.Forms.TextBox grenruta;
     }
 }

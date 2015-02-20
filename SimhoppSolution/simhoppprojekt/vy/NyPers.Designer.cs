@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NyPers));
             this.OrtBox = new System.Windows.Forms.TextBox();
-            this.GrenBox = new System.Windows.Forms.TextBox();
             this.BirthBox = new System.Windows.Forms.TextBox();
             this.GenderBox = new System.Windows.Forms.TextBox();
             this.ForeningBox = new System.Windows.Forms.TextBox();
@@ -39,7 +38,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Namnbox = new System.Windows.Forms.TextBox();
@@ -53,13 +51,6 @@
             this.OrtBox.Name = "OrtBox";
             this.OrtBox.Size = new System.Drawing.Size(86, 20);
             this.OrtBox.TabIndex = 5;
-            // 
-            // GrenBox
-            // 
-            this.GrenBox.Location = new System.Drawing.Point(105, 232);
-            this.GrenBox.Name = "GrenBox";
-            this.GrenBox.Size = new System.Drawing.Size(86, 20);
-            this.GrenBox.TabIndex = 6;
             // 
             // BirthBox
             // 
@@ -133,17 +124,6 @@
             this.textBox12.TabStop = false;
             this.textBox12.Text = "ID:";
             // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(49, 235);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(28, 13);
-            this.textBox15.TabIndex = 0;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Gren:";
-            // 
             // textBox16
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -175,7 +155,7 @@
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(49, 284);
+            this.OkButton.Location = new System.Drawing.Point(49, 261);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
             this.OkButton.TabIndex = 8;
@@ -186,7 +166,7 @@
             // cancelbutton
             // 
             this.cancelbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelbutton.Location = new System.Drawing.Point(144, 284);
+            this.cancelbutton.Location = new System.Drawing.Point(144, 261);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
             this.cancelbutton.TabIndex = 9;
@@ -200,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelbutton;
-            this.ClientSize = new System.Drawing.Size(261, 339);
+            this.ClientSize = new System.Drawing.Size(261, 311);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Namnbox);
@@ -209,13 +189,11 @@
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.BirthBox);
             this.Controls.Add(this.GenderBox);
             this.Controls.Add(this.ForeningBox);
             this.Controls.Add(this.IDbox);
-            this.Controls.Add(this.GrenBox);
             this.Controls.Add(this.OrtBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NyPers";
@@ -228,7 +206,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox OrtBox;
-        private System.Windows.Forms.TextBox GrenBox;
         private System.Windows.Forms.TextBox BirthBox;
         private System.Windows.Forms.TextBox GenderBox;
         private System.Windows.Forms.TextBox ForeningBox;
@@ -237,7 +214,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox Namnbox;

@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ITavlingsClass.cs" />
     <Compile Include="vy\IForm1.cs" />
     <Compile Include="presenter\PresenterForm1.cs" />
     <Compile Include="vy\Form1.cs">
@@ -88,6 +87,12 @@
       <DependentUpon>Redigera.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\TavlingsClass.cs" />
+    <Compile Include="vy\RedigeraHopp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vy\RedigeraHopp.Designer.cs">
+      <DependentUpon>RedigeraHopp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="vy\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +120,10 @@
     <EmbeddedResource Include="vy\Redigera.resx">
       <DependentUpon>Redigera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vy\RedigeraHopp.resx">
+      <DependentUpon>RedigeraHopp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -44,7 +44,6 @@ namespace simhoppprojekt
             this.fodeseruta.Text = person.getFodelsear().ToString();
             this.konruta.Text = person.getKon();
             this.ortruta.Text = person.getOrt();
-            this.grenruta.Text = person.getGren();
         }
         
 

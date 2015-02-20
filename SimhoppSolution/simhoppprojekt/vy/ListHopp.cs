@@ -42,17 +42,39 @@ namespace simhoppprojekt
 
         private void redButton_Click(object sender, EventArgs e)
         {
-            
-            
-            if(dataGridView1.ReadOnly == true)
+            int lastitem = -1;
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                this.redButton.Text = "Lås redigering";
-                this.dataGridView1.ReadOnly = false;
-                this.dataGridView1.Columns["points"].ReadOnly = true;
+                if (item.Selected && item.RowIndex != lastitem)
+                {
+                    List<Hopp> persHopp = this.person.getHopplista();
+                    Hopp Olikahopp = persHopp[item.RowIndex];
+                    
+                    RedigeraHopp redig = new RedigeraHopp(Olikahopp);
+                    redig.ShowDialog();
+                }
+                lastitem = item.RowIndex;
             }
-            else
-                this.redButton.Text = "Tillåt redigering";
-                this.dataGridView1.ReadOnly = false;
+            this.drawTable();
+        }
+        private void remove_Click(object sender, EventArgs e)
+        {
+            List<int> indexList = new List<int>();
+            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
+            {
+                if (item.Selected && !indexList.Contains(item.RowIndex))
+                {
+                    //this.EventDeletePers(item.RowIndex);
+                    indexList.Add(item.RowIndex);
+                }
+
+            }
+            indexList.Sort();
+            for (int i = indexList.Count - 1; i >= 0; i--)
+            {
+                this.person.RemoveHopp(indexList[i]);
+            }
+            this.drawTable();
         }
         #endregion
 
@@ -106,26 +128,6 @@ namespace simhoppprojekt
         }
 
         #endregion
-
-        private void remove_Click(object sender, EventArgs e)
-        {
-            List<int> indexList = new List<int>();
-            foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
-            {
-                if (item.Selected && !indexList.Contains(item.RowIndex))
-                {
-                    //this.EventDeletePers(item.RowIndex);
-                    indexList.Add(item.RowIndex);
-                }
-
-            }
-            indexList.Sort();
-            for (int i = indexList.Count - 1; i >= 0; i--)
-            {
-                this.person.RemoveHopp(indexList[i]);
-            }
-            this.drawTable();
-        }
 
 
     }
