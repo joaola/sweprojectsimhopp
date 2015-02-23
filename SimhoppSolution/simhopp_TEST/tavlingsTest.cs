@@ -29,7 +29,7 @@ namespace simhopp_TEST
             tempbetyg.Add(6);
             Hopp temphopp1 = new Hopp( 101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl1 = new Hopplist(1, "Kurt", "gyttorp sf", 1990, "man", "gyttorp", "3m");
+            Hopplist hl1 = new Hopplist(1, "Kurt", "gyttorp sf", 1990, "man", "gyttorp");
             hl1.AddHopp(temphopp1);
 
             tempbetyg.Clear();
@@ -72,7 +72,7 @@ namespace simhopp_TEST
             tempbetyg.Add(2);
             Hopp temphopp4 = new Hopp(101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl2 = new Hopplist(2, "Sven", "gyttorp sf", 1990, "man", "gyttorp", "3m");
+            Hopplist hl2 = new Hopplist(2, "Sven", "gyttorp sf", 1990, "man", "gyttorp");
             hl2.AddHopp(temphopp4);
 
             tempbetyg.Clear();
@@ -115,7 +115,7 @@ namespace simhopp_TEST
             tempbetyg.Add(8);
             Hopp temphopp7 = new Hopp(101, "A", 1.5f, 3, tempbetyg);
 
-            Hopplist hl3 = new Hopplist(3,"Bert", "gyttorp sf", 1990, "man", "gyttorp", "3m");
+            Hopplist hl3 = new Hopplist(3,"Bert", "gyttorp sf", 1990, "man", "gyttorp");
             hl3.AddHopp(temphopp7);
 
             tempbetyg.Clear();

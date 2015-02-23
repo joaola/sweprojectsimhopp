@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="simhoppprojekt.Hopp">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IMAIgAAACAAAAAAAAABAEAAAg4AIAAAIAkAAgDAACAY=</HashCode>
+      <FileName>Model\Hopp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Hopplist">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECIYQAAAAAAAACAAAAAAoEAAiYIEAABYAAAAgAgChA=</HashCode>
+      <FileName>Model\Hopplist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.TavlingsClass">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAREAIgAAAAAAAQAAAAAKAAAAAIgAACgAAAEI=</HashCode>
+      <FileName>Model\TavlingsClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.PresenterForm1" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAACiAABAAAAQAAgAAAAAAEAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>presenter\PresenterForm1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Program" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Form1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAMC4QCAWAEACYEGBgEgCCOh8BgAIMnQMBAACACA=</HashCode>
+      <FileName>vy\Form1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="simhoppprojekt.ListHopp" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBCABCECgAEmEACAAABCAAiIEABIHmAAAICAAEA=</HashCode>
+      <FileName>vy\ListHopp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.NyPers" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAEACAAAAAAEQCAAAASAAAAABIJEQgAAAAAAAA=</HashCode>
+      <FileName>vy\NyPers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.NyttHopp" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEBAAAASAgAICQQACAgABCAAAsABEAGHEAAAj//gA=</HashCode>
+      <FileName>vy\NyttHopp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Redigera" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACCAAAAAEACAAAACAAgAQBEAEAAAAACAMoA=</HashCode>
+      <FileName>vy\Redigera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.RedigeraHopp" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEBAAAASAAAAGQAACAgAACAAAIABkAEEEAAAj//gA=</HashCode>
+      <FileName>vy\RedigeraHopp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="simhoppprojekt.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="simhoppprojekt.Poang">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\Hopp.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="simhoppprojekt.IForm1" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYAAAAAEAAQAAAAAAAAAAAAAAAAAQABAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="simhoppprojekt.DelegateDeletePers" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateGetHopplistor" Collapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateGetTavling" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateGetTavlingsnamn" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateGetDatum" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateSetDatum" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateSetTavlingsnamn" Collapsed="true">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="simhoppprojekt.DelegateSort" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>vy\IForm1.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
