@@ -499,7 +499,9 @@
             this.Controls.Add(this.UpDown1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.antalDomare);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "NyttHopp";
             this.Text = "Nytt hopp";
             this.Load += new System.EventHandler(this.NyttHopp_Load);

@@ -14,6 +14,7 @@ namespace simhoppprojekt
     public delegate void DelegateSetDatum(string datum);
     public delegate void DelegateSetTavlingsnamn(string namn);
     public delegate void DelegateSort();
+    public delegate void DelegateSetTavling(TavlingsClass t1);
     
     public interface IForm1
     {
@@ -25,6 +26,7 @@ namespace simhoppprojekt
         event DelegateSetDatum EventSetDatum;
         event DelegateSetTavlingsnamn EventSetTavlingsnamn;
         event DelegateSort EventSort;
+        event DelegateSetTavling EventSetTavling;
 
     }
 

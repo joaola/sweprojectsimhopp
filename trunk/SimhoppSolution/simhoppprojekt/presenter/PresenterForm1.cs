@@ -25,6 +25,7 @@ namespace simhoppprojekt
             this._view.EventSetDatum += SetDatum;
             this._view.EventSetTavlingsnamn += setTavlingsnamn;
             this._view.EventSort += sort;
+            this._view.EventSetTavling += setTavling;
         }
 
         #region funcs
@@ -69,6 +70,10 @@ namespace simhoppprojekt
             this._model.PlaceringSort();
         }
         
+        public void setTavling(TavlingsClass t1)
+        {
+            this._model = t1;
+        }
 
         #endregion
     }
