@@ -342,7 +342,9 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.simnamn1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ListHopp";
             this.Text = "Personlig information";
             this.Load += new System.EventHandler(this.ListHopp_Load);

@@ -22,6 +22,7 @@ namespace simhoppprojekt
         public event DelegateSetDatum EventSetDatum = null;
         public event DelegateSetTavlingsnamn EventSetTavlingsnamn = null;
         public event DelegateSort EventSort = null;
+        public event DelegateSetTavling EventSetTavling = null;
         #endregion
 
         #region constr
@@ -189,34 +190,20 @@ namespace simhoppprojekt
 
         }
 
-        private static void threadNewTavling()
+        public static void threadNewTavling(TavlingsClass t1)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             Form1 form1 = new Form1();
-            TavlingsClass t1 = new TavlingsClass();
-
-            /*Hopplist kurt = new Hopplist(1, "Kurt", "slavicboyz", 1990, "?", "hallsberg", "3mmagplask");
-            List<float> tempbetyg = new List<float>();
-            tempbetyg.Add(10);
-            tempbetyg.Add(8.5f);
-            tempbetyg.Add(9f);
-            tempbetyg.Add(8);
-            tempbetyg.Add(7);
-            tempbetyg.Add(6);
-            tempbetyg.Add(6);
-            kurt.AddHopp(new Hopp(101, "A", 1.5f, 3, tempbetyg));
-            kurt.AddHopp(new Hopp(202, "A", 2f, 3, tempbetyg));
-            t1.AddPerson(kurt);*/
-
 
             PresenterForm1 presenter = new PresenterForm1(form1, t1);
             Application.Run(form1);
         }
+
         private void nyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(threadNewTavling));
+            System.Threading.Thread t = new System.Threading.Thread(() => threadNewTavling(new TavlingsClass()));
             t.SetApartmentState(System.Threading.ApartmentState.STA);
             t.Start();
         }
@@ -330,7 +317,76 @@ namespace simhoppprojekt
                     {
                         using (myStream)
                         {
+                            #region read
                             // Insert code to read the stream here.
+                            StreamReader file = new StreamReader(myStream);
+                            List<Hopplist> templist = new List<Hopplist>();
+                            List<Hopp> templisthopp = new List<Hopp>();
+                            string temp=null;
+                            string readDatum = file.ReadLine();
+
+                            string readTavling = file.ReadLine();
+
+                            //int i = 0;
+                            if(!file.EndOfStream)
+                                temp = file.ReadLine();
+
+                            while(!file.EndOfStream)
+                            {                               
+                                if(temp == ":")
+                                {
+                                    string readNamn = file.ReadLine();
+                                    int readID = Convert.ToInt32(file.ReadLine());
+                                    string readForening = file.ReadLine();
+                                    int readFodelse = Convert.ToInt32(file.ReadLine());
+                                    string readKon = file.ReadLine();
+                                    string readOrt = file.ReadLine();
+
+                                    Hopplist tempPerson = new Hopplist(readID, readNamn, readForening, readFodelse, readKon, readOrt);
+
+                                    temp = file.ReadLine();
+                                    if(temp == "-")
+                                    {
+                                        while(temp != ":")
+                                        {
+                                            int readHoppNr = Convert.ToInt32(file.ReadLine());
+                                            string readStil = file.ReadLine();
+                                            float readSvarighet = Convert.ToSingle(file.ReadLine());
+                                            int readHojd = Convert.ToInt32(file.ReadLine());
+                                            int readDomare = Convert.ToInt32(file.ReadLine());
+                                            List<float> tempbetyg = new List<float>();
+                                            for (int i = 0; i < readDomare; i++ )
+                                            {
+                                                tempbetyg.Add(Convert.ToSingle(file.ReadLine()));
+                                            }
+
+                                            Hopp temphopp = new Hopp(readHoppNr, readStil, readSvarighet,readHojd, tempbetyg);
+                                            tempPerson.AddHopp(temphopp);
+
+                                            temp = file.ReadLine();
+                                        }
+                                        
+                                    }
+                                    templist.Add(tempPerson); 
+                                }
+                            }
+                            TavlingsClass temptavling = new TavlingsClass(readTavling, readDatum, templist);
+
+                            if (EventGetHopplistor().Count != 0)
+                            {
+                                System.Threading.Thread t = new System.Threading.Thread(() => threadNewTavling(temptavling));
+                                t.SetApartmentState(System.Threading.ApartmentState.STA);
+                                t.Start();
+                            }
+
+                            else
+                            {
+                                EventSetTavling(temptavling);
+                                this.drawDate();
+                                this.drawTable();
+                                this.drawTavling();
+                            }
+                            #endregion
                         }
                     }
                 }

@@ -195,7 +195,9 @@
             this.Controls.Add(this.ForeningReg);
             this.Controls.Add(this.NamnReg);
             this.Controls.Add(this.OrtReg);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Redigera";
             this.Text = "Redigera";
             this.Load += new System.EventHandler(this.Redigera_Load);
