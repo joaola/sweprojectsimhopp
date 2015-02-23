@@ -347,7 +347,7 @@ namespace simhoppprojekt
                                     temp = file.ReadLine();
                                     if(temp == "-")
                                     {
-                                        while(temp != ":")
+                                        while(temp != ":" && temp!=null)
                                         {
                                             int readHoppNr = Convert.ToInt32(file.ReadLine());
                                             string readStil = file.ReadLine();
