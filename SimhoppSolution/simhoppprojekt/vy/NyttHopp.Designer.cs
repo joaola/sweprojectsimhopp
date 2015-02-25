@@ -59,6 +59,7 @@
             this.hojddrop = new System.Windows.Forms.ComboBox();
             this.HoppkodBox = new System.Windows.Forms.TextBox();
             this.cancelbutton = new System.Windows.Forms.Button();
+            this.UdpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown3)).BeginInit();
@@ -462,6 +463,16 @@
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
             // 
+            // UdpButton
+            // 
+            this.UdpButton.Location = new System.Drawing.Point(265, 35);
+            this.UdpButton.Name = "UdpButton";
+            this.UdpButton.Size = new System.Drawing.Size(75, 23);
+            this.UdpButton.TabIndex = 28;
+            this.UdpButton.Text = "Testknapp";
+            this.UdpButton.UseVisualStyleBackColor = true;
+            this.UdpButton.Click += new System.EventHandler(this.UdpButton_Click);
+            // 
             // NyttHopp
             // 
             this.AcceptButton = this.button1;
@@ -469,6 +480,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelbutton;
             this.ClientSize = new System.Drawing.Size(366, 419);
+            this.Controls.Add(this.UdpButton);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.HoppkodBox);
             this.Controls.Add(this.hojddrop);
@@ -549,5 +561,6 @@
         private System.Windows.Forms.ComboBox hojddrop;
         private System.Windows.Forms.TextBox HoppkodBox;
         private System.Windows.Forms.Button cancelbutton;
+        private System.Windows.Forms.Button UdpButton;
     }
 }
