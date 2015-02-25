@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace simhoppprojekt
     public partial class NyttHopp : Form
     {
         private Hopplist person;
+        private const int listenPort = 9058;
         public NyttHopp()
         {
             
@@ -116,11 +119,6 @@ namespace simhoppprojekt
 
             this.Close();
         }
-
-        private void button2_Click(object sender, EventArgs e) // ångra
-        {
-           
-        }
         
         #region domare
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,9 +209,112 @@ namespace simhoppprojekt
 
         private void cancelbutton_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
+        public void UdpReceive()
+        {
+            bool done = false;
+            UdpClient listener = new UdpClient(listenPort);
+            IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
+            string received_data = "";
+            byte[] receive_byte_array;
+            try
+            {
+                int i=0;
+                List <NumericUpDown> domare = new List<NumericUpDown>();
+                #region addDomare
+                domare.Add(this.UpDown1);
+                domare.Add(this.UpDown2);
+                domare.Add(this.UpDown3);
+                domare.Add(this.UpDown4);
+                domare.Add(this.UpDown5);
+                domare.Add(this.UpDown6);
+                domare.Add(this.UpDown7);
+                #endregion
+                int antaldomare = this.Getdomare();
+                
+                while (!done)
+                {   
+                    receive_byte_array = listener.Receive(ref groupEP);
+                    received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
+                    if(received_data != "")
+                    {
+                        decimal domarvarde = Convert.ToDecimal(received_data);
+                        if (domarvarde > 10)
+                            domarvarde = 10;
+                        else if (domarvarde < 0)
+                            domarvarde = 0;
+                        AppendTextBox(domarvarde, domare[i]);
+                        i++;
+                        received_data="";
+                        if (i >= antaldomare)
+                        {
+                            this.unlockAntalDomare();
+                            done = true;
+                        }
+                    }
+                    
+                    
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            listener.Close();
+            
+        }
 
+        private void UdpButton_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread t = new System.Threading.Thread(UdpReceive);
+            t.SetApartmentState(System.Threading.ApartmentState.STA);
+            t.IsBackground = true;
+            antaldomdrop.Enabled = false;
+            t.Start();
+        }
+
+        public void unlockAntalDomare()
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    this.antaldomdrop.Enabled = true;
+                });
+            }
+        }
+        public void AppendTextBox(decimal value,NumericUpDown domarupd)
+        {
+            if (InvokeRequired)
+            {
+                
+                //this.Invoke(new Action<string>(AppendTextBox), new object[] { value });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    domarupd.Value = value;
+                    domarupd.Enabled = false;
+                });
+            }
+            
+        }
+
+        public int Getdomare()
+        {
+            int antaldomare = 0;
+            if (InvokeRequired)
+            {
+                //this.Invoke(new Action<string>(AppendTextBox), new object[] { value });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    antaldomare = Convert.ToInt32(this.antaldomdrop.SelectedItem);
+                    
+                });
+                
+            }
+            return antaldomare;
+        }
     }
 }
