@@ -273,6 +273,8 @@ namespace simhoppprojekt
             t.SetApartmentState(System.Threading.ApartmentState.STA);
             t.IsBackground = true;
             antaldomdrop.Enabled = false;
+            UdpButton.Enabled = false;
+            UdpButton.Text = "Väntar...";
             t.Start();
         }
 
@@ -283,6 +285,8 @@ namespace simhoppprojekt
                 this.Invoke((MethodInvoker)delegate()
                 {
                     this.antaldomdrop.Enabled = true;
+                    this.UdpButton.Enabled = true;
+                    this.UdpButton.Text = "Begär betyg";
                 });
             }
         }

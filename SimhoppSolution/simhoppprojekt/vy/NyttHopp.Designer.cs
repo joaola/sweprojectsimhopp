@@ -465,11 +465,11 @@
             // 
             // UdpButton
             // 
-            this.UdpButton.Location = new System.Drawing.Point(265, 35);
+            this.UdpButton.Location = new System.Drawing.Point(202, 321);
             this.UdpButton.Name = "UdpButton";
             this.UdpButton.Size = new System.Drawing.Size(75, 23);
             this.UdpButton.TabIndex = 28;
-            this.UdpButton.Text = "Testknapp";
+            this.UdpButton.Text = "Begär betyg";
             this.UdpButton.UseVisualStyleBackColor = true;
             this.UdpButton.Click += new System.EventHandler(this.UdpButton_Click);
             // 
