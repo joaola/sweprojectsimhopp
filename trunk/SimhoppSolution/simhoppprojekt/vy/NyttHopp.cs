@@ -7,7 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace simhoppprojekt
@@ -16,6 +16,7 @@ namespace simhoppprojekt
     {
         private Hopplist person;
         private const int listenPort = 9058;
+        private System.Threading.Thread t;
         public NyttHopp()
         {
             
@@ -84,7 +85,7 @@ namespace simhoppprojekt
             int antaldom;
             int.TryParse(this.antaldomdrop.Text, out antaldom);
             List<float> tempbetyg = new List<float>();
-
+            #region add
             if (antaldom == 3)
             {
                 tempbetyg.Add((float)this.UpDown1.Value);
@@ -109,14 +110,13 @@ namespace simhoppprojekt
                 tempbetyg.Add((float)this.UpDown6.Value);
                 tempbetyg.Add((float)this.UpDown7.Value);
             }
-
+            #endregion
 
 
             Hopp temphopp = new Hopp(hoppkod,stil,svarighet,hojd,tempbetyg);
             this.person.AddHopp(temphopp);
             //if (this.EventNewHopp != null)
             //    this.EventNewHopp();
-
             this.Close();
         }
         
@@ -222,8 +222,8 @@ namespace simhoppprojekt
             byte[] receive_byte_array;
             try
             {
-                int i=0;
-                List <NumericUpDown> domare = new List<NumericUpDown>();
+                int i = 0;
+                List<NumericUpDown> domare = new List<NumericUpDown>();
                 #region addDomare
                 domare.Add(this.UpDown1);
                 domare.Add(this.UpDown2);
@@ -234,47 +234,72 @@ namespace simhoppprojekt
                 domare.Add(this.UpDown7);
                 #endregion
                 int antaldomare = this.Getdomare();
-                
+
                 while (!done)
-                {   
-                    receive_byte_array = listener.Receive(ref groupEP);
-                    received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
-                    if(received_data != "")
+                {
+                    if (listener.Available > 0)
                     {
-                        decimal domarvarde = Convert.ToDecimal(received_data);
-                        if (domarvarde > 10)
-                            domarvarde = 10;
-                        else if (domarvarde < 0)
-                            domarvarde = 0;
-                        AppendTextBox(domarvarde, domare[i]);
-                        i++;
-                        received_data="";
-                        if (i >= antaldomare)
+                        receive_byte_array = listener.Receive(ref groupEP);
+                        received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
+                        if (received_data != "")
                         {
-                            this.unlockAntalDomare();
-                            done = true;
+                            decimal domarvarde = Convert.ToDecimal(received_data);
+                            if (domarvarde > 10)
+                                domarvarde = 10;
+                            else if (domarvarde < 0)
+                                domarvarde = 0;
+                            AppendTextBox(domarvarde, domare[i]);
+                            i++;
+                            received_data = "";
+                            if (i >= antaldomare)
+                            {
+                                this.unlockAntalDomare();
+                                done = true;
+                            }
                         }
                     }
-                    
-                    
+                    else
+                    {
+                        Thread.Sleep(100);
+                    }
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
-            listener.Close();
-            
+            finally
+            {
+                listener.Close();
+            }
         }
 
         private void UdpButton_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread t = new System.Threading.Thread(UdpReceive);
-            t.SetApartmentState(System.Threading.ApartmentState.STA);
+            t = new System.Threading.Thread(UdpReceive);
+            //t.SetApartmentState(System.Threading.ApartmentState.STA);
             t.IsBackground = true;
             antaldomdrop.Enabled = false;
             UdpButton.Enabled = false;
             UdpButton.Text = "Väntar...";
+            #region reset betyg
+            UpDown1.Value = 0;
+            UpDown2.Value = 0;
+            UpDown3.Value = 0;
+            UpDown4.Value = 0;
+            UpDown5.Value = 0;
+            UpDown6.Value = 0;
+            UpDown7.Value = 0;
+            
+            UpDown1.Enabled = true;
+            UpDown2.Enabled = true;
+            UpDown3.Enabled = true;
+            UpDown4.Enabled = true;
+            UpDown5.Enabled = true;
+            UpDown6.Enabled = true;
+            UpDown7.Enabled = true;
+            
+            #endregion
             t.Start();
         }
 
@@ -319,6 +344,13 @@ namespace simhoppprojekt
                 
             }
             return antaldomare;
+        }
+
+        private void NyttHopp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(t.IsAlive)
+                t.Abort();
+
         }
     }
 }
