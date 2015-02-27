@@ -16,7 +16,7 @@ namespace simhoppprojekt
     {
         private Hopplist person;
         private const int listenPort = 9058;
-        private System.Threading.Thread t;
+        private System.Threading.Thread t = new Thread(() => { });
         public NyttHopp()
         {
             
@@ -300,6 +300,7 @@ namespace simhoppprojekt
             UpDown7.Enabled = true;
             
             #endregion
+            this.SendFunc("Judging open.");
             t.Start();
         }
 
@@ -312,6 +313,7 @@ namespace simhoppprojekt
                     this.antaldomdrop.Enabled = true;
                     this.UdpButton.Enabled = true;
                     this.UdpButton.Text = "Begär betyg";
+                    this.SendFunc("Judging closed.");
                 });
             }
         }
@@ -348,9 +350,39 @@ namespace simhoppprojekt
 
         private void NyttHopp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(t.IsAlive)
+            if(t.IsAlive == true)
                 t.Abort();
+        }
 
+        private void SendFunc(string s)
+        {
+            Boolean exception_thrown = false;
+            Socket sending_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            IPAddress send_to_address = IPAddress.Parse("10.22.8.160");
+            IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 9059);
+
+            string text_to_send = s;
+
+
+            byte[] send_buffer = Encoding.ASCII.GetBytes(text_to_send);
+            try
+            {
+                sending_socket.SendTo(send_buffer, sending_end_point);
+            }
+            catch (Exception send_exception)
+            {
+                exception_thrown = true;
+                //textBox1.Text = " Exception " + send_exception.Message;
+            }
+            if (exception_thrown == false)
+            {
+                //textBox1.Text = "Message has been sent to the broadcast address";
+            }
+            else
+            {
+                exception_thrown = false;
+                //textBox1.Text = "The exception indicates the message was not sent.";
+            }
         }
     }
 }
