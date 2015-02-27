@@ -465,7 +465,7 @@
             // 
             // UdpButton
             // 
-            this.UdpButton.Location = new System.Drawing.Point(202, 321);
+            this.UdpButton.Location = new System.Drawing.Point(202, 305);
             this.UdpButton.Name = "UdpButton";
             this.UdpButton.Size = new System.Drawing.Size(75, 23);
             this.UdpButton.TabIndex = 28;
@@ -516,6 +516,7 @@
             this.MaximizeBox = false;
             this.Name = "NyttHopp";
             this.Text = "Nytt hopp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NyttHopp_FormClosing);
             this.Load += new System.EventHandler(this.NyttHopp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDown2)).EndInit();
