@@ -108,7 +108,6 @@
             this.UpDown1.Size = new System.Drawing.Size(56, 20);
             this.UpDown1.TabIndex = 6;
             this.UpDown1.Visible = false;
-            this.UpDown1.ValueChanged += new System.EventHandler(this.UpDown1_ValueChanged);
             // 
             // button3
             // 

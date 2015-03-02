@@ -98,6 +98,7 @@ namespace simhoppprojekt
             
         }
 
+        #region clicks
         private void button1_Click(object sender, EventArgs e)
         {
             #region read
@@ -155,7 +156,7 @@ namespace simhoppprojekt
         {
             this.Close();
         }
-
+        #endregion
         private void antaldomdrop_SelectedIndexChanged(object sender, EventArgs e)
         {
             #region domare

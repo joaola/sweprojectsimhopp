@@ -14,6 +14,7 @@ namespace simhoppprojekt
     {
         private Hopplist person;
 
+        #region constr
         public Redigera()
         {
             InitializeComponent();
@@ -23,7 +24,9 @@ namespace simhoppprojekt
             this.person = person;
             InitializeComponent();
         }
+        #endregion
 
+        #region clicks
         private void OkReg_Click(object sender, EventArgs e)
         {
             #region read
@@ -53,7 +56,7 @@ namespace simhoppprojekt
         {
             this.Close();
         }
-
+        #endregion
         private void Redigera_Load(object sender, EventArgs e)
         {
             this.NamnReg.Text = this.person.getNamn();

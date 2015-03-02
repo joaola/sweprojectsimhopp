@@ -42,18 +42,18 @@ namespace simhoppprojekt
 
         private void redButton_Click(object sender, EventArgs e)
         {
-            int lastitem = -1;
+            List<int> indexList = new List<int>();
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected && item.RowIndex != lastitem)
+                if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
+                    indexList.Add(item.RowIndex);
                     List<Hopp> persHopp = this.person.getHopplista();
                     Hopp Olikahopp = persHopp[item.RowIndex];
-                    
+
                     RedigeraHopp redig = new RedigeraHopp(Olikahopp);
                     redig.ShowDialog();
                 }
-                lastitem = item.RowIndex;
             }
             this.drawTable();
         }
@@ -64,7 +64,6 @@ namespace simhoppprojekt
             {
                 if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
-                    //this.EventDeletePers(item.RowIndex);
                     indexList.Add(item.RowIndex);
                 }
 
@@ -76,8 +75,15 @@ namespace simhoppprojekt
             }
             this.drawTable();
         }
-        #endregion
 
+        private void nytthopp_Click(object sender, EventArgs e)
+        {
+            NyttHopp nyh = new NyttHopp(this.person);
+            nyh.ShowDialog();
+
+            this.drawTable();
+        }
+        #endregion
 
         private void ListHopp_Load(object sender, EventArgs e)
         {
@@ -134,13 +140,7 @@ namespace simhoppprojekt
 
         #endregion
 
-        private void nytthopp_Click(object sender, EventArgs e)
-        {
-            NyttHopp nyh = new NyttHopp(this.person);
-            nyh.ShowDialog();
-
-            this.drawTable();
-        }
+        
 
 
     }

@@ -112,17 +112,17 @@ namespace simhoppprojekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            int lastItemIndex = -1;
+            List<int> indexList = new List<int>();
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected && this.EventGetHopplistor().Count != 0 && item.RowIndex != lastItemIndex)
+                if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
+                    indexList.Add(item.RowIndex);
                     List<Hopplist> persons = this.EventGetHopplistor();
                     Hopplist person = persons[item.RowIndex];
                     NyttHopp nyh = new NyttHopp(person);
                     nyh.ShowDialog();
                 }
-                lastItemIndex = item.RowIndex;
             }
             this.EventSort();
             this.drawTable();
@@ -130,35 +130,37 @@ namespace simhoppprojekt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int lastitem=-1;
+            List<int> indexList = new List<int>();
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected && item.RowIndex != lastitem)
+                if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
+                    indexList.Add(item.RowIndex);
                     List<Hopplist> persons = this.EventGetHopplistor();
                     Hopplist person = persons[item.RowIndex];
                     Redigera reggie = new Redigera(person);
                     reggie.ShowDialog();
-                }
-                lastitem = item.RowIndex;
+                }   
+              
             }
             this.drawTable();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int lastItemIndex = -1;
+            List<int> indexList = new List<int>();
             foreach (DataGridViewCell item in this.dataGridView1.SelectedCells)
             {
-                if (item.Selected && this.EventGetHopplistor().Count != 0 && item.RowIndex != lastItemIndex)
+                if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
+                    indexList.Add(item.RowIndex);
                     List<Hopplist> persons = this.EventGetHopplistor();
                     Hopplist person = persons[item.RowIndex];
                     ListHopp lh = new ListHopp(person);
                     lh.ShowDialog();
-                }
-                lastItemIndex = item.RowIndex;
+                }        
             }
+
             this.EventSort();
             this.drawTable();
         }
@@ -175,7 +177,6 @@ namespace simhoppprojekt
             {
                 if (item.Selected && !indexList.Contains(item.RowIndex))
                 {
-                    //this.EventDeletePers(item.RowIndex);
                     indexList.Add(item.RowIndex);
                 }
                 
@@ -189,18 +190,6 @@ namespace simhoppprojekt
             this.drawTable();
 
         }
-
-        public static void threadNewTavling(TavlingsClass t1)
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            Form1 form1 = new Form1();
-
-            PresenterForm1 presenter = new PresenterForm1(form1, t1);
-            Application.Run(form1);
-        }
-
         private void nyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Threading.Thread t = new System.Threading.Thread(() => threadNewTavling(new TavlingsClass()));
@@ -237,6 +226,17 @@ namespace simhoppprojekt
         {
             this.EventSetTavlingsnamn(this.Tavlingsnamn.Text);
             this.drawTavling();
+        }
+
+        public static void threadNewTavling(TavlingsClass t1)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            Form1 form1 = new Form1();
+
+            PresenterForm1 presenter = new PresenterForm1(form1, t1);
+            Application.Run(form1);
         }
 
         private void Save()
