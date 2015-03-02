@@ -27,7 +27,82 @@ namespace simhoppprojekt
             this.person = person;
             InitializeComponent();
         }
-        
+
+        #region domare
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Object selectedItem = antaldomdrop.SelectedItem;
+            if (selectedItem.ToString() == "3")
+            {
+
+                domare1.Visible = true;
+                domare2.Visible = true;
+                domare3.Visible = true;
+                domare4.Visible = false;
+                domare5.Visible = false;
+                domare6.Visible = false;
+                domare7.Visible = false;
+                UpDown1.Visible = true;
+                UpDown2.Visible = true;
+                UpDown3.Visible = true;
+                UpDown4.Visible = false;
+                UpDown5.Visible = false;
+                UpDown6.Visible = false;
+                UpDown7.Visible = false;
+
+                // nollställ
+                UpDown4.Value = 0;
+                UpDown5.Value = 0;
+                UpDown6.Value = 0;
+                UpDown7.Value = 0;
+            }
+
+            else if (selectedItem.ToString() == "5")
+            {
+
+                domare1.Visible = true;
+                domare2.Visible = true;
+                domare3.Visible = true;
+                domare4.Visible = true;
+                domare5.Visible = true;
+                domare6.Visible = false;
+                domare7.Visible = false;
+                UpDown1.Visible = true;
+                UpDown2.Visible = true;
+                UpDown3.Visible = true;
+                UpDown4.Visible = true;
+                UpDown5.Visible = true;
+                UpDown6.Visible = false;
+                UpDown7.Visible = false;
+
+                // nollställ
+                UpDown6.Value = 0;
+                UpDown7.Value = 0;
+            }
+
+            else
+            {
+
+                domare1.Visible = true;
+                domare2.Visible = true;
+                domare3.Visible = true;
+                domare4.Visible = true;
+                domare5.Visible = true;
+                domare6.Visible = true;
+                domare7.Visible = true;
+                UpDown1.Visible = true;
+                UpDown2.Visible = true;
+                UpDown3.Visible = true;
+                UpDown4.Visible = true;
+                UpDown5.Visible = true;
+                UpDown6.Visible = true;
+                UpDown7.Visible = true;
+            }
+
+        }
+        #endregion
+
+        #region clicks
         private void button3_Click(object sender, EventArgs e) // räkna
         {
             int hoppkod;
@@ -119,78 +194,10 @@ namespace simhoppprojekt
             //    this.EventNewHopp();
             this.Close();
         }
-        
-        #region domare
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cancelbutton_Click(object sender, EventArgs e)
         {
-            Object selectedItem = antaldomdrop.SelectedItem;
-            if(selectedItem.ToString() == "3")
-            {
 
-                domare1.Visible = true;
-                domare2.Visible = true;
-                domare3.Visible = true;
-                domare4.Visible = false;
-                domare5.Visible = false;
-                domare6.Visible = false;
-                domare7.Visible = false;
-                UpDown1.Visible = true;
-                UpDown2.Visible = true;
-                UpDown3.Visible = true;
-                UpDown4.Visible = false;
-                UpDown5.Visible = false;
-                UpDown6.Visible = false;
-                UpDown7.Visible = false;
-
-                // nollställ
-                UpDown4.Value = 0;
-                UpDown5.Value = 0;
-                UpDown6.Value = 0;
-                UpDown7.Value = 0;
-            }
-            
-            else if(selectedItem.ToString() == "5")
-            {
-
-                domare1.Visible = true;
-                domare2.Visible = true;
-                domare3.Visible = true;
-                domare4.Visible = true;
-                domare5.Visible = true;
-                domare6.Visible = false;
-                domare7.Visible = false;
-                UpDown1.Visible = true;
-                UpDown2.Visible = true;
-                UpDown3.Visible = true;
-                UpDown4.Visible = true;
-                UpDown5.Visible = true;
-                UpDown6.Visible = false;
-                UpDown7.Visible = false;
-                
-                // nollställ
-                UpDown6.Value = 0;
-                UpDown7.Value = 0;
-            }
-
-            else
-            {
-
-                domare1.Visible = true;
-                domare2.Visible = true;
-                domare3.Visible = true;
-                domare4.Visible = true;
-                domare5.Visible = true;
-                domare6.Visible = true;
-                domare7.Visible = true;
-                UpDown1.Visible = true;
-                UpDown2.Visible = true;
-                UpDown3.Visible = true;
-                UpDown4.Visible = true;
-                UpDown5.Visible = true;
-                UpDown6.Visible = true;
-                UpDown7.Visible = true;
-            }
-
+            this.Close();
         }
         #endregion
 
@@ -202,17 +209,7 @@ namespace simhoppprojekt
             stilDrop.SelectedItem = "A";
         }
 
-        private void UpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cancelbutton_Click(object sender, EventArgs e)
-        {
-            
-            this.Close();
-        }
-
+        #region udp/thread
         public void UdpReceive()
         {
             bool done = false;
@@ -384,5 +381,6 @@ namespace simhoppprojekt
                 //textBox1.Text = "The exception indicates the message was not sent.";
             }
         }
+        #endregion
     }
 }

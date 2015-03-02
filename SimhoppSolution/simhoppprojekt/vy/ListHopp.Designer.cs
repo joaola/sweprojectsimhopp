@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListHopp));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.simnamn1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,6 +48,12 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.nytthopp = new System.Windows.Forms.Button();
+            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -80,53 +79,6 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(503, 248);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // hoppkod
-            // 
-            this.hoppkod.FillWeight = 65F;
-            this.hoppkod.HeaderText = "Hoppkod";
-            this.hoppkod.Name = "hoppkod";
-            this.hoppkod.ReadOnly = true;
-            this.hoppkod.Width = 65;
-            // 
-            // hojd
-            // 
-            this.hojd.FillWeight = 55F;
-            this.hojd.HeaderText = "Höjd";
-            this.hojd.Name = "hojd";
-            this.hojd.ReadOnly = true;
-            this.hojd.Width = 55;
-            // 
-            // Stile
-            // 
-            this.Stile.FillWeight = 55F;
-            this.Stile.HeaderText = "Stil";
-            this.Stile.Name = "Stile";
-            this.Stile.ReadOnly = true;
-            this.Stile.Width = 55;
-            // 
-            // svarighet
-            // 
-            this.svarighet.FillWeight = 55F;
-            this.svarighet.HeaderText = "Svårighetsgrad";
-            this.svarighet.Name = "svarighet";
-            this.svarighet.ReadOnly = true;
-            this.svarighet.Width = 80;
-            // 
-            // betyg
-            // 
-            this.betyg.HeaderText = "Betyg";
-            this.betyg.Name = "betyg";
-            this.betyg.ReadOnly = true;
-            this.betyg.Width = 140;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            this.points.Width = 85;
             // 
             // textBox3
             // 
@@ -317,6 +269,59 @@
             this.nytthopp.UseVisualStyleBackColor = true;
             this.nytthopp.Click += new System.EventHandler(this.nytthopp_Click);
             // 
+            // hoppkod
+            // 
+            this.hoppkod.FillWeight = 65F;
+            this.hoppkod.HeaderText = "Hoppkod";
+            this.hoppkod.Name = "hoppkod";
+            this.hoppkod.ReadOnly = true;
+            this.hoppkod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hoppkod.Width = 65;
+            // 
+            // hojd
+            // 
+            this.hojd.FillWeight = 55F;
+            this.hojd.HeaderText = "Höjd";
+            this.hojd.Name = "hojd";
+            this.hojd.ReadOnly = true;
+            this.hojd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hojd.Width = 55;
+            // 
+            // Stile
+            // 
+            this.Stile.FillWeight = 55F;
+            this.Stile.HeaderText = "Stil";
+            this.Stile.Name = "Stile";
+            this.Stile.ReadOnly = true;
+            this.Stile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Stile.Width = 55;
+            // 
+            // svarighet
+            // 
+            this.svarighet.FillWeight = 55F;
+            this.svarighet.HeaderText = "Svårighetsgrad";
+            this.svarighet.Name = "svarighet";
+            this.svarighet.ReadOnly = true;
+            this.svarighet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.svarighet.Width = 80;
+            // 
+            // betyg
+            // 
+            this.betyg.HeaderText = "Betyg";
+            this.betyg.Name = "betyg";
+            this.betyg.ReadOnly = true;
+            this.betyg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.betyg.Width = 140;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.points.Width = 85;
+            // 
             // ListHopp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,12 +369,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox poangsumbox;
         private System.Windows.Forms.Button remove;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoppkod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hojd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn svarighet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn betyg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn points;
         private System.Windows.Forms.TextBox ortruta;
         private System.Windows.Forms.TextBox konruta;
         private System.Windows.Forms.TextBox fodeseruta;
@@ -381,5 +380,11 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button nytthopp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoppkod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hojd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn svarighet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn betyg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn points;
     }
 }
