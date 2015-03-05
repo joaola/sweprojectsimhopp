@@ -16,7 +16,9 @@ namespace simhoppprojekt
     {
         private Hopplist person;
         private const int listenPort = 9058;
+        private List<string> domIp = new List<string>();
         private System.Threading.Thread t = new Thread(() => { });
+        private int index = 0;
         public NyttHopp()
         {
             
@@ -231,27 +233,31 @@ namespace simhoppprojekt
                 domare.Add(this.UpDown7);
                 #endregion
                 int antaldomare = this.Getdomare();
-
+                
                 while (!done)
                 {
                     if (listener.Available > 0)
                     {
+                            
                         receive_byte_array = listener.Receive(ref groupEP);
                         received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
-                        if (received_data != "")
+                        if (CheckIP(groupEP) == true)
                         {
-                            decimal domarvarde = Convert.ToDecimal(received_data);
-                            if (domarvarde > 10)
-                                domarvarde = 10;
-                            else if (domarvarde < 0)
-                                domarvarde = 0;
-                            AppendTextBox(domarvarde, domare[i]);
-                            i++;
-                            received_data = "";
-                            if (i >= antaldomare)
+                            if (received_data != "")
                             {
-                                this.unlockAntalDomare();
-                                done = true;
+                                decimal domarvarde = Convert.ToDecimal(received_data);
+                                if (domarvarde > 10)
+                                    domarvarde = 10;
+                                else if (domarvarde < 0)
+                                    domarvarde = 0;
+                                AppendTextBox(domarvarde, domare[index]);
+                                i++;
+                                received_data = "";
+                                if (i >= antaldomare)
+                                {
+                                    this.unlockAntalDomare();
+                                    done = true;
+                                }
                             }
                         }
                     }
@@ -260,6 +266,7 @@ namespace simhoppprojekt
                         Thread.Sleep(100);
                     }
                 }
+                
             }
             catch (Exception e)
             {
@@ -271,34 +278,34 @@ namespace simhoppprojekt
             }
         }
 
+        private bool CheckIP(IPEndPoint ipe)
+        {
+            for(int i = 0; i < domIp.Count; i++)
+            {
+                if(ipe.Address.ToString() == domIp[i])
+                {
+                    index = i;
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void UdpButton_Click(object sender, EventArgs e)
         {
-            t = new System.Threading.Thread(UdpReceive);
-            //t.SetApartmentState(System.Threading.ApartmentState.STA);
-            t.IsBackground = true;
-            antaldomdrop.Enabled = false;
-            UdpButton.Enabled = false;
-            UdpButton.Text = "Väntar...";
-            #region reset betyg
-            UpDown1.Value = 0;
-            UpDown2.Value = 0;
-            UpDown3.Value = 0;
-            UpDown4.Value = 0;
-            UpDown5.Value = 0;
-            UpDown6.Value = 0;
-            UpDown7.Value = 0;
-            
-            UpDown1.Enabled = true;
-            UpDown2.Enabled = true;
-            UpDown3.Enabled = true;
-            UpDown4.Enabled = true;
-            UpDown5.Enabled = true;
-            UpDown6.Enabled = true;
-            UpDown7.Enabled = true;
-            
-            #endregion
-            this.SendFunc("Judging open.");
-            t.Start();
+            DomarForfragan df = new DomarForfragan(Convert.ToInt32(this.antaldomdrop.SelectedItem), domIp);
+            df.ShowDialog();
+            if(this.domIp.Count == Convert.ToInt32(this.antaldomdrop.SelectedItem))
+            {
+                UdpButton.Enabled = false;
+                UdpButton.Text = "Väntar...";
+                antaldomdrop.Enabled = false;
+                t = new System.Threading.Thread(UdpReceive);
+                t.IsBackground = true;
+                t.Start();
+            }
+            else
+                this.domIp = new List<string>();
         }
 
         public void unlockAntalDomare()
@@ -355,31 +362,34 @@ namespace simhoppprojekt
         {
             Boolean exception_thrown = false;
             Socket sending_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            IPAddress send_to_address = IPAddress.Parse("10.22.8.160");
-            IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 9059);
+            for(int i = 0; i < domIp.Count; i++)
+            {
+                IPAddress send_to_address = IPAddress.Parse(domIp[i]);
+                IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 9059);
+                string text_to_send = s;
 
-            string text_to_send = s;
 
-
-            byte[] send_buffer = Encoding.ASCII.GetBytes(text_to_send);
-            try
-            {
-                sending_socket.SendTo(send_buffer, sending_end_point);
+                byte[] send_buffer = Encoding.ASCII.GetBytes(text_to_send);
+                try
+                {
+                    sending_socket.SendTo(send_buffer, sending_end_point);
+                }
+                catch (Exception send_exception)
+                {
+                    exception_thrown = true;
+                    //textBox1.Text = " Exception " + send_exception.Message;
+                }
+                if (exception_thrown == false)
+                {
+                    //textBox1.Text = "Message has been sent to the broadcast address";
+                }
+                else
+                {
+                    exception_thrown = false;
+                    //textBox1.Text = "The exception indicates the message was not sent.";
+                }
             }
-            catch (Exception send_exception)
-            {
-                exception_thrown = true;
-                //textBox1.Text = " Exception " + send_exception.Message;
-            }
-            if (exception_thrown == false)
-            {
-                //textBox1.Text = "Message has been sent to the broadcast address";
-            }
-            else
-            {
-                exception_thrown = false;
-                //textBox1.Text = "The exception indicates the message was not sent.";
-            }
+            //IPAddress send_to_address = IPAddress.Parse("10.22.8.160");
         }
         #endregion
     }

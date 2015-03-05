@@ -25,7 +25,7 @@ namespace UdpSend
         {
             Boolean exception_thrown = false;
             Socket sending_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            IPAddress send_to_address = IPAddress.Parse("10.22.8.160");
+            IPAddress send_to_address = IPAddress.Parse("10.22.8.68");
             IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 9058);
 
             textBox1.Text = "Skriv in och skicka domarpoäng.";

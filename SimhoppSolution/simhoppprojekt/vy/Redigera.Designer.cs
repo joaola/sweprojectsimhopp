@@ -51,7 +51,7 @@
             this.OkReg.Name = "OkReg";
             this.OkReg.Size = new System.Drawing.Size(75, 23);
             this.OkReg.TabIndex = 8;
-            this.OkReg.Text = "Ok";
+            this.OkReg.Text = "&Ok";
             this.OkReg.UseVisualStyleBackColor = true;
             this.OkReg.Click += new System.EventHandler(this.OkReg_Click);
             // 
@@ -170,7 +170,7 @@
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
             this.cancelbutton.TabIndex = 9;
-            this.cancelbutton.Text = "Avbryt";
+            this.cancelbutton.Text = "&Avbryt";
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
             // 

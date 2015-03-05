@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListHopp));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.simnamn1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,12 +54,6 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.nytthopp = new System.Windows.Forms.Button();
-            this.hoppkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hojd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.svarighet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.betyg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +78,60 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(503, 248);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // hoppkod
+            // 
+            this.hoppkod.FillWeight = 65F;
+            this.hoppkod.HeaderText = "Hoppkod";
+            this.hoppkod.Name = "hoppkod";
+            this.hoppkod.ReadOnly = true;
+            this.hoppkod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hoppkod.Width = 65;
+            // 
+            // hojd
+            // 
+            this.hojd.FillWeight = 55F;
+            this.hojd.HeaderText = "Höjd";
+            this.hojd.Name = "hojd";
+            this.hojd.ReadOnly = true;
+            this.hojd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hojd.Width = 55;
+            // 
+            // Stile
+            // 
+            this.Stile.FillWeight = 55F;
+            this.Stile.HeaderText = "Stil";
+            this.Stile.Name = "Stile";
+            this.Stile.ReadOnly = true;
+            this.Stile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Stile.Width = 55;
+            // 
+            // svarighet
+            // 
+            this.svarighet.FillWeight = 55F;
+            this.svarighet.HeaderText = "Svårighetsgrad";
+            this.svarighet.Name = "svarighet";
+            this.svarighet.ReadOnly = true;
+            this.svarighet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.svarighet.Width = 80;
+            // 
+            // betyg
+            // 
+            this.betyg.HeaderText = "Betyg";
+            this.betyg.Name = "betyg";
+            this.betyg.ReadOnly = true;
+            this.betyg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.betyg.Width = 140;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.points.Width = 85;
             // 
             // textBox3
             // 
@@ -107,8 +160,8 @@
             this.button1.Location = new System.Drawing.Point(450, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Stäng";
+            this.button1.TabIndex = 4;
+            this.button1.Text = "&Stäng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -117,8 +170,8 @@
             this.redButton.Location = new System.Drawing.Point(260, 277);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(96, 23);
-            this.redButton.TabIndex = 1;
-            this.redButton.Text = "Redigera hopp...";
+            this.redButton.TabIndex = 2;
+            this.redButton.Text = "&Redigera hopp...";
             this.redButton.UseVisualStyleBackColor = true;
             this.redButton.Click += new System.EventHandler(this.redButton_Click);
             // 
@@ -148,8 +201,8 @@
             this.remove.Location = new System.Drawing.Point(362, 277);
             this.remove.Name = "remove";
             this.remove.Size = new System.Drawing.Size(82, 23);
-            this.remove.TabIndex = 14;
-            this.remove.Text = "Ta bort hopp";
+            this.remove.TabIndex = 3;
+            this.remove.Text = "Ta &bort hopp";
             this.remove.UseVisualStyleBackColor = true;
             this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
@@ -264,63 +317,10 @@
             this.nytthopp.Location = new System.Drawing.Point(186, 277);
             this.nytthopp.Name = "nytthopp";
             this.nytthopp.Size = new System.Drawing.Size(68, 23);
-            this.nytthopp.TabIndex = 35;
-            this.nytthopp.Text = "Nytt hopp";
+            this.nytthopp.TabIndex = 1;
+            this.nytthopp.Text = "&Nytt hopp";
             this.nytthopp.UseVisualStyleBackColor = true;
             this.nytthopp.Click += new System.EventHandler(this.nytthopp_Click);
-            // 
-            // hoppkod
-            // 
-            this.hoppkod.FillWeight = 65F;
-            this.hoppkod.HeaderText = "Hoppkod";
-            this.hoppkod.Name = "hoppkod";
-            this.hoppkod.ReadOnly = true;
-            this.hoppkod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.hoppkod.Width = 65;
-            // 
-            // hojd
-            // 
-            this.hojd.FillWeight = 55F;
-            this.hojd.HeaderText = "Höjd";
-            this.hojd.Name = "hojd";
-            this.hojd.ReadOnly = true;
-            this.hojd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.hojd.Width = 55;
-            // 
-            // Stile
-            // 
-            this.Stile.FillWeight = 55F;
-            this.Stile.HeaderText = "Stil";
-            this.Stile.Name = "Stile";
-            this.Stile.ReadOnly = true;
-            this.Stile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Stile.Width = 55;
-            // 
-            // svarighet
-            // 
-            this.svarighet.FillWeight = 55F;
-            this.svarighet.HeaderText = "Svårighetsgrad";
-            this.svarighet.Name = "svarighet";
-            this.svarighet.ReadOnly = true;
-            this.svarighet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.svarighet.Width = 80;
-            // 
-            // betyg
-            // 
-            this.betyg.HeaderText = "Betyg";
-            this.betyg.Name = "betyg";
-            this.betyg.ReadOnly = true;
-            this.betyg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.betyg.Width = 140;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.points.Width = 85;
             // 
             // ListHopp
             // 
@@ -349,10 +349,12 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ListHopp";
             this.Text = "Personlig information";
             this.Load += new System.EventHandler(this.ListHopp_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListHopp_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

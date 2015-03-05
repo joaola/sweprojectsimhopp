@@ -140,6 +140,14 @@ namespace simhoppprojekt
 
         #endregion
 
+        private void ListHopp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                remove_Click(sender, e);
+            }
+        }
+
         
 
 

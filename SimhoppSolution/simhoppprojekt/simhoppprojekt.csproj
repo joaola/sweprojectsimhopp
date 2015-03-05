@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vy\DomarForfragan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vy\DomarForfragan.Designer.cs">
+      <DependentUpon>DomarForfragan.cs</DependentUpon>
+    </Compile>
     <Compile Include="vy\IForm1.cs" />
     <Compile Include="presenter\PresenterForm1.cs" />
     <Compile Include="vy\Form1.cs">
@@ -87,6 +93,9 @@
     <Compile Include="vy\RedigeraHopp.Designer.cs">
       <DependentUpon>RedigeraHopp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vy\DomarForfragan.resx">
+      <DependentUpon>DomarForfragan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vy\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
