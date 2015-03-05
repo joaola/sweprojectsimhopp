@@ -82,11 +82,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(69, 373);
+            this.button1.Location = new System.Drawing.Point(63, 373);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Ok";
+            this.button1.Text = "&Ok";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -111,11 +111,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(202, 243);
+            this.button3.Location = new System.Drawing.Point(186, 246);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(81, 23);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Räkna";
+            this.button3.Text = "&Räkna";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -385,7 +385,7 @@
             // poangbox
             // 
             this.poangbox.BackColor = System.Drawing.SystemColors.Info;
-            this.poangbox.Location = new System.Drawing.Point(202, 217);
+            this.poangbox.Location = new System.Drawing.Point(186, 220);
             this.poangbox.Name = "poangbox";
             this.poangbox.ReadOnly = true;
             this.poangbox.Size = new System.Drawing.Size(109, 20);
@@ -454,21 +454,21 @@
             // cancelbutton
             // 
             this.cancelbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelbutton.Location = new System.Drawing.Point(202, 373);
+            this.cancelbutton.Location = new System.Drawing.Point(186, 373);
             this.cancelbutton.Name = "cancelbutton";
-            this.cancelbutton.Size = new System.Drawing.Size(75, 23);
+            this.cancelbutton.Size = new System.Drawing.Size(81, 23);
             this.cancelbutton.TabIndex = 16;
-            this.cancelbutton.Text = "Avbryt";
+            this.cancelbutton.Text = "&Avbryt";
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
             // 
             // UdpButton
             // 
-            this.UdpButton.Location = new System.Drawing.Point(202, 305);
+            this.UdpButton.Location = new System.Drawing.Point(186, 308);
             this.UdpButton.Name = "UdpButton";
-            this.UdpButton.Size = new System.Drawing.Size(75, 23);
+            this.UdpButton.Size = new System.Drawing.Size(81, 23);
             this.UdpButton.TabIndex = 28;
-            this.UdpButton.Text = "Begär betyg";
+            this.UdpButton.Text = "Begär &betyg...";
             this.UdpButton.UseVisualStyleBackColor = true;
             this.UdpButton.Click += new System.EventHandler(this.UdpButton_Click);
             // 
@@ -478,7 +478,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelbutton;
-            this.ClientSize = new System.Drawing.Size(366, 419);
+            this.ClientSize = new System.Drawing.Size(326, 419);
             this.Controls.Add(this.UdpButton);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.HoppkodBox);

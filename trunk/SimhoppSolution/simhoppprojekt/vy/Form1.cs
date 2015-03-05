@@ -91,7 +91,6 @@ namespace simhoppprojekt
 
             NyPers np = new NyPers(this.EventGetTavling());
             np.ShowDialog();
-            //this.EventNewPers();
             this.drawTable();                       
         }
 
@@ -206,7 +205,7 @@ namespace simhoppprojekt
         }
         private void innehallToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("huehuehuehuehuehuehuehuehuehue");
+            MessageBox.Show("Tryck och håll in ALT-tangenten för att komma åt kortkommandon för tangentbordet. Ta bort personer och hopp med Delete-knappen.");
         }
 
         private void omToolStripMenuItem_Click(object sender, EventArgs e)
@@ -394,6 +393,28 @@ namespace simhoppprojekt
                 {
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(Tavlingsnamn.ContainsFocus == false && e.KeyCode == Keys.Delete)
+            {
+                button3_Click(sender, e);
+            }
+            else if (e.Control && e.KeyCode == Keys.S)
+            {
+                sparaToolStripMenuItem_Click(sender, e);
+            }
+
+            else if (e.Control && e.KeyCode == Keys.O)
+            {
+                openToolStripMenuItem_Click(sender, e);
+            }
+
+            else if (e.Control && e.KeyCode == Keys.N)
+            {
+                nyToolStripMenuItem_Click(sender, e);
             }
         }
 

@@ -48,14 +48,14 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.datum = new System.Windows.Forms.DateTimePicker();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.Tavlingsnamn = new System.Windows.Forms.TextBox();
             this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.antalhopp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.points = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.datum = new System.Windows.Forms.DateTimePicker();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Tavlingsnamn = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,7 +67,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Ny person...";
+            this.button1.Text = "Ny &person...";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -77,7 +77,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Redigera person...";
+            this.button2.Text = "&Redigera person...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -87,7 +87,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 23);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Ta bort person";
+            this.button3.Text = "Ta &bort person";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -99,7 +99,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(553, 24);
-            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // arkivToolStripMenuItem
@@ -112,39 +112,39 @@
             this.avslutaToolStripMenuItem});
             this.arkivToolStripMenuItem.Name = "arkivToolStripMenuItem";
             this.arkivToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.arkivToolStripMenuItem.Text = "Arkiv";
+            this.arkivToolStripMenuItem.Text = "&Arkiv";
             // 
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.nyToolStripMenuItem.Text = "Ny";
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nyToolStripMenuItem.Text = "&Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.sparaToolStripMenuItem.Text = "Spara";
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sparaToolStripMenuItem.Text = "&Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.openToolStripMenuItem.Text = "Öppna";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "&Öppna";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.avslutaToolStripMenuItem.Text = "Avsluta";
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.avslutaToolStripMenuItem.Text = "&Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
             // hjälpToolStripMenuItem
@@ -154,20 +154,20 @@
             this.omToolStripMenuItem});
             this.hjälpToolStripMenuItem.Name = "hjälpToolStripMenuItem";
             this.hjälpToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.hjälpToolStripMenuItem.Text = "Hjälp";
+            this.hjälpToolStripMenuItem.Text = "&Hjälp";
             // 
             // innehallToolStripMenuItem
             // 
             this.innehallToolStripMenuItem.Name = "innehallToolStripMenuItem";
-            this.innehallToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.innehallToolStripMenuItem.Text = "Innehåll";
+            this.innehallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.innehallToolStripMenuItem.Text = "&Innehåll";
             this.innehallToolStripMenuItem.Click += new System.EventHandler(this.innehallToolStripMenuItem_Click);
             // 
             // omToolStripMenuItem
             // 
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
-            this.omToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.omToolStripMenuItem.Text = "Om";
+            this.omToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.omToolStripMenuItem.Text = "&Om";
             this.omToolStripMenuItem.Click += new System.EventHandler(this.omToolStripMenuItem_Click);
             // 
             // button4
@@ -176,7 +176,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 23);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Information...";
+            this.button4.Text = "&Information...";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -217,7 +217,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 23);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Nytt hopp...";
+            this.button5.Text = "&Nytt hopp...";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -241,6 +241,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(475, 236);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Placering
+            // 
+            this.Placering.FillWeight = 65F;
+            this.Placering.HeaderText = "Placering";
+            this.Placering.Name = "Placering";
+            this.Placering.ReadOnly = true;
+            this.Placering.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Placering.Width = 70;
+            // 
+            // name
+            // 
+            this.name.FillWeight = 170F;
+            this.name.HeaderText = "Namn";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.name.Width = 170;
+            // 
+            // antalhopp
+            // 
+            this.antalhopp.HeaderText = "Antal hopp";
+            this.antalhopp.Name = "antalhopp";
+            this.antalhopp.ReadOnly = true;
+            this.antalhopp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // points
+            // 
+            this.points.FillWeight = 120F;
+            this.points.HeaderText = "Poäng";
+            this.points.Name = "points";
+            this.points.ReadOnly = true;
+            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.points.Width = 120;
             // 
             // textBox1
             // 
@@ -285,40 +319,6 @@
             this.Tavlingsnamn.TabIndex = 0;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
-            // Placering
-            // 
-            this.Placering.FillWeight = 65F;
-            this.Placering.HeaderText = "Placering";
-            this.Placering.Name = "Placering";
-            this.Placering.ReadOnly = true;
-            this.Placering.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Placering.Width = 70;
-            // 
-            // name
-            // 
-            this.name.FillWeight = 170F;
-            this.name.HeaderText = "Namn";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.name.Width = 170;
-            // 
-            // antalhopp
-            // 
-            this.antalhopp.HeaderText = "Antal hopp";
-            this.antalhopp.Name = "antalhopp";
-            this.antalhopp.ReadOnly = true;
-            this.antalhopp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // points
-            // 
-            this.points.FillWeight = 120F;
-            this.points.HeaderText = "Poäng";
-            this.points.Name = "points";
-            this.points.ReadOnly = true;
-            this.points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.points.Width = 120;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,11 +340,13 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "HoppSIM";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
