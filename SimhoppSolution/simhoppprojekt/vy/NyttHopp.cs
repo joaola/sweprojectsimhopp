@@ -221,7 +221,6 @@ namespace simhoppprojekt
             byte[] receive_byte_array;
             try
             {
-                int i = 0;
                 List<NumericUpDown> domare = new List<NumericUpDown>();
                 #region addDomare
                 domare.Add(this.UpDown1);
@@ -233,7 +232,8 @@ namespace simhoppprojekt
                 domare.Add(this.UpDown7);
                 #endregion
                 int antaldomare = this.Getdomare();
-                
+                List<string> tempIP = new List<string>(domIp);
+
                 while (!done)
                 {
                     if (listener.Available > 0)
@@ -241,7 +241,7 @@ namespace simhoppprojekt
                             
                         receive_byte_array = listener.Receive(ref groupEP);
                         received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
-                        if (CheckIP(groupEP) == true)
+                        if (CheckIP(groupEP, tempIP) == true)
                         {
                             if (received_data != "")
                             {
@@ -251,13 +251,19 @@ namespace simhoppprojekt
                                 else if (domarvarde < 0)
                                     domarvarde = 0;
                                 AppendTextBox(domarvarde, domare[index]);
-                                i++;
+                                tempIP[index] = "";
                                 received_data = "";
-                                if (i >= antaldomare)
+                                
+                                if (CheckEquals(tempIP,""))
                                 {
                                     this.unlockAntalDomare();
                                     done = true;
                                 }
+                                else 
+                                {
+                                    done = false;
+                                }
+                                
                             }
                         }
                     }
@@ -278,11 +284,22 @@ namespace simhoppprojekt
             }
         }
 
-        private bool CheckIP(IPEndPoint ipe)
+        private bool CheckEquals(List<string> ls, string s)
         {
-            for(int i = 0; i < domIp.Count; i++)
+            for(int i = 0; i < ls.Count; i++)
             {
-                if(ipe.Address.ToString() == domIp[i])
+                if(ls[i] != s)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool CheckIP(IPEndPoint ipe, List<string> ip)
+        {
+            for(int i = 0; i < ip.Count; i++)
+            {
+                if(ipe.Address.ToString() == ip[i])
                 {
                     index = i;
                     return true;
@@ -299,6 +316,7 @@ namespace simhoppprojekt
             {
                 UdpButton.Enabled = false;
                 UdpButton.Text = "Väntar...";
+                this.SendFunc("Judging open.");
                 antaldomdrop.Enabled = false;
                 t = new System.Threading.Thread(UdpReceive);
                 t.IsBackground = true;
@@ -321,6 +339,7 @@ namespace simhoppprojekt
                 });
             }
         }
+
         public void AppendTextBox(decimal value,NumericUpDown domarupd)
         {
             if (InvokeRequired)
