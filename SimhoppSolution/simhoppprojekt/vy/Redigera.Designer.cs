@@ -50,7 +50,7 @@
             this.OkReg.Location = new System.Drawing.Point(49, 254);
             this.OkReg.Name = "OkReg";
             this.OkReg.Size = new System.Drawing.Size(75, 23);
-            this.OkReg.TabIndex = 8;
+            this.OkReg.TabIndex = 7;
             this.OkReg.Text = "&Ok";
             this.OkReg.UseVisualStyleBackColor = true;
             this.OkReg.Click += new System.EventHandler(this.OkReg_Click);
@@ -115,21 +115,21 @@
             this.BirthReg.Location = new System.Drawing.Point(105, 126);
             this.BirthReg.Name = "BirthReg";
             this.BirthReg.Size = new System.Drawing.Size(86, 20);
-            this.BirthReg.TabIndex = 3;
+            this.BirthReg.TabIndex = 4;
             // 
             // GenderReg
             // 
             this.GenderReg.Location = new System.Drawing.Point(105, 161);
             this.GenderReg.Name = "GenderReg";
             this.GenderReg.Size = new System.Drawing.Size(86, 20);
-            this.GenderReg.TabIndex = 4;
+            this.GenderReg.TabIndex = 5;
             // 
             // ForeningReg
             // 
             this.ForeningReg.Location = new System.Drawing.Point(105, 91);
             this.ForeningReg.Name = "ForeningReg";
             this.ForeningReg.Size = new System.Drawing.Size(86, 20);
-            this.ForeningReg.TabIndex = 2;
+            this.ForeningReg.TabIndex = 3;
             // 
             // NamnReg
             // 
@@ -143,7 +143,7 @@
             this.OrtReg.Location = new System.Drawing.Point(105, 196);
             this.OrtReg.Name = "OrtReg";
             this.OrtReg.Size = new System.Drawing.Size(86, 20);
-            this.OrtReg.TabIndex = 5;
+            this.OrtReg.TabIndex = 6;
             // 
             // textBox1
             // 
@@ -169,7 +169,7 @@
             this.cancelbutton.Location = new System.Drawing.Point(139, 254);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
-            this.cancelbutton.TabIndex = 9;
+            this.cancelbutton.TabIndex = 8;
             this.cancelbutton.Text = "&Avbryt";
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);

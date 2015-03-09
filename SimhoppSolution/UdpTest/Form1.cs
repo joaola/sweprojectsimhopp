@@ -25,8 +25,8 @@ namespace UdpSend
         {
             Boolean exception_thrown = false;
             Socket sending_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            IPAddress send_to_address = IPAddress.Parse("10.22.8.68");
-            IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 9058);
+            IPAddress send_to_address = IPAddress.Parse(ipadrBox.Text);
+            IPEndPoint sending_end_point = new IPEndPoint(send_to_address, int.Parse(portBox.Text));
 
             textBox1.Text = "Skriv in och skicka domarpoäng.";
             string text_to_send = this.UpDown1.Value.ToString();
@@ -44,7 +44,7 @@ namespace UdpSend
             }
             if (exception_thrown == false)
             {
-                textBox1.Text = "Message has been sent to the broadcast address";
+                textBox1.Text = "Domarpoäng skickat till mottagare.";
             }
             else
             {
@@ -105,6 +105,9 @@ namespace UdpSend
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            judgebox.Text = "Judging closed.";
+            ipadrBox.Text = "10.22.8.68";
+            portBox.Text = "9058";
             t = new Thread(UdpReceive);
             t.IsBackground = true;
             t.Start();

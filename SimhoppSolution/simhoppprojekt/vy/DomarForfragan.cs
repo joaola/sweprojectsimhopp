@@ -17,16 +17,18 @@ namespace simhoppprojekt
         private int domare;
         private List<string> domIp = new List<string>();
         public Thread t;
-        private const int listenPort = 9058;
+        public int listenPort;
         public DomarForfragan()
         {
             InitializeComponent();
         }
 
-        public DomarForfragan(int antalDomare,List<string> domIp)
+        public DomarForfragan(int antalDomare,List<string> domIp, int listenPort)
         {
             domare = antalDomare;
             this.domIp = domIp;
+            this.listenPort = listenPort;
+
             InitializeComponent();
         }
 
@@ -47,6 +49,7 @@ namespace simhoppprojekt
                 if (lt[i].Text != "")
                     this.domIp.Add(lt[i].Text);
             }
+            listenPort = int.Parse(portBox.Text);
 
             this.Close();
         }
@@ -58,6 +61,7 @@ namespace simhoppprojekt
 
         private void DomarForfragan_Load(object sender, EventArgs e)
         {
+            portBox.Text = "9058";
             List<TextBox> lt = new List<TextBox>();
             #region add
             lt.Add(domarebox1);

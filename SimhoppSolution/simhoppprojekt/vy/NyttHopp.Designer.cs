@@ -114,7 +114,7 @@
             this.button3.Location = new System.Drawing.Point(186, 246);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 23);
-            this.button3.TabIndex = 14;
+            this.button3.TabIndex = 13;
             this.button3.Text = "&Räkna";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -390,6 +390,7 @@
             this.poangbox.ReadOnly = true;
             this.poangbox.Size = new System.Drawing.Size(109, 20);
             this.poangbox.TabIndex = 13;
+            this.poangbox.TabStop = false;
             // 
             // textBox6
             // 
@@ -467,7 +468,7 @@
             this.UdpButton.Location = new System.Drawing.Point(186, 308);
             this.UdpButton.Name = "UdpButton";
             this.UdpButton.Size = new System.Drawing.Size(81, 23);
-            this.UdpButton.TabIndex = 28;
+            this.UdpButton.TabIndex = 14;
             this.UdpButton.Text = "Begär &betyg...";
             this.UdpButton.UseVisualStyleBackColor = true;
             this.UdpButton.Click += new System.EventHandler(this.UdpButton_Click);

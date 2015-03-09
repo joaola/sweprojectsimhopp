@@ -46,6 +46,8 @@
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.portBox = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // domare7
@@ -183,10 +185,10 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(29, 244);
+            this.okButton.Location = new System.Drawing.Point(30, 266);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 15;
+            this.okButton.TabIndex = 9;
             this.okButton.Text = "&Ok";
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -194,10 +196,10 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(119, 244);
+            this.cancelButton.Location = new System.Drawing.Point(120, 266);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 16;
+            this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "&Avbryt";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -214,13 +216,33 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Skriv in IP-adresser:";
             // 
+            // portBox
+            // 
+            this.portBox.Location = new System.Drawing.Point(91, 232);
+            this.portBox.Name = "portBox";
+            this.portBox.Size = new System.Drawing.Size(100, 20);
+            this.portBox.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(30, 235);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(55, 13);
+            this.textBox3.TabIndex = 18;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Port:";
+            // 
             // DomarForfragan
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(226, 289);
+            this.ClientSize = new System.Drawing.Size(226, 312);
+            this.Controls.Add(this.portBox);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
@@ -268,6 +290,8 @@
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox portBox;
+        private System.Windows.Forms.TextBox textBox3;
 
     }
 }

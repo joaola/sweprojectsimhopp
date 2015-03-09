@@ -15,7 +15,7 @@ namespace simhoppprojekt
     public partial class NyttHopp : Form
     {
         private Hopplist person;
-        private const int listenPort = 9058;
+        private int listenPort = 0;
         private List<string> domIp = new List<string>();
         private System.Threading.Thread t = new Thread(() => { });
         private int index = 0;
@@ -215,12 +215,23 @@ namespace simhoppprojekt
         public void UdpReceive()
         {
             bool done = false;
-            UdpClient listener = new UdpClient(listenPort);
+            UdpClient listener = new UdpClient();
             IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
             string received_data = "";
             byte[] receive_byte_array;
             try
+            { 
+                done = false;
+                listener = new UdpClient(listenPort);
+                groupEP = new IPEndPoint(IPAddress.Any, listenPort);
+            }
+            catch (Exception ex)
             {
+                const string caption = "Error";
+                MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                try
+                {
                 List<NumericUpDown> domare = new List<NumericUpDown>();
                 #region addDomare
                 domare.Add(this.UpDown1);
@@ -233,7 +244,7 @@ namespace simhoppprojekt
                 #endregion
                 int antaldomare = this.Getdomare();
                 List<string> tempIP = new List<string>(domIp);
-
+               
                 while (!done)
                 {
                     if (listener.Available > 0)
@@ -258,6 +269,7 @@ namespace simhoppprojekt
                                 {
                                     this.unlockAntalDomare();
                                     done = true;
+                                    domIp.Clear();
                                 }
                                 else 
                                 {
@@ -276,13 +288,15 @@ namespace simhoppprojekt
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Console.Write(e.ToString());
             }
             finally
             {
                 listener.Close();
             }
+           
         }
+        
 
         private bool CheckEquals(List<string> ls, string s)
         {
@@ -310,8 +324,9 @@ namespace simhoppprojekt
 
         private void UdpButton_Click(object sender, EventArgs e)
         {
-            DomarForfragan df = new DomarForfragan(Convert.ToInt32(this.antaldomdrop.SelectedItem), domIp);
+            DomarForfragan df = new DomarForfragan(Convert.ToInt32(this.antaldomdrop.SelectedItem), domIp, listenPort);
             df.ShowDialog();
+            this.listenPort = df.listenPort;
             if(this.domIp.Count == Convert.ToInt32(this.antaldomdrop.SelectedItem))
             {
                 UdpButton.Enabled = false;
