@@ -37,6 +37,7 @@
             this.nyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PDFbutton = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.avslutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +57,7 @@
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
+            this.PDFtoolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,6 +110,7 @@
             this.nyToolStripMenuItem,
             this.sparaToolStripMenuItem,
             this.openToolStripMenuItem,
+            this.PDFbutton,
             this.toolStripMenuItem1,
             this.avslutaToolStripMenuItem});
             this.arkivToolStripMenuItem.Name = "arkivToolStripMenuItem";
@@ -117,33 +120,40 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.nyToolStripMenuItem.Text = "&Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.sparaToolStripMenuItem.Text = "&Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.openToolStripMenuItem.Text = "&Öppna";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // PDFbutton
+            // 
+            this.PDFbutton.Name = "PDFbutton";
+            this.PDFbutton.Size = new System.Drawing.Size(147, 22);
+            this.PDFbutton.Text = "Exportera PDF";
+            this.PDFbutton.Click += new System.EventHandler(this.PDFbutton_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(110, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(144, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.avslutaToolStripMenuItem.Text = "&Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
@@ -159,8 +169,8 @@
             // innehallToolStripMenuItem
             // 
             this.innehallToolStripMenuItem.Name = "innehallToolStripMenuItem";
-            this.innehallToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.innehallToolStripMenuItem.Text = "&Innehåll";
+            this.innehallToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.innehallToolStripMenuItem.Text = "&Programinformation";
             this.innehallToolStripMenuItem.Click += new System.EventHandler(this.innehallToolStripMenuItem_Click);
             // 
             // omToolStripMenuItem
@@ -184,7 +194,8 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.PDFtoolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(553, 25);
@@ -319,6 +330,16 @@
             this.Tavlingsnamn.TabIndex = 0;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
+            // PDFtoolStripButton3
+            // 
+            this.PDFtoolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PDFtoolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("PDFtoolStripButton3.Image")));
+            this.PDFtoolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PDFtoolStripButton3.Name = "PDFtoolStripButton3";
+            this.PDFtoolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.PDFtoolStripButton3.Text = "Exportera PDF";
+            this.PDFtoolStripButton3.Click += new System.EventHandler(this.PDFtoolStripButton3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +366,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "HoppSIM";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.menuStrip1.ResumeLayout(false);
@@ -386,6 +408,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn antalhopp;
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
+        private System.Windows.Forms.ToolStripMenuItem PDFbutton;
+        private System.Windows.Forms.ToolStripButton PDFtoolStripButton3;
 
     }
 }

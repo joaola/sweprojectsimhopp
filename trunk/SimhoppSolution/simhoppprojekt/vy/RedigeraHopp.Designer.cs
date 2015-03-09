@@ -70,7 +70,7 @@
             this.cancelbutton.Location = new System.Drawing.Point(149, 373);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
-            this.cancelbutton.TabIndex = 54;
+            this.cancelbutton.TabIndex = 14;
             this.cancelbutton.Text = "&Avbryt";
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
@@ -80,7 +80,7 @@
             this.HoppkodBox.Location = new System.Drawing.Point(130, 29);
             this.HoppkodBox.Name = "HoppkodBox";
             this.HoppkodBox.Size = new System.Drawing.Size(44, 20);
-            this.HoppkodBox.TabIndex = 36;
+            this.HoppkodBox.TabIndex = 1;
             // 
             // hojddrop
             // 
@@ -95,7 +95,7 @@
             this.hojddrop.Location = new System.Drawing.Point(132, 83);
             this.hojddrop.Name = "hojddrop";
             this.hojddrop.Size = new System.Drawing.Size(38, 21);
-            this.hojddrop.TabIndex = 38;
+            this.hojddrop.TabIndex = 3;
             this.hojddrop.Tag = "";
             // 
             // stilDrop
@@ -110,7 +110,7 @@
             this.stilDrop.Location = new System.Drawing.Point(132, 109);
             this.stilDrop.Name = "stilDrop";
             this.stilDrop.Size = new System.Drawing.Size(38, 21);
-            this.stilDrop.TabIndex = 39;
+            this.stilDrop.TabIndex = 4;
             this.stilDrop.Tag = "";
             // 
             // textBox5
@@ -140,7 +140,7 @@
             this.svarighetsbox.Location = new System.Drawing.Point(130, 54);
             this.svarighetsbox.Name = "svarighetsbox";
             this.svarighetsbox.Size = new System.Drawing.Size(44, 20);
-            this.svarighetsbox.TabIndex = 37;
+            this.svarighetsbox.TabIndex = 2;
             // 
             // textBox1
             // 
@@ -264,7 +264,7 @@
             0});
             this.UpDown7.Name = "UpDown7";
             this.UpDown7.Size = new System.Drawing.Size(56, 20);
-            this.UpDown7.TabIndex = 49;
+            this.UpDown7.TabIndex = 12;
             this.UpDown7.Visible = false;
             // 
             // UpDown6
@@ -283,7 +283,7 @@
             0});
             this.UpDown6.Name = "UpDown6";
             this.UpDown6.Size = new System.Drawing.Size(56, 20);
-            this.UpDown6.TabIndex = 48;
+            this.UpDown6.TabIndex = 11;
             this.UpDown6.Visible = false;
             // 
             // UpDown5
@@ -302,7 +302,7 @@
             0});
             this.UpDown5.Name = "UpDown5";
             this.UpDown5.Size = new System.Drawing.Size(56, 20);
-            this.UpDown5.TabIndex = 47;
+            this.UpDown5.TabIndex = 10;
             this.UpDown5.Visible = false;
             // 
             // UpDown4
@@ -321,7 +321,7 @@
             0});
             this.UpDown4.Name = "UpDown4";
             this.UpDown4.Size = new System.Drawing.Size(56, 20);
-            this.UpDown4.TabIndex = 46;
+            this.UpDown4.TabIndex = 9;
             this.UpDown4.Visible = false;
             // 
             // UpDown3
@@ -340,7 +340,7 @@
             0});
             this.UpDown3.Name = "UpDown3";
             this.UpDown3.Size = new System.Drawing.Size(56, 20);
-            this.UpDown3.TabIndex = 45;
+            this.UpDown3.TabIndex = 8;
             this.UpDown3.Visible = false;
             // 
             // UpDown2
@@ -359,7 +359,7 @@
             0});
             this.UpDown2.Name = "UpDown2";
             this.UpDown2.Size = new System.Drawing.Size(56, 20);
-            this.UpDown2.TabIndex = 44;
+            this.UpDown2.TabIndex = 7;
             this.UpDown2.Visible = false;
             // 
             // antaldomdrop
@@ -373,7 +373,7 @@
             this.antaldomdrop.Location = new System.Drawing.Point(132, 135);
             this.antaldomdrop.Name = "antaldomdrop";
             this.antaldomdrop.Size = new System.Drawing.Size(38, 21);
-            this.antaldomdrop.TabIndex = 40;
+            this.antaldomdrop.TabIndex = 5;
             this.antaldomdrop.Tag = "";
             this.antaldomdrop.SelectedIndexChanged += new System.EventHandler(this.antaldomdrop_SelectedIndexChanged);
             // 
@@ -393,7 +393,7 @@
             0});
             this.UpDown1.Name = "UpDown1";
             this.UpDown1.Size = new System.Drawing.Size(56, 20);
-            this.UpDown1.TabIndex = 42;
+            this.UpDown1.TabIndex = 6;
             this.UpDown1.Visible = false;
             // 
             // button1
@@ -401,7 +401,7 @@
             this.button1.Location = new System.Drawing.Point(55, 373);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 51;
+            this.button1.TabIndex = 13;
             this.button1.Text = "&Ok";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

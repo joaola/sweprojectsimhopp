@@ -50,35 +50,35 @@
             this.OrtBox.Location = new System.Drawing.Point(105, 197);
             this.OrtBox.Name = "OrtBox";
             this.OrtBox.Size = new System.Drawing.Size(86, 20);
-            this.OrtBox.TabIndex = 5;
+            this.OrtBox.TabIndex = 6;
             // 
             // BirthBox
             // 
             this.BirthBox.Location = new System.Drawing.Point(105, 127);
             this.BirthBox.Name = "BirthBox";
             this.BirthBox.Size = new System.Drawing.Size(86, 20);
-            this.BirthBox.TabIndex = 3;
+            this.BirthBox.TabIndex = 4;
             // 
             // GenderBox
             // 
             this.GenderBox.Location = new System.Drawing.Point(105, 162);
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.Size = new System.Drawing.Size(86, 20);
-            this.GenderBox.TabIndex = 4;
+            this.GenderBox.TabIndex = 5;
             // 
             // ForeningBox
             // 
             this.ForeningBox.Location = new System.Drawing.Point(105, 92);
             this.ForeningBox.Name = "ForeningBox";
             this.ForeningBox.Size = new System.Drawing.Size(86, 20);
-            this.ForeningBox.TabIndex = 2;
+            this.ForeningBox.TabIndex = 3;
             // 
             // IDbox
             // 
             this.IDbox.Location = new System.Drawing.Point(105, 59);
             this.IDbox.Name = "IDbox";
             this.IDbox.Size = new System.Drawing.Size(86, 20);
-            this.IDbox.TabIndex = 1;
+            this.IDbox.TabIndex = 2;
             // 
             // textBox9
             // 
@@ -158,7 +158,7 @@
             this.OkButton.Location = new System.Drawing.Point(49, 254);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 8;
+            this.OkButton.TabIndex = 7;
             this.OkButton.Text = "&Ok";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -169,7 +169,7 @@
             this.cancelbutton.Location = new System.Drawing.Point(140, 254);
             this.cancelbutton.Name = "cancelbutton";
             this.cancelbutton.Size = new System.Drawing.Size(75, 23);
-            this.cancelbutton.TabIndex = 9;
+            this.cancelbutton.TabIndex = 8;
             this.cancelbutton.Text = "&Avbryt";
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.cancelbutton_Click);
