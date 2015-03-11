@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -106,10 +107,6 @@ namespace simhoppprojekt
             this.Save();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -215,7 +212,40 @@ namespace simhoppprojekt
         {
             const string caption = "Om";
             MessageBox.Show("Gjort av Patrik, Mikael, Joakim och Hampus.", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        } 
+        }
+        private void PDFtoolStripButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ExportPDF();
+                const string caption = "Klart!";
+                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void pDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ExportPDF();
+                const string caption = "Klart!";
+                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                const string caption = "Error";
+                MessageBox.Show(ex.ToString(), caption);
+            }
+        }
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         private void datum_ValueChanged(object sender, EventArgs e)
@@ -509,37 +539,6 @@ namespace simhoppprojekt
             }
         }
 
-        private void PDFbutton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.ExportPDF();
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            catch (Exception ex)
-            {
-                const string caption = "Error";
-                MessageBox.Show(ex.ToString(),caption);
-            }
-        }
-
-        private void PDFtoolStripButton3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.ExportPDF();
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             const string message = "Är du säker på att du vill stänga ner?";
@@ -553,6 +552,8 @@ namespace simhoppprojekt
                 e.Cancel = true;
             }
         }
+
+        
 
     }
 }

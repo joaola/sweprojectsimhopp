@@ -389,7 +389,22 @@ namespace simhoppprojekt
         private void NyttHopp_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(t.IsAlive == true)
-                t.Abort();
+            {
+                const string message = "Väntar på domarbetyg. Vill du fortsätta?";
+                const string caption = "Form Closing";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else if(result == DialogResult.Yes)
+                {
+                    t.Abort();
+                }
+            }   
         }
 
         private void SendFunc(string s)
