@@ -112,6 +112,23 @@ namespace UdpSend
             t.IsBackground = true;
             t.Start();
         }
+
+        private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void innehallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string caption = "Programinformation";
+            MessageBox.Show("Tryck och håll in ALT-tangenten för att komma åt kortkommandon för tangentbordet. Skriv in IP-adress, port och betyg för simhopparens hopp.", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void omToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string caption = "Om";
+            MessageBox.Show("Gjort av Patrik, Mikael, Joakim och Hampus.", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
 

@@ -60,6 +60,7 @@
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -124,6 +125,7 @@
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
             this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nyToolStripMenuItem.Text = "&Ny";
+            this.nyToolStripMenuItem.ToolTipText = "Nytt fönster";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
@@ -131,6 +133,7 @@
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
             this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sparaToolStripMenuItem.Text = "&Spara";
+            this.sparaToolStripMenuItem.ToolTipText = "Spara fil";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
@@ -138,6 +141,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "&Öppna";
+            this.openToolStripMenuItem.ToolTipText = "Öppna sparad fil";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // PDFbutton
@@ -154,6 +158,7 @@
             this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
             this.pDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pDFToolStripMenuItem.Text = "&PDF";
+            this.pDFToolStripMenuItem.ToolTipText = "Exportera som PDF";
             this.pDFToolStripMenuItem.Click += new System.EventHandler(this.pDFToolStripMenuItem_Click);
             // 
             // hTMLToolStripMenuItem
@@ -161,18 +166,20 @@
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hTMLToolStripMenuItem.Text = "&HTML";
+            this.hTMLToolStripMenuItem.ToolTipText = "Exportera som HTML";
             this.hTMLToolStripMenuItem.Click += new System.EventHandler(this.hTMLToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(136, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
             this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.avslutaToolStripMenuItem.Text = "&Avsluta";
+            this.avslutaToolStripMenuItem.ToolTipText = "Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
             // hjälpToolStripMenuItem
@@ -189,6 +196,7 @@
             this.innehallToolStripMenuItem.Name = "innehallToolStripMenuItem";
             this.innehallToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.innehallToolStripMenuItem.Text = "&Programinformation";
+            this.innehallToolStripMenuItem.ToolTipText = "Information";
             this.innehallToolStripMenuItem.Click += new System.EventHandler(this.innehallToolStripMenuItem_Click);
             // 
             // omToolStripMenuItem
@@ -196,6 +204,7 @@
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
             this.omToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.omToolStripMenuItem.Text = "&Om";
+            this.omToolStripMenuItem.ToolTipText = "Om";
             this.omToolStripMenuItem.Click += new System.EventHandler(this.omToolStripMenuItem_Click);
             // 
             // button4
@@ -213,7 +222,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
             this.toolStripButton1,
-            this.PDFtoolStripButton3});
+            this.PDFtoolStripButton3,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(553, 25);
@@ -357,6 +367,16 @@
             this.Tavlingsnamn.TabIndex = 0;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Exportera HTML";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +449,7 @@
         private System.Windows.Forms.ToolStripButton PDFtoolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
 
     }
 }
