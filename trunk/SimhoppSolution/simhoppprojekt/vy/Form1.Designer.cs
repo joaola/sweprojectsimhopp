@@ -38,6 +38,8 @@
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PDFbutton = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.avslutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +49,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.PDFtoolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Placering = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +60,6 @@
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.Tavlingsnamn = new System.Windows.Forms.TextBox();
-            this.PDFtoolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,40 +122,56 @@
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nyToolStripMenuItem.Text = "&Ny";
             this.nyToolStripMenuItem.Click += new System.EventHandler(this.nyToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sparaToolStripMenuItem.Text = "&Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "&Öppna";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // PDFbutton
             // 
+            this.PDFbutton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pDFToolStripMenuItem,
+            this.hTMLToolStripMenuItem});
             this.PDFbutton.Name = "PDFbutton";
-            this.PDFbutton.Size = new System.Drawing.Size(147, 22);
-            this.PDFbutton.Text = "Exportera PDF";
-            this.PDFbutton.Click += new System.EventHandler(this.PDFbutton_Click);
+            this.PDFbutton.Size = new System.Drawing.Size(152, 22);
+            this.PDFbutton.Text = "&Exportera till";
+            // 
+            // pDFToolStripMenuItem
+            // 
+            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pDFToolStripMenuItem.Text = "&PDF";
+            this.pDFToolStripMenuItem.Click += new System.EventHandler(this.pDFToolStripMenuItem_Click);
+            // 
+            // hTMLToolStripMenuItem
+            // 
+            this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hTMLToolStripMenuItem.Text = "&HTML";
+            this.hTMLToolStripMenuItem.Click += new System.EventHandler(this.hTMLToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(144, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.avslutaToolStripMenuItem.Text = "&Avsluta";
             this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
@@ -176,7 +194,7 @@
             // omToolStripMenuItem
             // 
             this.omToolStripMenuItem.Name = "omToolStripMenuItem";
-            this.omToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.omToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.omToolStripMenuItem.Text = "&Om";
             this.omToolStripMenuItem.Click += new System.EventHandler(this.omToolStripMenuItem_Click);
             // 
@@ -222,6 +240,16 @@
             this.toolStripButton1.Text = "Öppna";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // PDFtoolStripButton3
+            // 
+            this.PDFtoolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PDFtoolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("PDFtoolStripButton3.Image")));
+            this.PDFtoolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PDFtoolStripButton3.Name = "PDFtoolStripButton3";
+            this.PDFtoolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.PDFtoolStripButton3.Text = "Exportera PDF";
+            this.PDFtoolStripButton3.Click += new System.EventHandler(this.PDFtoolStripButton3_Click);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(352, 323);
@@ -251,7 +279,6 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(475, 236);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Placering
             // 
@@ -330,16 +357,6 @@
             this.Tavlingsnamn.TabIndex = 0;
             this.Tavlingsnamn.TextChanged += new System.EventHandler(this.Tavlingsnamn_TextChanged);
             // 
-            // PDFtoolStripButton3
-            // 
-            this.PDFtoolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PDFtoolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("PDFtoolStripButton3.Image")));
-            this.PDFtoolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PDFtoolStripButton3.Name = "PDFtoolStripButton3";
-            this.PDFtoolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.PDFtoolStripButton3.Text = "Exportera PDF";
-            this.PDFtoolStripButton3.Click += new System.EventHandler(this.PDFtoolStripButton3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +427,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn points;
         private System.Windows.Forms.ToolStripMenuItem PDFbutton;
         private System.Windows.Forms.ToolStripButton PDFtoolStripButton3;
+        private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
 
     }
 }
