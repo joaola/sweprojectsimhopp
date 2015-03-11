@@ -244,7 +244,36 @@ namespace simhoppprojekt
         }
         private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string HtmlBody = ExportHTML(dataGridView1);
+                System.IO.File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".HTML", HtmlBody);
+                const string caption = "Klart!";
+                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+            catch (Exception ex)
+            {
+                const string caption = "Error";
+                MessageBox.Show(ex.ToString(), caption);
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string HtmlBody = ExportHTML(dataGridView1);
+                System.IO.File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".HTML", HtmlBody);
+                const string caption = "Klart!";
+                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                const string caption = "Error";
+                MessageBox.Show(ex.ToString(), caption);
+            }  
         }
         #endregion
 
@@ -433,7 +462,7 @@ namespace simhoppprojekt
         private void ExportPDF()
         {
             Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(EventGetTavlingsnamn() + ".pdf", FileMode.Create));
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".pdf", FileMode.Create));
             TavlingsClass temptavling = EventGetTavling();
             doc.Open();
 
@@ -517,6 +546,130 @@ namespace simhoppprojekt
             doc.Close();
         }
 
+        private string ExportHTML(DataGridView dt)
+        {
+            TavlingsClass temptavling = EventGetTavling();
+            StringBuilder strHTMLBuilder = new StringBuilder();
+            strHTMLBuilder.Append("<html >");  
+            strHTMLBuilder.Append("<head>");
+            strHTMLBuilder.Append("<meta charset=\"UTF-8\" />");
+            strHTMLBuilder.Append("</head>");  
+            strHTMLBuilder.Append("<body>");
+            strHTMLBuilder.Append("<font size=\"3\"><b>Tävling: " + EventGetTavlingsnamn() + "</b></font>");
+            strHTMLBuilder.Append("</br>");
+            strHTMLBuilder.Append("<font size=\"3\"><b>Datum: " + EventGetDatum() + "</b></font>");
+            strHTMLBuilder.Append("</br> </br>");
+            strHTMLBuilder.Append("<font size=\"3\"><b>Översikt</b></font>");
+            strHTMLBuilder.Append("</br>");
+            strHTMLBuilder.Append("<table border='1px' cellpadding='1' cellspacing='1' bgcolor='lightyellow' style='font-family:Garamond; font-size:medium'>");  
+  
+            strHTMLBuilder.Append("<tr >");  
+            foreach (DataGridViewTextBoxColumn myColumn in dt.Columns)  
+            {  
+                strHTMLBuilder.Append("<td >");  
+                strHTMLBuilder.Append(myColumn.HeaderText);  
+                strHTMLBuilder.Append("</td>");  
+  
+            }  
+            strHTMLBuilder.Append("</tr>");
+
+
+            foreach (DataGridViewRow myRow in dt.Rows)  
+            {  
+  
+                strHTMLBuilder.Append("<tr >");  
+                foreach (DataGridViewTextBoxColumn myColumn in dt.Columns)  
+                {  
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(myRow.Cells[myColumn.Index].Value);  
+                    strHTMLBuilder.Append("</td>");  
+  
+                }  
+                strHTMLBuilder.Append("</tr>");  
+            }
+
+            strHTMLBuilder.Append("</table>");
+            strHTMLBuilder.Append("<br><hr><br>");
+            strHTMLBuilder.Append("<font size=\"3\"><b>Simhoppare</b></font><br><br><br>");
+
+            for (int i = 0; i < temptavling.AntalTavlande(); i++)
+            {
+                strHTMLBuilder.Append("Namn: " + temptavling.getHopplistor()[i].getNamn() + "<br>");
+                strHTMLBuilder.Append("ID: " + temptavling.getHopplistor()[i].getID().ToString() + "<br>");
+                strHTMLBuilder.Append("Förening: " + temptavling.getHopplistor()[i].getForening() + "<br>");
+                strHTMLBuilder.Append("Födelseår: " + temptavling.getHopplistor()[i].getFodelsear().ToString() + "<br>");
+                strHTMLBuilder.Append("Kön: " + temptavling.getHopplistor()[i].getKon() + "<br>");
+                strHTMLBuilder.Append("Ort: " + temptavling.getHopplistor()[i].getOrt() + "<br>");
+                strHTMLBuilder.Append("<br>");
+     
+                strHTMLBuilder.Append("<table border='1px' cellpadding='1' cellspacing='1' bgcolor='lightyellow' style='font-family:Garamond; font-size:medium'>");
+                strHTMLBuilder.Append("<tr >");
+
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Hoppkod");
+                strHTMLBuilder.Append("</td>");
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Höjd");
+                strHTMLBuilder.Append("</td>");
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Stil");
+                strHTMLBuilder.Append("</td>");
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Svårighetsgrad");
+                strHTMLBuilder.Append("</td>");
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Betyg");
+                strHTMLBuilder.Append("</td>");
+                strHTMLBuilder.Append("<td >");
+                strHTMLBuilder.Append("Poäng");
+                strHTMLBuilder.Append("</td>");
+
+                strHTMLBuilder.Append("</tr >");
+                for (int j = 0; j < EventGetHopplistor()[i].getHopplista().Count; j++)
+                {
+                    strHTMLBuilder.Append("<tr >");
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(EventGetHopplistor()[i].getHopplista()[j].getHoppNr().ToString());
+                    strHTMLBuilder.Append("</td>");
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(EventGetHopplistor()[i].getHopplista()[j].getHojd().ToString());
+                    strHTMLBuilder.Append("</td>");
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(EventGetHopplistor()[i].getHopplista()[j].getStil());
+                    strHTMLBuilder.Append("</td>");
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(EventGetHopplistor()[i].getHopplista()[j].getSvarighet().ToString());
+                    strHTMLBuilder.Append("</td>");
+                    string tempstring = "";
+                    for (int k = 0; k < EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count; k++)
+                    {
+                        if (k == EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count - 1)
+                        {
+                            tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString();
+                        }
+                        else
+                            tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString() + " | ";
+                    }
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(tempstring);
+                    strHTMLBuilder.Append("</td>");
+                    strHTMLBuilder.Append("<td >");
+                    strHTMLBuilder.Append(EventGetHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang.ToString());
+                    strHTMLBuilder.Append("</td>");
+                    strHTMLBuilder.Append("</tr >");
+                }
+
+                strHTMLBuilder.Append("</table>");
+                strHTMLBuilder.Append("<br><hr style=\"border-top: dotted 2px;\" /><br>");
+            }
+            strHTMLBuilder.Append("</body>");  
+            strHTMLBuilder.Append("</html>");  
+  
+            string Htmltext = strHTMLBuilder.ToString();  
+  
+            return Htmltext;  
+        } 
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(Tavlingsnamn.ContainsFocus == false && e.KeyCode == Keys.Delete)
@@ -552,8 +705,6 @@ namespace simhoppprojekt
                 e.Cancel = true;
             }
         }
-
-        
 
     }
 }
