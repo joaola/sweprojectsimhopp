@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Formen NyPers används för att lägga till en ny person, med information om simhopparen.
+    /// </summary>
     public partial class NyPers : Form
     {
 

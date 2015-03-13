@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Klassen TavlingsClass håller koll på en tävlings namn, datum och listan av personer som tävlar.
+    /// </summary>
     [Serializable()]
     public class TavlingsClass
     {

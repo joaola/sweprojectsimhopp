@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Structen poäng innehåller summan av betygen (minus största och minsta värdet om antalet domare > 3)
+    ///  och den uträknade poängen (summan multiplicerat med svårighetsgraden)
+    /// </summary>
     public struct Poang
     {
         public float poang;
@@ -18,6 +22,12 @@ namespace simhoppprojekt
             this.utraknadpoang = utraknadpoang;
         }
     }
+
+    /// <summary>
+    ///  Den här klassen håller reda på en persons hopp. 
+    ///  Varje hopp har ett hoppnummer, en stil, en svårighetsgrad,
+    ///  en höjd, en lista av betyg, totalsumman av betygen och en struct för poäng.
+    /// </summary>
 
    public class Hopp
     {

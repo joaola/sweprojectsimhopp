@@ -12,6 +12,12 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Formen NyttHopp används för att lägga till ett nytt hopp till en simhoppare.
+    ///  I formen matar man in all nödvändig data för att skapa ett hopp.
+    ///  Domarbetygen kan antingen matas in manuellt, eller bli begärt genom att skicka
+    ///  en förfrågan till olika domares IP-adresser.
+    /// </summary>
     public partial class NyttHopp : Form
     {
         private Hopplist person;

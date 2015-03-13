@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Presentern kopplar ihop modellen och vyn, för att kunna använda event.
+    /// </summary>
     public class PresenterForm1
     {
         #region data
