@@ -9,11 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Form1 är main-formen som skriver ut en översikt av en tävling.
+    ///  När programmet startas så kommer man till denna form, som man sedan navigerar vidare ifrån.
+    ///  Från formen kan man lägga till en ny simhoppare, redigera en simhoppare, ta bort en existerande simhoppare,
+    ///  lägga till ett nytt hopp till en simhoppare och läsa personlig information om en simhoppare.
+    /// </summary>
     public partial class Form1 : Form, IForm1
     {
         #region events
@@ -217,14 +224,13 @@ namespace simhoppprojekt
         {
             try
             {
-                this.ExportPDF();
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.ExportPDF();   
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                const string caption = "Error";
+                MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void pDFToolStripMenuItem_Click(object sender, EventArgs e)
@@ -232,30 +238,38 @@ namespace simhoppprojekt
             try
             {
                 this.ExportPDF();
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception ex)
             {
                 const string caption = "Error";
-                MessageBox.Show(ex.ToString(), caption);
+                MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                string HtmlBody = ExportHTML(dataGridView1);
-                System.IO.File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".HTML", HtmlBody);
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (SaveFileDialog dialog = new SaveFileDialog())
+                {
+                    dialog.Filter = "html file (*.html)|*.html";
+                    dialog.FilterIndex = 1;
+                    dialog.RestoreDirectory = true;
+                    dialog.Title = "Exportera HTML";
+                    dialog.FileName = EventGetTavlingsnamn();
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string HtmlBody = ExportHTML(dataGridView1);
+                        System.IO.File.WriteAllText(dialog.FileName, HtmlBody);
+                    }
+                }
             }
 
             catch (Exception ex)
             {
                 const string caption = "Error";
-                MessageBox.Show(ex.ToString(), caption);
+                MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -263,16 +277,26 @@ namespace simhoppprojekt
         {
             try
             {
-                string HtmlBody = ExportHTML(dataGridView1);
-                System.IO.File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".HTML", HtmlBody);
-                const string caption = "Klart!";
-                MessageBox.Show("Exportering lyckades!", caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (SaveFileDialog dialog = new SaveFileDialog())
+                {
+                    dialog.Filter = "html file (*.html)|*.html";
+                    dialog.FilterIndex = 1;
+                    dialog.RestoreDirectory = true;
+                    dialog.Title = "Exportera HTML";
+                    dialog.FileName = EventGetTavlingsnamn();
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string HtmlBody = ExportHTML(dataGridView1);
+                        System.IO.File.WriteAllText(dialog.FileName, HtmlBody);
+                    }
+                }
             }
 
             catch (Exception ex)
             {
                 const string caption = "Error";
-                MessageBox.Show(ex.ToString(), caption);
+                MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }  
         }
         #endregion
@@ -306,8 +330,9 @@ namespace simhoppprojekt
             using (SaveFileDialog dialog = new SaveFileDialog())
             {
                 dialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                dialog.FilterIndex = 2;
+                dialog.FilterIndex = 1;
                 dialog.RestoreDirectory = true;
+                dialog.FileName = EventGetTavlingsnamn();
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -461,89 +486,101 @@ namespace simhoppprojekt
 
         private void ExportPDF()
         {
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "\\" + EventGetTavlingsnamn() + ".pdf", FileMode.Create));
-            TavlingsClass temptavling = EventGetTavling();
-            doc.Open();
-
-            BaseFont bfTimes = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false);
-            iTextSharp.text.Font times = new iTextSharp.text.Font(bfTimes, 16, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLACK);
-            Paragraph line = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.DottedLineSeparator()));
-            Paragraph line2 = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
-
-            Paragraph tnamn = new Paragraph("               Tävling: " + EventGetTavlingsnamn(), times);
-            Paragraph tdatum = new Paragraph("               Datum: " + EventGetDatum(), times);
-            doc.Add(tnamn);
-            doc.Add(tdatum);
-            doc.Add(new Paragraph("\n \n"));
-
-            doc.Add(new Paragraph("               Översikt", times));
-            doc.Add(new Paragraph("\n"));
-            PdfPTable t1 = new PdfPTable(4);
-            t1.AddCell("Placering");
-            t1.AddCell("Namn");
-            t1.AddCell("Antal Hopp");
-            t1.AddCell("Poäng");
-            for (int i = 0; i < temptavling.AntalTavlande(); i++)
+            using (SaveFileDialog dialog = new SaveFileDialog())
             {
-                t1.AddCell((i + 1).ToString());
-                t1.AddCell(temptavling.getHopplistor()[i].getNamn());
-                t1.AddCell(temptavling.getHopplistor()[i].getHopplista().Count.ToString());
-                t1.AddCell(temptavling.getHopplistor()[i].UtraknadPoangSumma().ToString());
-            }
-            doc.Add(t1);
-            doc.Add(new Paragraph("\n"));
-            doc.Add(line2);
-            doc.Add(new Paragraph("\n"));
-            doc.Add(new Paragraph("          Simhoppare", times));
+                dialog.Filter = "pdf file (*.pdf)|*.pdf";
+                dialog.FilterIndex = 1;
+                dialog.RestoreDirectory = true;
+                dialog.Title = "Exportera PDF";
+                dialog.FileName = EventGetTavlingsnamn();
 
-            for (int i = 0; i < temptavling.AntalTavlande(); i++)
-            {
-                PdfPTable t2 = new PdfPTable(6);
-                List list = new List(List.UNORDERED, 40f);
-
-                list.Add("Namn: " + temptavling.getHopplistor()[i].getNamn());
-                list.Add("ID: " + temptavling.getHopplistor()[i].getID().ToString());
-                list.Add("Förening: " + temptavling.getHopplistor()[i].getForening());
-                list.Add("Födelseår: " + temptavling.getHopplistor()[i].getFodelsear().ToString());
-                list.Add("Kön: " + temptavling.getHopplistor()[i].getKon());
-                list.Add("Ort: " + temptavling.getHopplistor()[i].getOrt());
-
-                t2.AddCell("Hoppkod");
-                t2.AddCell("Höjd");
-                t2.AddCell("Stil");
-                t2.AddCell("Svårighetsgrad");
-                t2.AddCell("Betyg");
-                t2.AddCell("Poäng");
-                for (int j = 0; j < EventGetHopplistor()[i].getHopplista().Count; j++)
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getHoppNr().ToString());
-                    t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getHojd().ToString());
-                    t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getStil());
-                    t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getSvarighet().ToString());
-                    string tempstring = "";
-                    for (int k = 0; k < EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count; k++)
-                    {
-                        if (k == EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count - 1)
-                        {
-                            tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString();
-                        }
-                        else
-                            tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString() + " | ";
-                    }
-                    t2.AddCell(tempstring);
-                    t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang.ToString());
-                }
-                doc.Add(new Paragraph("\n"));
-                doc.Add(list);
-                doc.Add(new Paragraph("\n"));
-                doc.Add(t2);
-                doc.Add(new Paragraph("\n"));
-                doc.Add(line);
-                doc.Add(new Paragraph("\n"));
-            }
+                    Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+                    PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(dialog.FileName, FileMode.Create));
+                    TavlingsClass temptavling = EventGetTavling();
+                    doc.Open();
 
-            doc.Close();
+                    BaseFont bfTimes = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false);
+                    iTextSharp.text.Font times = new iTextSharp.text.Font(bfTimes, 16, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLACK);
+                    Paragraph line = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.DottedLineSeparator()));
+                    Paragraph line2 = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+
+                    Paragraph tnamn = new Paragraph("               Tävling: " + EventGetTavlingsnamn(), times);
+                    Paragraph tdatum = new Paragraph("               Datum: " + EventGetDatum(), times);
+                    doc.Add(tnamn);
+                    doc.Add(tdatum);
+                    doc.Add(new Paragraph("\n \n"));
+
+                    doc.Add(new Paragraph("               Översikt", times));
+                    doc.Add(new Paragraph("\n"));
+                    PdfPTable t1 = new PdfPTable(4);
+                    t1.AddCell("Placering");
+                    t1.AddCell("Namn");
+                    t1.AddCell("Antal Hopp");
+                    t1.AddCell("Poäng");
+                    for (int i = 0; i < temptavling.AntalTavlande(); i++)
+                    {
+                        t1.AddCell((i + 1).ToString());
+                        t1.AddCell(temptavling.getHopplistor()[i].getNamn());
+                        t1.AddCell(temptavling.getHopplistor()[i].getHopplista().Count.ToString());
+                        t1.AddCell(temptavling.getHopplistor()[i].UtraknadPoangSumma().ToString());
+                    }
+                    doc.Add(t1);
+                    doc.Add(new Paragraph("\n"));
+                    doc.Add(line2);
+                    doc.Add(new Paragraph("\n"));
+                    doc.Add(new Paragraph("          Simhoppare", times));
+
+                    for (int i = 0; i < temptavling.AntalTavlande(); i++)
+                    {
+                        PdfPTable t2 = new PdfPTable(6);
+                        List list = new List(List.UNORDERED, 40f);
+
+                        list.Add("Namn: " + temptavling.getHopplistor()[i].getNamn());
+                        list.Add("ID: " + temptavling.getHopplistor()[i].getID().ToString());
+                        list.Add("Förening: " + temptavling.getHopplistor()[i].getForening());
+                        list.Add("Födelseår: " + temptavling.getHopplistor()[i].getFodelsear().ToString());
+                        list.Add("Kön: " + temptavling.getHopplistor()[i].getKon());
+                        list.Add("Ort: " + temptavling.getHopplistor()[i].getOrt());
+
+                        t2.AddCell("Hoppkod");
+                        t2.AddCell("Höjd");
+                        t2.AddCell("Stil");
+                        t2.AddCell("Svårighetsgrad");
+                        t2.AddCell("Betyg");
+                        t2.AddCell("Poäng");
+                        for (int j = 0; j < EventGetHopplistor()[i].getHopplista().Count; j++)
+                        {
+                            t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getHoppNr().ToString());
+                            t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getHojd().ToString());
+                            t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getStil());
+                            t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getSvarighet().ToString());
+                            string tempstring = "";
+                            for (int k = 0; k < EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count; k++)
+                            {
+                                if (k == EventGetHopplistor()[i].getHopplista()[j].getBetyg().Count - 1)
+                                {
+                                    tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString();
+                                }
+                                else
+                                    tempstring += EventGetTavling().getHopplistor()[i].getHopplista()[j].getBetyg()[k].ToString() + " | ";
+                            }
+                            t2.AddCell(tempstring);
+                            t2.AddCell(EventGetHopplistor()[i].getHopplista()[j].getPoang().utraknadpoang.ToString());
+                        }
+                        doc.Add(new Paragraph("\n"));
+                        doc.Add(list);
+                        doc.Add(new Paragraph("\n"));
+                        doc.Add(t2);
+                        doc.Add(new Paragraph("\n"));
+                        doc.Add(line);
+                        doc.Add(new Paragraph("\n"));
+                    }
+
+                    doc.Close();
+                }
+            }
         }
 
         private string ExportHTML(DataGridView dt)
@@ -667,7 +704,8 @@ namespace simhoppprojekt
   
             string Htmltext = strHTMLBuilder.ToString();  
   
-            return Htmltext;  
+            return Htmltext; 
+ 
         } 
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Formen Redigera används för att redigera informationen om en simhoppare.
+    /// </summary>
     public partial class Redigera : Form
     {
         private Hopplist person;

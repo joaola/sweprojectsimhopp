@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    /// Formen RedigeraHopp används för att manuellt redigera en persons hopp.
+    /// </summary>
     public partial class RedigeraHopp : Form
     {
         #region data

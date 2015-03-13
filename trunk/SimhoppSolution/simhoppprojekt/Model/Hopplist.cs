@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Klassen hopplist har koll på en person. Varje person har en lista med hopp, ett ID,
+    ///  ett namn, en förening, ett födelseår, ett kön och en ort.
+    /// </summary>
     public class Hopplist
     {
         #region data

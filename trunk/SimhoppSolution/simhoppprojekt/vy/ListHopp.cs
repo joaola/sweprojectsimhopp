@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Formen ListHopp innehåller personlig information om en simhoppare. Den visar även alla hopp som denna simhoppare har gjort.
+    ///  Från denna form kan man lägga till ett nytt hopp, redigera hopp och ta bort hopp.
+    /// </summary>
     public partial class ListHopp : Form
     {
         #region data

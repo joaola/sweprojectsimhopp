@@ -12,6 +12,10 @@ using System.Windows.Forms;
 
 namespace UdpSend
 {
+    /// <summary>
+    ///  Denna form används som domarklient.
+    ///  Man skickar betyg till den andra klienten.
+    /// </summary>
     public partial class Form1 : Form
     {
         private const int listenPort = 9059;

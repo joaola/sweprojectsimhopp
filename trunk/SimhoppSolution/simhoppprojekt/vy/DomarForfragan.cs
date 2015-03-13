@@ -12,6 +12,10 @@ using System.Windows.Forms;
 
 namespace simhoppprojekt
 {
+    /// <summary>
+    ///  Denna form används för att bestämma vilken port man ska lyssna på 
+    ///  och vilka IP-adresser som man ska ta emot domarbetyg ifrån.
+    /// </summary>
     public partial class DomarForfragan : Form
     {
         private int domare;
